@@ -62,7 +62,7 @@ export default function CoreValues() {
         </h2>
       </MotionFadeIn>
 
-      <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {coreValues.values.map((value) => (
           <StaggerItem key={value.title} variant="scaleIn">
             <div className="text-center px-4 py-6">

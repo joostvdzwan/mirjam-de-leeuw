@@ -35,7 +35,7 @@ export default function AboutPractice() {
         <StaggerContainer className="grid gap-6 md:grid-cols-2">
           {aboutPractice.formats.items.map((item) => (
             <StaggerItem key={item.title} variant="scaleIn">
-              <div className="rounded-2xl border border-brown/5 bg-cream p-8">
+              <div className="rounded-2xl border border-brown/5 bg-cream p-5 md:p-8">
                 <h4 className="heading-md heading-md-medium mb-3 text-brown">
                   {item.title}
                 </h4>
@@ -49,7 +49,7 @@ export default function AboutPractice() {
       </MotionFadeIn>
 
       <MotionFadeIn variant="fadeIn" delay={0.1}>
-        <div className="rounded-2xl border border-blush/30 bg-cream p-8 max-w-3xl">
+        <div className="rounded-2xl border border-blush/30 bg-cream p-5 md:p-8 max-w-3xl">
           <h3 className="heading-md heading-md-medium mb-3 text-brown">
             {aboutPractice.disclaimer.heading}
           </h3>

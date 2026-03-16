@@ -59,7 +59,7 @@ export default function Hero() {
   });
 
   return (
-    <section className="relative flex min-h-screen items-center bg-cream pt-20">
+    <section className="relative flex min-h-dvh items-center bg-cream pt-20">
       {/* Background with slow breathe animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div

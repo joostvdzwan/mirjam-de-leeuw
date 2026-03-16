@@ -93,7 +93,7 @@ export default function Navigation() {
         </a>
 
         {/* Desktop nav */}
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-6 lg:flex xl:gap-8">
           {nav.links.map((link) => {
             const isActive = activeSection === link.href.replace("#", "");
             return (
@@ -124,7 +124,7 @@ export default function Navigation() {
           })}
           <motion.a
             href="#contact"
-            className="label-md label-md-medium rounded-full bg-sage-dark px-5 py-2.5 text-white transition-colors hover:bg-sage"
+            className="label-md label-md-medium rounded-full bg-sage-dark px-4 py-2.5 text-white transition-colors hover:bg-sage xl:px-5"
             whileHover={{ scale: 1.02, boxShadow: "0 4px 16px rgba(94, 107, 82, 0.2)" }}
             whileTap={{ scale: 0.98 }}
             transition={{ duration: 0.2, ease: ease.gentle }}

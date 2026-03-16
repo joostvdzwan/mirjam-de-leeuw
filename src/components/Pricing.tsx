@@ -22,9 +22,9 @@ export default function Pricing() {
 
       <StaggerContainer className="mx-auto grid max-w-3xl gap-8 md:grid-cols-2">
         {pricing.cards.map((card) => (
-          <StaggerItem key={card.title}>
+          <StaggerItem key={card.title} className="h-full">
             <div
-              className={`relative rounded-2xl p-8 ${
+              className={`relative rounded-2xl p-8 h-full flex flex-col ${
                 card.highlighted
                   ? "border-2 border-sage bg-sand shadow-lg"
                   : "border border-brown/5 bg-sand"
@@ -49,7 +49,7 @@ export default function Pricing() {
                   {card.unit}
                 </span>
               </div>
-              <p className="body-md body-md-regular mb-8 text-brown-muted">
+              <p className="body-md body-md-regular mb-8 text-brown-muted grow">
                 {card.description}
               </p>
               <a

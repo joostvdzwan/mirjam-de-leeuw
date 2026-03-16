@@ -50,12 +50,12 @@ export default function ForWhom() {
       </MotionFadeIn>
 
       <StaggerContainer
-        className="grid gap-8 md:grid-cols-3"
+        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
         stagger={stagger.relaxed}
       >
         {forWhom.groups.map((group) => (
           <StaggerItem key={group.title} variant="scaleIn">
-            <div className="rounded-2xl border border-brown/5 bg-cream p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div className="rounded-2xl border border-brown/5 bg-cream p-5 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-5 text-sage">
                 <GroupIcon label={group.iconLabel} />
               </div>

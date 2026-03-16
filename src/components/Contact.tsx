@@ -100,7 +100,7 @@ export default function Contact() {
 
         {/* Contact form */}
         <MotionFadeIn variant="fadeUp" delay={0.1}>
-          <div className="rounded-2xl border border-brown/5 bg-cream p-8">
+          <div className="rounded-2xl border border-brown/5 bg-cream p-5 md:p-8">
             <form
               action="#"
               method="POST"

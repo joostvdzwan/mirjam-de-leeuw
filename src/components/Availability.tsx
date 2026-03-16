@@ -25,7 +25,7 @@ export default function Availability() {
             {availability.slots.map((slot) => (
               <div
                 key={`${slot.day}-${slot.format}`}
-                className="flex items-center justify-between rounded-xl border border-brown/5 bg-cream px-6 py-5"
+                className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-brown/5 bg-cream px-6 py-5"
               >
                 <div>
                   <p className="body-md body-md-semibold text-brown">
