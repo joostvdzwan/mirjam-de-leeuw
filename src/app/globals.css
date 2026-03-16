@@ -156,10 +156,10 @@ body {
 .heading-md-semibold { font-weight: 600; }
 
 .heading-sm {
-  font-family: var(--font-heading);
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
   line-height: 1.4;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .heading-sm-regular { font-weight: 400; }

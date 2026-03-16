@@ -1,8 +1,10 @@
+import Image from "next/image";
 import SectionWrapper from "./SectionWrapper";
 import MotionFadeIn from "./motion/MotionFadeIn";
 import { StaggerContainer, StaggerItem } from "./motion/MotionStagger";
 import content from "@/content/nl.json";
 import { duration } from "@/lib/motion";
+import mirjamPhoto from "@/assets/mirjam-2.jpg";
 
 const { aboutMe } = content;
 
@@ -38,22 +40,20 @@ export default function AboutMe() {
           </MotionFadeIn>
         </div>
 
-        {/* Photo placeholder */}
         <MotionFadeIn
           variant="scaleIn"
           duration={duration.slow}
           className="flex items-center justify-center"
         >
-          <div
-            className="aspect-3/4 w-full max-w-md rounded-2xl bg-linear-to-br from-sage-light/20 via-sand to-blush/15"
-            role="img"
-            aria-label={aboutMe.imageAlt}
-          >
-            <div className="flex h-full items-center justify-center">
-              <span className="body-sm body-sm-regular text-brown-muted/50">
-                Foto
-              </span>
-            </div>
+          <div className="relative w-full max-w-md overflow-hidden rounded-2xl">
+            <Image
+              src={mirjamPhoto}
+              alt={aboutMe.imageAlt}
+              className="w-full h-auto object-cover"
+              sizes="(max-width: 1024px) 100vw, 448px"
+              placeholder="blur"
+              quality={85}
+            />
           </div>
         </MotionFadeIn>
       </div>

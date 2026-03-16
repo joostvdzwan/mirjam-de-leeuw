@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import content from "@/content/nl.json";
 import { ease, duration, stagger, fadeUp, fadeIn } from "@/lib/motion";
+import mirjamHero from "@/assets/mirjam-1.jpg";
 
 const { hero } = content;
 
@@ -71,90 +73,116 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-32">
-        <div className="max-w-2xl">
-          {/* Subtitle */}
-          <motion.p
-            className="heading-sm heading-sm-medium mb-4 text-sage-dark"
-            variants={gentleFadeIn(0)}
-            initial="hidden"
-            animate="visible"
-          >
-            {hero.subtitle}
-          </motion.p>
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
+          <div className="max-w-2xl lg:flex-1">
+            {/* Subtitle */}
+            <motion.p
+              className="heading-sm heading-sm-medium mb-4 text-sage-dark"
+              variants={gentleFadeIn(0)}
+              initial="hidden"
+              animate="visible"
+            >
+              {hero.subtitle}
+            </motion.p>
 
-          {/* Title - word by word */}
-          <motion.h1
-            className="display-lg display-lg-regular mb-6 text-brown"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            {words.map((word, i) => (
-              <motion.span
-                key={i}
-                variants={wordVariants}
-                className="mr-[0.3em] inline-block"
-              >
-                {word}
-              </motion.span>
-            ))}
-          </motion.h1>
+            {/* Title - word by word */}
+            <motion.h1
+              className="display-lg display-lg-regular mb-6 text-brown"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              {words.map((word, i) => (
+                <motion.span
+                  key={i}
+                  variants={wordVariants}
+                  className="mr-[0.3em] inline-block"
+                >
+                  {word}
+                </motion.span>
+              ))}
+            </motion.h1>
 
-          {/* Tagline */}
-          <motion.p
-            className="quote mb-8 text-brown-muted"
-            variants={gentleFadeUp(1.2)}
-            initial="hidden"
-            animate="visible"
-          >
-            {hero.tagline}
-          </motion.p>
+            {/* Tagline */}
+            <motion.p
+              className="quote mb-8 text-brown-muted"
+              variants={gentleFadeUp(1.2)}
+              initial="hidden"
+              animate="visible"
+            >
+              {hero.tagline}
+            </motion.p>
 
-          {/* Opening line */}
-          <motion.p
-            className="body-lg body-lg-regular mb-10 max-w-xl text-brown-muted"
-            variants={gentleFadeIn(1.6)}
-            initial="hidden"
-            animate="visible"
-          >
-            {hero.intro}
-          </motion.p>
+            {/* Opening line */}
+            <motion.p
+              className="body-lg body-lg-regular mb-10 max-w-xl text-brown-muted"
+              variants={gentleFadeIn(1.6)}
+              initial="hidden"
+              animate="visible"
+            >
+              {hero.intro}
+            </motion.p>
 
-          {/* CTA buttons */}
-          <motion.div
-            className="flex flex-col gap-4 sm:flex-row"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: {
-                transition: {
-                  delayChildren: shouldReduceMotion ? 0 : 2.0,
-                  staggerChildren: shouldReduceMotion ? 0 : stagger.normal,
+            {/* CTA buttons */}
+            <motion.div
+              className="flex flex-col gap-4 sm:flex-row"
+              initial="hidden"
+              animate="visible"
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    delayChildren: shouldReduceMotion ? 0 : 2.0,
+                    staggerChildren: shouldReduceMotion ? 0 : stagger.normal,
+                  },
                 },
-              },
-            }}
+              }}
+            >
+              <motion.a
+                href="#contact"
+                className="label-md label-md-medium inline-flex items-center justify-center rounded-full bg-sage-dark px-8 py-3.5 text-white transition-colors hover:bg-sage"
+                variants={shouldReduceMotion ? { hidden: { opacity: 0 }, visible: { opacity: 1 } } : fadeUp}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ duration: duration.fast, ease: ease.enter }}
+              >
+                {hero.ctaPrimary}
+              </motion.a>
+              <motion.a
+                href="#tarieven"
+                className="label-md label-md-medium inline-flex items-center justify-center rounded-full border-2 border-sage-dark px-8 py-3.5 text-sage-dark transition-colors hover:bg-sage-dark hover:text-white"
+                variants={shouldReduceMotion ? { hidden: { opacity: 0 }, visible: { opacity: 1 } } : fadeUp}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ duration: duration.fast, ease: ease.enter }}
+              >
+                {hero.ctaSecondary}
+              </motion.a>
+            </motion.div>
+          </div>
+
+          {/* Portrait photo -- small, warm, secondary to the text */}
+          <motion.div
+            className="hidden lg:block lg:shrink-0"
+            variants={gentleFadeIn(1.8)}
+            initial="hidden"
+            animate="visible"
           >
-            <motion.a
-              href="#contact"
-              className="label-md label-md-medium inline-flex items-center justify-center rounded-full bg-sage-dark px-8 py-3.5 text-white transition-colors hover:bg-sage"
-              variants={shouldReduceMotion ? { hidden: { opacity: 0 }, visible: { opacity: 1 } } : fadeUp}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: duration.fast, ease: ease.enter }}
-            >
-              {hero.ctaPrimary}
-            </motion.a>
-            <motion.a
-              href="#tarieven"
-              className="label-md label-md-medium inline-flex items-center justify-center rounded-full border-2 border-sage-dark px-8 py-3.5 text-sage-dark transition-colors hover:bg-sage-dark hover:text-white"
-              variants={shouldReduceMotion ? { hidden: { opacity: 0 }, visible: { opacity: 1 } } : fadeUp}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ duration: duration.fast, ease: ease.enter }}
-            >
-              {hero.ctaSecondary}
-            </motion.a>
+            <div className="relative w-56 xl:w-72">
+              <div className="rounded-4xl border border-sage/75 p-3">
+                <div className="overflow-hidden rounded-3xl">
+                  <Image
+                    src={mirjamHero}
+                    alt="Mirjam de Leeuw"
+                    className="w-full h-auto object-cover"
+                    sizes="256px"
+                    placeholder="blur"
+                    quality={85}
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
