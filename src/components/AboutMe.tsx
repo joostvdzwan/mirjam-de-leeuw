@@ -33,6 +33,18 @@ export default function AboutMe() {
             ))}
           </StaggerContainer>
 
+          {"credentials" in aboutMe && (
+            <MotionFadeIn variant="fadeIn" delay={0.25} duration={duration.slow}>
+              <div className="mt-8 space-y-1">
+                {(aboutMe as { credentials: string[] }).credentials.map((c, i) => (
+                  <p key={i} className="body-sm body-sm-medium text-sage-dark">
+                    {c}
+                  </p>
+                ))}
+              </div>
+            </MotionFadeIn>
+          )}
+
           <MotionFadeIn variant="fadeIn" delay={0.3} duration={duration.slow}>
             <blockquote className="mt-10 border-l-4 border-sage pl-6 py-2">
               <p className="quote text-brown">{aboutMe.quote}</p>

@@ -10,7 +10,7 @@ const { approach } = content;
 export default function Approach() {
   return (
     <SectionWrapper id="werkwijze" background="sand">
-      <MotionFadeIn className="text-center mb-16">
+      <MotionFadeIn className="text-left md:text-center mb-16">
         <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
           {approach.sectionLabel}
         </p>

@@ -37,16 +37,21 @@ function GroupIcon({ label }: { label: string }) {
 export default function ForWhom() {
   return (
     <SectionWrapper id="voor-wie" background="sand">
-      <MotionFadeIn className="text-center mb-12">
+      <MotionFadeIn className="text-left md:text-center mb-12">
         <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
           {forWhom.sectionLabel}
         </p>
         <h2
           id="voor-wie-heading"
-          className="display-md display-md-regular text-brown"
+          className="display-md display-md-regular mb-4 text-brown"
         >
           {forWhom.heading}
         </h2>
+        {"intro" in forWhom && (
+          <p className="body-lg body-lg-regular mx-auto max-w-2xl text-brown-muted">
+            {(forWhom as { intro: string }).intro}
+          </p>
+        )}
       </MotionFadeIn>
 
       <StaggerContainer

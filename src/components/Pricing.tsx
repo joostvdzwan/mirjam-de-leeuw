@@ -14,10 +14,15 @@ export default function Pricing() {
         </p>
         <h2
           id="tarieven-heading"
-          className="display-md display-md-regular text-brown"
+          className="display-md display-md-regular mb-4 text-brown"
         >
           {pricing.heading}
         </h2>
+        {pricing.intro && (
+          <p className="body-lg body-lg-regular mx-auto max-w-2xl text-brown-muted">
+            {pricing.intro}
+          </p>
+        )}
       </MotionFadeIn>
 
       <StaggerContainer className="mx-auto grid max-w-3xl gap-8 md:grid-cols-2">

@@ -1,6 +1,6 @@
 {
   "siteTitle": "Praktijk De Leeuw — Coaching & Gezinsbegeleiding in Leiden",
-  "siteDescription": "Wandelcoaching en online coaching in Leiden. Praktische, systeemgerichte begeleiding voor jongeren, ouders en volwassenen. Gratis kennismakingsgesprek.",
+  "siteDescription": "Wandelcoaching en online coaching in Leiden. Praktische begeleiding voor jongeren, ouders en volwassenen. Kosteloos kennismakingsgesprek.",
   "nav": {
     "links": [
       { "label": "Over de praktijk", "href": "#over-de-praktijk" },
@@ -10,23 +10,23 @@
       { "label": "Tarieven", "href": "#tarieven" },
       { "label": "Contact", "href": "#contact" }
     ],
-    "cta": "Plan een kennismaking"
+    "cta": "Plan een kennismakingsgesprek"
   },
   "hero": {
     "title": "Praktijk De Leeuw",
     "subtitle": "Coaching & Gezinsbegeleiding",
-    "tagline": "Inzicht in je eigen verhaal — meer ruimte voor wie je bent",
-    "intro": "Praktische en systeemgerichte coaching voor jongeren vanaf 16 jaar, ouders en volwassenen die vastlopen in gedrag, emoties, overprikkeling of dagelijkse organisatie.",
-    "ctaPrimary": "Plan gratis kennismaking",
-    "ctaSecondary": "Bekijk aanbod & tarieven",
+    "tagline": "Meer rust in je hoofd. Meer overzicht in wat er speelt.",
+    "intro": "Voor jongeren, ouders en volwassenen die merken dat dingen blijven terugkomen. Dingen thuis die niet lekker lopen, twijfels over jezelf of het gevoel dat het anders moet, maar je weet niet goed hoe. Het kan helpend zijn als iemand met een onafhankelijke blik met je meekijkt en meedenkt. Zodat je weer overzicht krijgt en kunt kijken naar wat kan helpen.",
+    "ctaPrimary": "Plan een kennismakingsgesprek",
+    "ctaSecondary": "Lees meer over de werkwijze",
     "imageAlt": "Wandelpad door de natuur — rustgevend groen landschap"
   },
   "aboutPractice": {
     "sectionLabel": "Over de praktijk",
-    "heading": "Praktische coaching, dicht bij het dagelijks leven",
+    "heading": "Over de praktijk",
     "paragraphs": [
-      "Bij Praktijk De Leeuw werk ik met jongeren vanaf 16 jaar, ouders en volwassenen die vastlopen in het dagelijks leven. Denk aan moeite met emotieregulatie, overprikkeling, het organiseren van je dag, of terugkerende patronen in relaties en gezinssituaties.",
-      "De coaching is kortdurend, doelgericht en systeemgericht. Dat betekent dat ik niet alleen naar jou als individu kijk, maar ook naar de context waarin je functioneert — je gezin, je relaties, je omgeving. Samen zoeken we naar praktische inzichten en stappen die passen bij jouw situatie."
+      "In deze praktijk is er ruimte om stil te staan bij wat er speelt en waar je tegenaan loopt. We kijken naar de situatie, wat daarin meespeelt en welke patronen zichtbaar worden. Daarbij is aandacht voor gedrag én de context daaromheen, zoals gezin, werk of school.",
+      "De begeleiding is praktisch en gericht op inzicht en overzicht, zodat je weer verder kunt op een manier die bij je past."
     ],
     "formats": {
       "heading": "Coaching op jouw manier",
@@ -43,23 +43,36 @@
     },
     "disclaimer": {
       "heading": "Goed om te weten",
-      "text": "Praktijk De Leeuw biedt geen diagnostiek, behandeling of crisisinterventie. Mijn coaching is aanvullend op — niet in plaats van — professionele GGZ-hulp. Bij acute problematiek verwijs ik je graag door naar de juiste instantie."
+      "text": "De begeleiding binnen deze praktijk is bedoeld voor situaties waarin er behoefte is aan meedenken, reflectie en praktische handvatten. Bij ernstige klachten of acute problematiek is specialistische GGZ passender. In dat geval denk ik graag mee over een passend vervolg."
     }
   },
   "aboutMe": {
     "sectionLabel": "Over mij",
     "heading": "Mirjam de Leeuw",
     "paragraphs": [
-      "Na mijn bachelor Pedagogiek koos ik voor de master Kinder- en Jeugdpsychologie. Ik werkte als klinisch psycholoog in de Jeugd-GGZ en later als gedragswetenschapper in een jeugdondersteuningsteam. Mooie, intensieve jaren waarin ik veel leerde over gezinnen, ontwikkeling en gedrag.",
-      "Maar ik merkte ook dat het systeem niet altijd ruimte bood om écht naast gezinnen te staan. De wachtlijsten, de protocollen, de administratie — het trok me weg van waar ik het beste in ben: praktisch meedenken, dichtbij, met rust en overzicht.",
-      "Daarom startte ik Praktijk De Leeuw. Om op mijn eigen manier te werken: kleinschalig, persoonlijk en gericht op wat wél werkt. Geen diagnoses, maar inzicht. Geen lange trajecten, maar concrete stappen."
+      "Ik ben kinder- en jeugdpsycholoog en werk op dit moment als gedragswetenschapper vanuit Cardea bij Stichting Jeugdteams Leidse Regio.",
+      "Na de middelbare school ben ik begonnen met de opleiding HBO pedagogiek. Na het behalen van mijn propedeuse ben ik Psychologie gaan studeren aan de universiteit, gevolgd door de master Kinder- en Jeugdpsychologie.",
+      "Na mijn studie werkte ik als basispsycholoog in de specialistische jeugd-GGZ bij GGZ Rivierduinen Jong. Daar voerde ik intakegesprekken, deed ik diagnostiek en behandeling en werkte ik met uiteenlopende (complexe) vraagstukken bij kinderen, jongeren en gezinnen.",
+      "Vervolgens maakte ik de overstap naar mijn huidige functie als gedragswetenschapper binnen Stichting Jeugdteams Leidse Regio. In deze rol ondersteun ik professionals die met gezinnen werken, onder andere door middel van werkbegeleiding en casuïstiekbesprekingen. Daarnaast houd ik mij bezig met beleid- en methodiekontwikkeling binnen de organisatie.",
+      "De wens om mijn eigen praktijk te starten is er altijd geweest. Met de werkervaring die ik tot nu toe heb opgedaan en mijn persoonlijke levenservaring zet ik nu die stap.",
+      "Naast mijn werk ben ik moeder van twee jonge kinderen. Net als ieder mens, heb ik ook mijn eigen zoektocht naar mezelf. In verschillende fases van mijn leven heb ik daarvoor ook hulp gezocht, waar ik veel van heb geleerd.",
+      "Het moederschap leert mij daarnaast veel over de invloed van je eigen jeugd en hoe kinderen je kunnen spiegelen.",
+      "In mijn werk zie ik dat de zorg vaak gericht is op diagnoses, trajecten en dat er lange wachtlijsten zijn. Terwijl dit lang niet altijd nodig is. Veel mensen maken periodes door waarin het even niet loopt, en juist dan kan het helpend zijn als er op tijd iemand met je meekijkt.",
+      "In mijn begeleiding kijk ik niet alleen naar wat iemand laat zien, maar juist naar wat daaronder ligt. Gedrag is vaak een signaal van iets anders. Wat maakt dat iemand reageert zoals hij of zij doet? En wat is er op dat moment nodig?",
+      "Ik geloof in een laagdrempelige en mensgerichte benadering, waarbij we samen kijken naar wat past en wat kan helpen. Deze visie neem ik mee naar mijn manier van begeleiden."
+    ],
+    "credentials": [
+      "Kinder- en jeugdpsycholoog",
+      "Gedragswetenschapper – Stichting Jeugdteams Leidse Regio",
+      "SKJ geregistreerd – 130005177"
     ],
     "quote": "Gedrag is vaak een signaal van wat iemand nodig heeft.",
     "imageAlt": "Mirjam de Leeuw — wandelend in de natuur"
   },
   "forWhom": {
     "sectionLabel": "Voor wie",
-    "heading": "Voor wie is coaching bedoeld?",
+    "heading": "Voor jongeren, ouders en volwassenen",
+    "intro": "De begeleiding is bedoeld voor jongeren vanaf 16 jaar, ouders en volwassenen die merken dat ze ergens in vastlopen of behoefte hebben aan een onafhankelijke blik. Bijvoorbeeld wanneer situaties thuis, in relaties of in het dagelijks leven steeds terugkomen of niet lekker lopen. Soms is er behoefte aan meer inzicht, soms aan overzicht of praktische handvatten om weer verder te kunnen.",
     "groups": [
       {
         "title": "Jongeren (16+)",
@@ -79,90 +92,77 @@
     ]
   },
   "commonQuestions": {
-    "sectionLabel": "Hulpvragen",
-    "heading": "Waar mensen mee komen",
+    "sectionLabel": "Bijvoorbeeld bij",
+    "heading": "Bijvoorbeeld bij",
     "intro": "Je hoeft geen duidelijke hulpvraag te hebben. Vaak begint het met een gevoel dat iets niet lekker loopt. Herken je iets in deze thema's?",
     "items": [
-      "Emotieregulatie en gedrag",
-      "Prikkelverwerking en overprikkeling",
-      "Organisatie van het dagelijks leven",
-      "Overzicht en structuur",
-      "Gezinsdynamiek en terugkerende patronen",
-      "Zelfbeeld en verwachtingen",
-      "Schooldruk en prestatiedruk",
-      "Werk-privébalans en stress",
-      "Vroege signalen van burn-out",
-      "Beperkende overtuigingen"
+      "Vragen over gedrag of ontwikkeling",
+      "Situaties thuis die steeds terugkomen of niet lekker lopen",
+      "Overprikkeling, spanning of moeite met balans",
+      "Opvoedvragen of onzekerheid in het ouderschap",
+      "Terugkerende patronen in relaties of binnen het gezin",
+      "Behoefte aan een onafhankelijke blik of om even mee te denken"
     ]
   },
   "approach": {
     "sectionLabel": "Werkwijze",
-    "heading": "Hoe werkt het?",
-    "intro": "Coaching bij Praktijk De Leeuw is laagdrempelig en doelgericht. Zo ziet het traject eruit:",
+    "heading": "Praktisch en systeemgericht",
+    "intro": "In de gesprekken kijken we naar wat er speelt en welke factoren daarin een rol spelen. Daarbij is er aandacht voor het gedrag, maar ook voor wat daaronder ligt en de context daaromheen, zoals gezin, werk of school. We staan stil bij patronen en wat maakt dat situaties blijven terugkomen. Vanuit daar kijken we wat helpend kan zijn en wat bij iemand past. De begeleiding is praktisch en gericht op inzicht en overzicht, zodat je weer verder kunt.",
     "steps": [
       {
         "number": 1,
-        "title": "Vrijblijvende kennismaking",
-        "description": "Een kort telefonisch gesprek van 15 minuten. We bespreken je situatie en kijken of coaching bij mij past."
+        "title": "Kennismaking",
+        "description": "Begeleiding begint altijd met een kennismakingsgesprek. Dit gesprek vindt telefonisch plaats, duurt ongeveer 20–30 minuten en is kosteloos. We bespreken wat er speelt, waar behoefte aan is en of begeleiding passend is."
       },
       {
         "number": 2,
-        "title": "Intake gesprek",
-        "description": "Een uitgebreider gesprek waarin we je hulpvraag verkennen en samen doelen formuleren."
-      },
-      {
-        "number": 3,
-        "title": "Coaching sessies",
-        "description": "Doelgerichte, kortdurende begeleiding — wandelend of online. Gericht op inzicht en praktische stappen."
-      },
-      {
-        "number": 4,
-        "title": "Evaluatie en afronding",
-        "description": "We kijken terug op het traject, bespreken wat je hebt geleerd en hoe je zelfstandig verder kunt."
+        "title": "Vervolggesprekken",
+        "description": "Na de kennismaking plannen we, als dat passend voelt, één of meerdere gesprekken. Deze gesprekken kunnen online plaatsvinden. Daarnaast is het mogelijk om de gesprekken wandelend te doen. Tijdens een wandelgesprek zijn we letterlijk in beweging. Dit helpt vaak om gedachten makkelijker op gang te brengen en geeft ruimte om situaties op een andere manier te bekijken. Veel mensen ervaren het als prettig om niet tegenover elkaar te zitten, maar naast elkaar te lopen."
       }
     ]
   },
   "pricing": {
-    "sectionLabel": "Aanbod & Tarieven",
-    "heading": "Aanbod & tarieven",
+    "sectionLabel": "Tarieven",
+    "heading": "Tarieven",
+    "intro": "Praktijk De Leeuw werkt op particuliere basis. De kosten voor begeleiding worden daarom niet vergoed door de zorgverzekering.",
     "cards": [
       {
-        "title": "Wandelcoaching",
-        "subtitle": "buiten, in de natuur",
-        "price": "€105",
+        "title": "Wandelgesprek",
+        "subtitle": "60–90 minuten",
+        "price": "€125",
         "unit": "per sessie",
         "description": "Coaching in de buitenlucht. Wandelen opent gesprekken op een natuurlijke manier.",
         "highlighted": true,
         "badge": "Meest gekozen",
-        "cta": "Plan een wandelcoaching"
+        "cta": "Plan een wandelgesprek"
       },
       {
-        "title": "Online coaching",
-        "subtitle": "flexibel, vanuit huis",
-        "price": "€95",
+        "title": "Online gesprek",
+        "subtitle": "60 minuten",
+        "price": "€110",
         "unit": "per sessie",
         "description": "Flexibel en vanuit huis. Ideaal voor avondmomenten of wanneer je liever thuis werkt.",
         "highlighted": false,
         "badge": null,
-        "cta": "Plan een online sessie"
+        "cta": "Plan een online gesprek"
       }
     ],
     "bundles": {
       "heading": "Bundels",
       "items": [
-        { "title": "5× wandelcoaching", "price": "€525" },
-        { "title": "5× online coaching", "price": "€475" }
+        { "title": "5 wandelgesprekken van 60–90 minuten", "price": "€600" },
+        { "title": "5 online gesprekken van 60 minuten", "price": "€525" }
       ]
     },
-    "note": "Alle tarieven zijn btw-vrij (KOR)."
+    "note": "Na het gesprek ontvang je een factuur."
   },
   "availability": {
     "sectionLabel": "Beschikbaarheid",
-    "heading": "Beschikbaarheid",
+    "heading": "Momenten voor gesprekken",
     "slots": [
-      { "day": "Zaterdag", "time": "Ochtend", "format": "Wandelcoaching" },
-      { "day": "Dinsdag", "time": "20:00 – 22:00", "format": "Online coaching" },
-      { "day": "Woensdag", "time": "20:00 – 22:00", "format": "Online coaching" }
+      { "day": "Zaterdagochtend", "time": "09:00 – 13:00", "format": "Wandelgesprekken" },
+      { "day": "Dinsdagavond", "time": "20:00 – 22:00", "format": "Online gesprekken" },
+      { "day": "Woensdagavond", "time": "20:00 – 22:00", "format": "Online gesprekken" }
     ]
   },
   "coreValues": {
@@ -193,12 +193,14 @@
   },
   "contact": {
     "sectionLabel": "Contact",
-    "heading": "Neem contact op",
-    "intro": "Heb je een vraag of wil je een vrijblijvende kennismaking plannen? Neem gerust contact op.",
-    "email": "info@praktijkdeleeuw.nl",
+    "heading": "Plan een kennismakingsgesprek",
+    "intro": "Heb je een vraag of wil je een kennismakingsgesprek plannen? Neem gerust contact op.",
+    "subIntro": "Voor het plannen van een kennismakingsgesprek kun je bij voorkeur een e-mail sturen. Ik neem dan zo snel mogelijk contact met je op.",
+    "email": "mirjam@deleeuw.nl",
+    "phone": "Volgt binnenkort",
     "formats": "Online of wandelend — in en rondom Leiden",
-    "kennismaking": "Vrijblijvende telefonische kennismaking van 15 minuten",
-    "cta": "Plan een gratis kennismaking",
+    "kennismaking": "Telefonische kennismaking · kosteloos · zonder verplichtingen",
+    "cta": "Plan een kennismakingsgesprek",
     "closingQuote": "Je hoeft het niet alleen uit te zoeken.",
     "form": {
       "nameLabel": "Naam",
@@ -214,7 +216,7 @@
     "practiceName": "Praktijk De Leeuw",
     "tagline": "Coaching & Gezinsbegeleiding",
     "location": "Leiden en omgeving",
-    "email": "info@praktijkdeleeuw.nl",
+    "email": "mirjam@deleeuw.nl",
     "disclaimer": "Praktijk De Leeuw biedt coaching en geen diagnostiek, behandeling of crisisinterventie.",
     "copyright": "© {year} Praktijk De Leeuw. Alle rechten voorbehouden."
   }

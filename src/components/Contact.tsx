@@ -20,9 +20,14 @@ export default function Contact() {
             >
               {contact.heading}
             </h2>
-            <p className="body-lg body-lg-regular mb-8 text-brown-muted">
+            <p className="body-lg body-lg-regular mb-4 text-brown-muted">
               {contact.intro}
             </p>
+            {"subIntro" in contact && (
+              <p className="body-md body-md-regular mb-8 text-brown-muted">
+                {(contact as { subIntro: string }).subIntro}
+              </p>
+            )}
 
             <div className="space-y-4 mb-10">
               <div className="flex items-start gap-3">
@@ -48,6 +53,28 @@ export default function Contact() {
                   {contact.email}
                 </a>
               </div>
+              {"phone" in contact && (
+                <div className="flex items-start gap-3">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    className="mt-0.5 shrink-0 text-sage-dark"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M3 4.5C3 3.672 3.672 3 4.5 3h2.382a1 1 0 01.894.553L9 6l-2 1.5c1.042 2.085 3.415 4.458 5.5 5.5L14 11l2.447 1.224a1 1 0 01.553.894V15.5c0 .828-.672 1.5-1.5 1.5A13 13 0 013 4.5z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span className="body-md body-md-regular text-brown-muted">
+                    {(contact as { phone: string }).phone}
+                  </span>
+                </div>
+              )}
               <div className="flex items-start gap-3">
                 <svg
                   width="20"
@@ -77,12 +104,8 @@ export default function Contact() {
                   className="mt-0.5 shrink-0 text-sage-dark"
                   aria-hidden="true"
                 >
-                  <path
-                    d="M3 4.5C3 3.672 3.672 3 4.5 3h2.382a1 1 0 01.894.553L9 6l-2 1.5c1.042 2.085 3.415 4.458 5.5 5.5L14 11l2.447 1.224a1 1 0 01.553.894V15.5c0 .828-.672 1.5-1.5 1.5A13 13 0 013 4.5z"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinejoin="round"
-                  />
+                  <rect x="3" y="4" width="14" height="13" rx="2" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M3 8h14M7 2v4M13 2v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
                 <span className="body-md body-md-regular text-brown-muted">
                   {contact.kennismaking}

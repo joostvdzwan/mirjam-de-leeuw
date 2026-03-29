@@ -50,7 +50,7 @@ export default function RootLayout({
     name: "Praktijk De Leeuw",
     description: content.siteDescription,
     url: "https://praktijkdeleeuw.nl",
-    email: "info@praktijkdeleeuw.nl",
+    email: "mirjam@deleeuw.nl",
     areaServed: {
       "@type": "City",
       name: "Leiden",
@@ -60,7 +60,7 @@ export default function RootLayout({
       "Online coaching",
       "Gezinsbegeleiding",
     ],
-    priceRange: "€95 - €105",
+    priceRange: "€110 - €125",
   };
 
   return (
