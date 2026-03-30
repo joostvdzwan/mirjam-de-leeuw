@@ -10,9 +10,11 @@ export default function CommonQuestions() {
   return (
     <SectionWrapper id="hulpvragen" background="cream">
       <MotionFadeIn className="text-center mb-12">
-        <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
-          {commonQuestions.sectionLabel}
-        </p>
+        {commonQuestions.sectionLabel !== commonQuestions.heading && (
+          <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
+            {commonQuestions.sectionLabel}
+          </p>
+        )}
         <h2
           id="hulpvragen-heading"
           className="display-md display-md-regular mb-4 text-brown"

@@ -9,9 +9,11 @@ export default function AboutPractice() {
   return (
     <SectionWrapper id="over-de-praktijk" background="sand">
       <MotionFadeIn>
-        <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
-          {aboutPractice.sectionLabel}
-        </p>
+        {aboutPractice.sectionLabel !== aboutPractice.heading && (
+          <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
+            {aboutPractice.sectionLabel}
+          </p>
+        )}
         <h2
           id="over-de-praktijk-heading"
           className="display-md display-md-regular mb-8 text-brown"

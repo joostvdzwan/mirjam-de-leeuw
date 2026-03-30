@@ -9,9 +9,11 @@ export default function Pricing() {
   return (
     <SectionWrapper id="tarieven" background="cream">
       <MotionFadeIn className="text-center mb-12">
-        <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
-          {pricing.sectionLabel}
-        </p>
+        {pricing.sectionLabel !== pricing.heading && (
+          <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
+            {pricing.sectionLabel}
+          </p>
+        )}
         <h2
           id="tarieven-heading"
           className="display-md display-md-regular mb-4 text-brown"
