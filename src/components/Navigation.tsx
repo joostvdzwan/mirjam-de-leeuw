@@ -63,170 +63,169 @@ export default function Navigation() {
   }, []);
 
   return (
-    <motion.header
-      className="fixed top-0 left-0 right-0 z-50"
-      animate={{
-        backgroundColor: scrolled
-          ? "rgba(250, 247, 242, 0.9)"
-          : "rgba(250, 247, 242, 0)",
-        backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
-        borderBottomColor: scrolled
-          ? "rgba(59, 50, 41, 0.05)"
-          : "rgba(59, 50, 41, 0)",
-      }}
-      transition={{
-        duration: shouldReduceMotion ? 0.01 : 0.3,
-        ease: ease.gentle,
-      }}
-      style={{ borderBottomWidth: "1px", borderBottomStyle: "solid" }}
-    >
-      <nav
-        className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
-        aria-label="Hoofdnavigatie"
+    <>
+      <motion.header
+        className="fixed top-0 left-0 right-0 z-50"
+        animate={{
+          backgroundColor: scrolled
+            ? "rgba(250, 247, 242, 0.9)"
+            : "rgba(250, 247, 242, 0)",
+          backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
+          borderBottomColor: scrolled
+            ? "rgba(59, 50, 41, 0.05)"
+            : "rgba(59, 50, 41, 0)",
+        }}
+        transition={{
+          duration: shouldReduceMotion ? 0.01 : 0.3,
+          ease: ease.gentle,
+        }}
+        style={{ borderBottomWidth: "1px", borderBottomStyle: "solid" }}
       >
-        <a
-          href="#"
-          className="heading-md heading-md-semibold text-brown hover:text-sage-dark transition-colors"
-          onClick={handleNavClick}
+        <nav
+          className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
+          aria-label="Hoofdnavigatie"
         >
-          Praktijk De Leeuw
-        </a>
-
-        {/* Desktop nav */}
-        <div className="hidden items-center gap-6 lg:flex xl:gap-8">
-          {nav.links.map((link) => {
-            const isActive = activeSection === link.href.replace("#", "");
-            return (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`label-md label-md-medium relative py-1 transition-colors ${
-                  isActive
-                    ? "text-sage-dark"
-                    : "text-brown-muted hover:text-brown"
-                }`}
-                aria-current={isActive ? "true" : undefined}
-              >
-                {link.label}
-                {isActive && (
-                  <motion.span
-                    layoutId="activeNav"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-sage-dark"
-                    transition={{
-                      type: "spring",
-                      stiffness: 300,
-                      damping: 30,
-                    }}
-                  />
-                )}
-              </a>
-            );
-          })}
-          <motion.a
-            href="#contact"
-            className="label-md label-md-medium rounded-full bg-sage-dark px-4 py-2.5 text-white transition-colors hover:bg-sage xl:px-5"
-            whileHover={{ scale: 1.02, boxShadow: "0 4px 16px rgba(94, 107, 82, 0.2)" }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.2, ease: ease.gentle }}
+          <a
+            href="#"
+            className="heading-md heading-md-semibold text-brown hover:text-sage-dark transition-colors"
+            onClick={handleNavClick}
           >
-            {nav.cta}
-          </motion.a>
-        </div>
+            Praktijk De Leeuw
+          </a>
 
-        {/* Mobile hamburger */}
-        <button
-          className="relative z-50 flex h-10 w-10 items-center justify-center lg:hidden"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-expanded={mobileMenuOpen}
-          aria-label={mobileMenuOpen ? "Menu sluiten" : "Menu openen"}
-        >
-          <div className="flex w-6 flex-col gap-1.5">
-            <motion.span
-              className="block h-0.5 w-full bg-brown origin-center"
-              animate={
-                mobileMenuOpen
-                  ? { rotate: 45, y: 8 }
-                  : { rotate: 0, y: 0 }
-              }
-              transition={{ duration: 0.3, ease: ease.gentle }}
-            />
-            <motion.span
-              className="block h-0.5 w-full bg-brown"
-              animate={{ opacity: mobileMenuOpen ? 0 : 1 }}
-              transition={{ duration: 0.2 }}
-            />
-            <motion.span
-              className="block h-0.5 w-full bg-brown origin-center"
-              animate={
-                mobileMenuOpen
-                  ? { rotate: -45, y: -8 }
-                  : { rotate: 0, y: 0 }
-              }
-              transition={{ duration: 0.3, ease: ease.gentle }}
-            />
-          </div>
-        </button>
-
-        {/* Mobile overlay */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              className="fixed inset-0 z-40 bg-cream lg:hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                duration: shouldReduceMotion ? 0.01 : 0.3,
-                ease: ease.gentle,
-              }}
-              aria-hidden={!mobileMenuOpen}
+          {/* Desktop nav */}
+          <div className="hidden items-center gap-6 lg:flex xl:gap-8">
+            {nav.links.map((link) => {
+              const isActive = activeSection === link.href.replace("#", "");
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`label-md label-md-medium relative py-1 transition-colors ${
+                    isActive
+                      ? "text-sage-dark"
+                      : "text-brown-muted hover:text-brown"
+                  }`}
+                  aria-current={isActive ? "true" : undefined}
+                >
+                  {link.label}
+                  {isActive && (
+                    <motion.span
+                      layoutId="activeNav"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-sage-dark"
+                      transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 30,
+                      }}
+                    />
+                  )}
+                </a>
+              );
+            })}
+            <motion.a
+              href="#contact"
+              className="label-md label-md-medium rounded-full bg-sage-dark px-4 py-2.5 text-white transition-colors hover:bg-sage xl:px-5"
+              whileHover={{ scale: 1.02, boxShadow: "0 4px 16px rgba(94, 107, 82, 0.2)" }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ duration: 0.2, ease: ease.gentle }}
             >
-              <motion.div
-                className="flex h-full flex-col items-center justify-center gap-8"
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={{
-                  hidden: {},
-                  visible: {
-                    transition: {
-                      staggerChildren: shouldReduceMotion ? 0 : stagger.relaxed,
-                      delayChildren: shouldReduceMotion ? 0 : 0.15,
-                    },
-                  },
-                }}
+              {nav.cta}
+            </motion.a>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="relative z-50 flex h-10 w-10 items-center justify-center lg:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-label={mobileMenuOpen ? "Menu sluiten" : "Menu openen"}
+          >
+            <div className="flex w-6 flex-col gap-1.5">
+              <motion.span
+                className="block h-0.5 w-full bg-brown origin-center"
+                animate={
+                  mobileMenuOpen
+                    ? { rotate: 45, y: 8 }
+                    : { rotate: 0, y: 0 }
+                }
+                transition={{ duration: 0.3, ease: ease.gentle }}
+              />
+              <motion.span
+                className="block h-0.5 w-full bg-brown"
+                animate={{ opacity: mobileMenuOpen ? 0 : 1 }}
+                transition={{ duration: 0.2 }}
+              />
+              <motion.span
+                className="block h-0.5 w-full bg-brown origin-center"
+                animate={
+                  mobileMenuOpen
+                    ? { rotate: -45, y: -8 }
+                    : { rotate: 0, y: 0 }
+                }
+                transition={{ duration: 0.3, ease: ease.gentle }}
+              />
+            </div>
+          </button>
+        </nav>
+      </motion.header>
+
+      {/* Mobile overlay — outside header to avoid transform breaking fixed positioning */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 bg-white lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              duration: shouldReduceMotion ? 0.01 : 0.3,
+              ease: ease.gentle,
+            }}
+            aria-hidden={!mobileMenuOpen}
+          >
+            <div className="flex items-end justify-end px-6 py-4">
+              <button
+                className="flex h-10 w-10 items-center justify-center"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Menu sluiten"
               >
-                {nav.links.map((link) => (
-                  <motion.a
-                    key={link.href}
-                    href={link.href}
-                    className={`display-sm display-sm-regular transition-colors ${
-                      activeSection === link.href.replace("#", "")
-                        ? "text-sage-dark"
-                        : "text-brown-muted hover:text-brown"
-                    }`}
-                    aria-current={
-                      activeSection === link.href.replace("#", "")
-                        ? "true"
-                        : undefined
-                    }
-                    onClick={handleNavClick}
-                    variants={
-                      shouldReduceMotion
-                        ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
-                        : fadeUp
-                    }
-                    transition={{
-                      duration: shouldReduceMotion ? 0.01 : duration.fast,
-                      ease: ease.enter,
-                    }}
-                  >
-                    {link.label}
-                  </motion.a>
-                ))}
+                <div className="flex w-6 flex-col gap-1.5">
+                  <span className="block h-0.5 w-full bg-brown origin-center rotate-45 translate-y-[4px]" />
+                  <span className="block h-0.5 w-full bg-brown origin-center -rotate-45 -translate-y-[4px]" />
+                </div>
+              </button>
+            </div>
+
+            <motion.div
+              className="flex h-[calc(100%-60px)] flex-col items-center justify-center gap-8"
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={{
+                hidden: {},
+                visible: {
+                  transition: {
+                    staggerChildren: shouldReduceMotion ? 0 : stagger.relaxed,
+                    delayChildren: shouldReduceMotion ? 0 : 0.15,
+                  },
+                },
+              }}
+            >
+              {nav.links.map((link) => (
                 <motion.a
-                  href="#contact"
-                  className="label-md label-md-medium mt-4 rounded-full bg-sage-dark px-8 py-3 text-white transition-colors hover:bg-sage"
+                  key={link.href}
+                  href={link.href}
+                  className={`display-sm display-sm-regular transition-colors ${
+                    activeSection === link.href.replace("#", "")
+                      ? "text-sage-dark"
+                      : "text-brown-muted hover:text-brown"
+                  }`}
+                  aria-current={
+                    activeSection === link.href.replace("#", "")
+                      ? "true"
+                      : undefined
+                  }
                   onClick={handleNavClick}
                   variants={
                     shouldReduceMotion
@@ -238,13 +237,29 @@ export default function Navigation() {
                     ease: ease.enter,
                   }}
                 >
-                  {nav.cta}
+                  {link.label}
                 </motion.a>
-              </motion.div>
+              ))}
+              <motion.a
+                href="#contact"
+                className="label-md label-md-medium mt-4 rounded-full bg-sage-dark px-8 py-3 text-white transition-colors hover:bg-sage"
+                onClick={handleNavClick}
+                variants={
+                  shouldReduceMotion
+                    ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
+                    : fadeUp
+                }
+                transition={{
+                  duration: shouldReduceMotion ? 0.01 : duration.fast,
+                  ease: ease.enter,
+                }}
+              >
+                {nav.cta}
+              </motion.a>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-    </motion.header>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 }
