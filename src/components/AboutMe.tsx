@@ -4,7 +4,7 @@ import MotionFadeIn from "./motion/MotionFadeIn";
 import { StaggerContainer, StaggerItem } from "./motion/MotionStagger";
 import content from "@/content/nl.json";
 import { duration } from "@/lib/motion";
-import mirjamPhoto from "@/assets/mirjam-2.jpg";
+import mirjamPhoto from "@/assets/mirjam-camera-2.jpg";
 
 const { aboutMe } = content;
 

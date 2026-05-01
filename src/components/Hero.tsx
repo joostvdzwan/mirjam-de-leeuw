@@ -4,7 +4,8 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import content from "@/content/nl.json";
 import { ease, duration, stagger, fadeUp, fadeIn } from "@/lib/motion";
-import mirjamHero from "@/assets/mirjam-1.jpg";
+import mirjamHero from "@/assets/mirjam-kind-1.jpg";
+import Logo from "./Logo";
 
 const { hero } = content;
 
@@ -62,6 +63,7 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-dvh items-center bg-cream pt-20">
+
       {/* Background with slow breathe animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -73,6 +75,7 @@ export default function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-32">
+        
         <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
           <div className="max-w-2xl lg:flex-1">
             {/* Subtitle */}
@@ -150,7 +153,7 @@ export default function Hero() {
               </motion.a>
               <motion.a
                 href="#tarieven"
-                className="label-md label-md-medium inline-flex items-center justify-center rounded-full border-2 border-sage-dark px-8 py-3.5 text-sage-dark transition-colors hover:bg-sage-dark hover:text-white"
+                className="label-md label-md-medium inline-flex items-center justify-center rounded-full border-2 border-sage-dark px-8 py-3.5 text-sage-dark transition-colors hover:bg-sage-dark/10"
                 variants={shouldReduceMotion ? { hidden: { opacity: 0 }, visible: { opacity: 1 } } : fadeUp}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -168,7 +171,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            <div className="relative w-56 xl:w-72">
+            <div className="relative w-64 xl:w-80">
               <div className="rounded-4xl border border-sage/75 p-3">
                 <div className="overflow-hidden rounded-3xl">
                   <Image
@@ -180,6 +183,7 @@ export default function Hero() {
                     quality={85}
                     priority
                   />
+                  <Logo className="absolute z-10 w-24 bottom-8 right-8 text-white opacity-100" />
                 </div>
               </div>
             </div>

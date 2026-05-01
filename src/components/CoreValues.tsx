@@ -1,3 +1,11 @@
+import {
+  CheckCircle,
+  HandHeart,
+  Leaf,
+  Lightbulb,
+  TreeStructure,
+} from "@phosphor-icons/react/dist/ssr";
+import type { Icon } from "@phosphor-icons/react";
 import SectionWrapper from "./SectionWrapper";
 import MotionFadeIn from "./motion/MotionFadeIn";
 import { StaggerContainer, StaggerItem } from "./motion/MotionStagger";
@@ -5,46 +13,17 @@ import content from "@/content/nl.json";
 
 const { coreValues } = content;
 
+const valueIcons: Record<string, Icon> = {
+  "Rust & Ruimte": Leaf,
+  Inzicht: Lightbulb,
+  Praktisch: CheckCircle,
+  Systeemgericht: TreeStructure,
+  Verbinding: HandHeart,
+};
+
 function ValueIcon({ title }: { title: string }) {
-  switch (title) {
-    case "Rust & Ruimte":
-      return (
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <path d="M18 4C10.268 4 4 10.268 4 18s6.268 14 14 14 14-6.268 14-14S25.732 4 18 4z" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M12 18h12M18 12v12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        </svg>
-      );
-    case "Inzicht":
-      return (
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <circle cx="18" cy="16" r="8" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M18 24v6M14 32h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-          <circle cx="18" cy="16" r="3" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      );
-    case "Praktisch":
-      return (
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <path d="M8 20l6 6L28 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      );
-    case "Systeemgericht":
-      return (
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <circle cx="18" cy="10" r="4" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="10" cy="26" r="4" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="26" cy="26" r="4" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M18 14v4M14 24l-2-2M22 24l2-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        </svg>
-      );
-    default:
-      return (
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <path d="M18 6C13 6 9 10.5 9 15c0 7 9 15 9 15s9-8 9-15c0-4.5-4-9-9-9z" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="18" cy="15" r="3" stroke="currentColor" strokeWidth="1.5" />
-        </svg>
-      );
-  }
+  const IconComponent = valueIcons[title] ?? HandHeart;
+  return <IconComponent size={36} aria-hidden="true" />;
 }
 
 export default function CoreValues() {

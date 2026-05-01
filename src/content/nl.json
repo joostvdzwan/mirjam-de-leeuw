@@ -1,5 +1,5 @@
 {
-  "siteTitle": "Praktijk De Leeuw — Coaching & Gezinsbegeleiding in Leiden",
+  "siteTitle": "Coachingpraktijk De Leeuw — Coaching & Gezinsbegeleiding in Leiden",
   "siteDescription": "Wandelcoaching en online coaching in Leiden. Praktische begeleiding voor jongeren, ouders en volwassenen. Kosteloos kennismakingsgesprek.",
   "nav": {
     "links": [
@@ -13,10 +13,10 @@
     "cta": "Plan een kennismakingsgesprek"
   },
   "hero": {
-    "title": "Praktijk De Leeuw",
+    "title": "Coachingpraktijk De Leeuw",
     "subtitle": "Coaching & Gezinsbegeleiding",
     "tagline": "Meer rust in je hoofd. Meer overzicht in wat er speelt.",
-    "intro": "Voor jongeren, ouders en volwassenen die vastlopen in terugkerende situaties, twijfels of onrust. Samen kijken we met een onafhankelijke blik naar wat er speelt en wat kan helpen om weer verder te kunnen.",
+    "intro": "Voor jongeren, ouders en volwassenen die vastlopen in terugkerende situaties, vol twijfels zitten of onrust ervaren. Samen kijken we met een frisse blik naar wat er speelt en wat kan helpen om weer vooruit te komen.",
     "ctaPrimary": "Plan een kennismakingsgesprek",
     "ctaSecondary": "Lees meer over de werkwijze",
     "imageAlt": "Wandelpad door de natuur — rustgevend groen landschap"
@@ -25,39 +25,38 @@
     "sectionLabel": "Over de praktijk",
     "heading": "Over de praktijk",
     "paragraphs": [
-      "Ruimte om stil te staan bij wat er speelt. We kijken naar gedrag, onderliggende factoren en de omgeving (gezin, werk/school, vrienden/familie). Gericht op inzicht en overzicht."
+      "Ruimte om even stil te staan bij wat er speelt. We kijken naar gedrag, onderliggende factoren en de bredere omgeving — gezin, werk of school, vrienden en familie. Altijd gericht op inzicht en overzicht."
     ],
     "formats": {
       "heading": "Coaching op jouw manier",
       "items": [
         {
           "title": "Wandelcoaching",
-          "description": "Buiten, in beweging, in de natuur. Wandelen opent gesprekken op een natuurlijke, ontspannen manier."
+          "description": "Buiten, in beweging, in de natuur. Wandelen opent gesprekken op een ontspannen, natuurlijke manier."
         },
         {
           "title": "Online coaching",
-          "description": "Flexibel en vanuit huis. Ideaal als je liever in je eigen vertrouwde omgeving werkt, of voor avondmomenten."
+          "description": "Flexibel en vanuit huis. Ideaal voor avondmomenten of als je liever in je eigen vertrouwde omgeving werkt."
         }
       ]
     },
     "disclaimer": {
       "heading": "Goed om te weten",
-      "text": "Voor situaties waarin behoefte is aan meedenken, reflectie en praktische handvatten. Bij ernstige klachten of acute problematiek is een GGZ traject passender – ik denk daarin graag mee."
+      "text": "Bij ernstige klachten of acute problematiek past een GGZ-traject beter. Daarin denk ik graag met je mee."
     }
   },
   "aboutMe": {
     "sectionLabel": "Over mij",
     "heading": "Mirjam de Leeuw",
     "paragraphs": [
-      "Ik ben kinder- en jeugdpsycholoog en werk naast deze praktijk als gedragswetenschapper bij Stichting Jeugdteams Leidse Regio. Hiervoor heb ik een aantal jaren in de specialistische jeugd-GGZ gewerkt, waar ik ervaring opdeed met diagnostiek en behandeling van kinderen, jongeren en gezinnen met uiteenlopende (en vaak complexe) hulpvragen.",
-      "In de afgelopen jaren zie ik van dichtbij hoe de zorg vaak ingericht is: gericht op diagnoses, trajecten en dat er steeds langere wachtlijsten zijn. Terwijl veel mensen juist geholpen zijn met op tijd stilstaan, overzicht krijgen en iemand die met hen meedenkt.",
-      "Die ervaring is voor mij de reden geweest om mijn eigen praktijk te starten. Een plek waar het niet draait om labels, maar om wat er op dat moment speelt en wat iemand nodig heeft.",
-      "In mijn begeleiding kijk ik verder dan het gedrag alleen. Gedrag is voor mij een ingang: een signaal van iets. Door samen te onderzoeken wat eronder ligt en welke patronen een rol spelen, ontstaat er ruimte voor inzicht en verandering.",
-      "Naast mijn werk ben ik moeder van twee jonge kinderen. Juist daarin ervaar ik hoe ingewikkeld het soms kan zijn: hoe snel je kan worden geraakt, hoe patronen doorwerken vanuit je eigen jeugd en hoe lastig het soms kan zijn om patronen te doorbreken. Die ervaring maakt dat ik niet alleen vanuit kennis werk, maar ook vanuit herkenning. Ik weet hoe het is als het even niet loopt – en hoe helpend het kan zijn als iemand met je meekijkt zonder oordeel.",
-      "Mijn manier van werken is laagdrempelig, betrokken en praktisch. Geen standaard trajecten, maar samen kijken naar wat helpt – zodat je weer verder kunt op een manier die bij je past."
+      "Ik ben kinder- en jeugdpsycholoog en werk naast deze praktijk als gedragswetenschapper bij Stichting Jeugdteams Leidse Regio. Daarvoor heb ik een aantal jaar in de specialistische jeugd-GGZ gewerkt, waar ik ervaring opdeed met diagnostiek en behandeling van kinderen, jongeren en gezinnen met uiteenlopende — en vaak complexe — hulpvragen.",
+      "In die jaren zag ik van dichtbij hoe de zorg vaak is ingericht: gericht op diagnoses en trajecten, met steeds langere wachtlijsten als gevolg. Terwijl veel mensen juist geholpen zijn met op tijd stilstaan, overzicht krijgen en iemand die met hen meedenkt.",
+      "Die ervaring bracht mij ertoe mijn eigen praktijk te starten. Een plek waar het niet draait om labels, maar om wat er op dat moment speelt en wat iemand nodig heeft.",
+      "In mijn begeleiding kijk ik verder dan gedrag alleen. Gedrag is voor mij een ingang — een signaal van iets wat eronder ligt. Door samen te onderzoeken welke patronen een rol spelen, ontstaat er ruimte voor inzicht en verandering.",
+      "Naast mijn werk ben ik moeder van twee jonge kinderen. Dat maakt me ervan bewust hoe normaal het is om het soms even niet te weten, geraakt te worden of vast te lopen. Het hoort bij het leven — en bij het ouderschap. Die herkenning neem ik mee in mijn werk. Ik weet hoe helpend het kan zijn als iemand met je meekijkt zonder oordeel.",
+      "Mijn manier van werken is laagdrempelig, betrokken en praktisch. Geen standaardtrajecten, maar samen kijken naar wat helpt — zodat je verder kunt op een manier die bij jou past."
     ],
     "credentials": [
-      "Kinder- en jeugdpsycholoog",
       "SKJ geregistreerd – 130005177"
     ],
     "quote": "Gedrag is vaak een signaal van wat iemand nodig heeft.",
@@ -66,29 +65,29 @@
   "forWhom": {
     "sectionLabel": "Voor wie",
     "heading": "Voor jongeren, ouders en volwassenen",
-    "intro": "Voor jongeren (16+), ouders en volwassenen die vastlopen of behoefte hebben aan een onafhankelijke blik en praktisch meedenken.",
+    "intro": "",
     "groups": [
       {
         "title": "Jongeren (16+)",
-        "description": "Moeite met overprikkeling, zelfbeeld, schooldruk of het organiseren van je dag? Je hoeft niet alles alleen uit te zoeken. Samen kijken we naar wat jou helpt om meer grip te krijgen.",
+        "description": "Last van overprikkeling, twijfels over jezelf, schooldruk of moeite met dagstructuur? Je hoeft het niet alleen uit te zoeken. Samen kijken we naar wat jou helpt om meer grip te krijgen.",
         "iconLabel": "Jongeren"
       },
       {
         "title": "Ouders & gezinnen",
-        "description": "Opvoedvragen, gezinsdynamiek of overprikkeling binnen het gezin? Soms helpt het om met iemand van buitenaf te kijken naar patronen en samen te zoeken naar wat wél werkt.",
+        "description": "Opvoedvragen, gezinsdynamiek of overprikkeling binnen het gezin? Soms helpt een blik van buitenaf om patronen te herkennen en samen te zoeken naar wat wél werkt.",
         "iconLabel": "Gezin"
       },
       {
         "title": "Volwassenen",
-        "description": "Vastgelopen in een levensfase, stress of vroege burn-outklachten? Last van beperkende overtuigingen of terugkerende patronen? Coaching biedt ruimte om stil te staan en weer in beweging te komen.",
+        "description": "Vastgelopen in een levensfase, last van stress of vroege burn-outklachten? Beperkende overtuigingen of terugkerende patronen die je remmen? Coaching biedt ruimte om stil te staan en weer in beweging te komen.",
         "iconLabel": "Volwassenen"
       }
     ]
   },
   "commonQuestions": {
     "sectionLabel": "Bijvoorbeeld bij",
-    "heading": "Bijvoorbeeld bij",
-    "intro": "Je hoeft geen duidelijke hulpvraag te hebben. Vaak begint het met een gevoel dat iets niet lekker loopt. Herken je iets in deze thema's?",
+    "heading": "Herken je iets in deze thema's?",
+    "intro": "Je hoeft geen duidelijke hulpvraag te hebben. Vaak begint het met een gevoel dat iets niet lekker loopt.",
     "items": [
       "Terugkerende situaties thuis of in relaties",
       "Vragen over gedrag of ontwikkeling",
@@ -105,19 +104,19 @@
       {
         "number": 1,
         "title": "Kennismaking",
-        "description": "Telefonisch, 20–30 minuten, kosteloos."
+        "description": "Telefonisch, 20 à 30 minuten, kosteloos."
       },
       {
         "number": 2,
         "title": "Vervolggesprekken",
-        "description": "Online of wandelend. Wandelgesprekken brengen je letterlijk in beweging en helpen vaak om gedachten makkelijker op gang te brengen en situaties op een andere manier te bekijken."
+        "description": "Online of wandelend. Wandelgesprekken brengen je letterlijk in beweging en helpen om gedachten makkelijker op gang te laten komen en situaties vanuit een ander perspectief te bekijken."
       }
     ]
   },
   "pricing": {
     "sectionLabel": "Tarieven",
     "heading": "Tarieven",
-    "intro": "Particulier (geen vergoeding via zorgverzekering).",
+    "intro": "Particulier — geen vergoeding via zorgverzekering.",
     "cards": [
       {
         "title": "Wandelgesprek",
@@ -143,8 +142,8 @@
     "bundles": {
       "heading": "Bundels",
       "items": [
-        { "title": "5 wandelgesprekken van 60–90 minuten", "price": "€600" },
-        { "title": "5 online gesprekken van 60 minuten", "price": "€525" }
+        { "title": "5 wandelgesprekken", "price": "€600" },
+        { "title": "5 online gesprekken", "price": "€525" }
       ]
     },
     "note": "Na het gesprek ontvang je een factuur."
@@ -164,11 +163,11 @@
     "values": [
       {
         "title": "Rust & Ruimte",
-        "description": "Ik creëer een rustige, veilige sfeer waarin je jezelf kunt zijn."
+        "description": "Een veilige, rustige sfeer waarin je jezelf kunt zijn."
       },
       {
         "title": "Inzicht",
-        "description": "Samen ontdekken we wat er onder het gedrag of gevoel zit."
+        "description": "Samen ontdekken wat er achter gedrag of gevoel zit."
       },
       {
         "title": "Praktisch",
@@ -176,7 +175,7 @@
       },
       {
         "title": "Systeemgericht",
-        "description": "Ik kijk niet alleen naar jou, maar naar je hele context — gezin, relaties, omgeving."
+        "description": "Ik kijk niet alleen naar jou, maar naar je hele context: gezin, relaties en omgeving."
       },
       {
         "title": "Verbinding",
@@ -192,7 +191,7 @@
     "email": "mirjam@deleeuw.nl",
     "phone": "Volgt binnenkort",
     "formats": "Online of wandelend — in en rondom Leiden",
-    "kennismaking": "Telefonische kennismaking · kosteloos · zonder verplichtingen",
+    "kennismaking": "Telefonische kennismaking: kosteloos, zonder verplichtingen",
     "cta": "Plan een kennismakingsgesprek",
     "closingQuote": "Je hoeft het niet alleen uit te zoeken.",
     "form": {
@@ -206,11 +205,11 @@
     }
   },
   "footer": {
-    "practiceName": "Praktijk De Leeuw",
+    "practiceName": "Coachingpraktijk De Leeuw",
     "tagline": "Coaching & Gezinsbegeleiding",
     "location": "Leiden en omgeving",
     "email": "mirjam@deleeuw.nl",
-    "disclaimer": "Praktijk De Leeuw biedt coaching en geen diagnostiek, behandeling of crisisinterventie.",
-    "copyright": "© {year} Praktijk De Leeuw. Alle rechten voorbehouden."
+    "disclaimer": "Coachingpraktijk De Leeuw biedt coaching en geen diagnostiek, behandeling of crisisinterventie.",
+    "copyright": "© {year} Coachingpraktijk De Leeuw. Alle rechten voorbehouden."
   }
 }

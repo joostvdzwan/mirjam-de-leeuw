@@ -1,4 +1,6 @@
+import Link from "next/link";
 import content from "@/content/nl.json";
+import Logo from "./Logo";
 
 const { footer } = content;
 
@@ -9,13 +11,17 @@ export default function Footer() {
     <footer className="border-t border-brown/5 bg-cream py-12">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
-          <div>
-            <p className="heading-md heading-md-medium text-brown">
-              {footer.practiceName}
-            </p>
-            <p className="body-sm body-sm-regular text-brown-muted">
-              {footer.tagline} — {footer.location}
-            </p>
+          <div className="flex items-center gap-7">
+            <Logo className="w-40 text-sage" />
+            <div>
+
+              <p className="heading-md heading-md-medium text-brown">
+                {footer.practiceName}
+              </p>
+              <p className="body-sm body-sm-regular text-brown-muted">
+                {footer.tagline} — {footer.location}
+              </p>
+            </div>
           </div>
           <a
             href={`mailto:${footer.email}`}
@@ -31,9 +37,20 @@ export default function Footer() {
           <p className="body-xs body-xs-regular text-brown-muted">
             {footer.disclaimer}
           </p>
-          <p className="body-xs body-xs-regular text-brown-muted">
-            {footer.copyright.replace("{year}", String(year))}
-          </p>
+          <div className="flex flex-col items-center gap-2 md:flex-row md:gap-4">
+            <Link
+              href="/privacy"
+              className="body-xs body-xs-regular text-brown-muted hover:text-sage-dark transition-colors"
+            >
+              Privacyverklaring
+            </Link>
+            <span className="hidden text-brown-muted md:inline" aria-hidden="true">
+              ·
+            </span>
+            <p className="body-xs body-xs-regular text-brown-muted">
+              {footer.copyright.replace("{year}", String(year))}
+            </p>
+          </div>
         </div>
       </div>
     </footer>

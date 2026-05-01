@@ -90,7 +90,7 @@ export default function Navigation() {
             className="heading-md heading-md-semibold text-brown hover:text-sage-dark transition-colors"
             onClick={handleNavClick}
           >
-            Praktijk De Leeuw
+            Coachingpraktijk De Leeuw
           </a>
 
           {/* Desktop nav */}

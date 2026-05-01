@@ -51,11 +51,11 @@ export default function AboutPractice() {
       </MotionFadeIn>
 
       <MotionFadeIn variant="fadeIn" delay={0.1}>
-        <div className="rounded-2xl border border-blush/30 bg-cream p-5 md:p-8 max-w-3xl">
-          <h3 className="heading-md heading-md-medium mb-3 text-brown">
-            {aboutPractice.disclaimer.heading}
-          </h3>
+        <div className="max-w-3xl border-l-2 border-sage/40 pl-5 py-1">
           <p className="body-md body-md-regular text-brown-muted">
+            <span className="body-md-medium text-brown">
+              {aboutPractice.disclaimer.heading}
+            </span>{" "}
             {aboutPractice.disclaimer.text}
           </p>
         </div>

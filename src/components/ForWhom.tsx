@@ -1,3 +1,9 @@
+import {
+  PersonSimpleWalk,
+  Student,
+  UsersThree,
+} from "@phosphor-icons/react/dist/ssr";
+import type { Icon } from "@phosphor-icons/react";
 import SectionWrapper from "./SectionWrapper";
 import MotionFadeIn from "./motion/MotionFadeIn";
 import { StaggerContainer, StaggerItem } from "./motion/MotionStagger";
@@ -6,32 +12,15 @@ import content from "@/content/nl.json";
 
 const { forWhom } = content;
 
+const groupIcons: Record<string, Icon> = {
+  Jongeren: Student,
+  Gezin: UsersThree,
+  Volwassenen: PersonSimpleWalk,
+};
+
 function GroupIcon({ label }: { label: string }) {
-  if (label === "Jongeren") {
-    return (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <circle cx="20" cy="14" r="6" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M10 34c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    );
-  }
-  if (label === "Gezin") {
-    return (
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <circle cx="14" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.5" />
-        <circle cx="26" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M6 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        <path d="M18 32c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      </svg>
-    );
-  }
-  return (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <circle cx="20" cy="14" r="6" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M8 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M28 10l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+  const IconComponent = groupIcons[label] ?? PersonSimpleWalk;
+  return <IconComponent size={40} aria-hidden="true" />;
 }
 
 export default function ForWhom() {
