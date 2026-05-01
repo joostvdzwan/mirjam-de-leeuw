@@ -198,7 +198,7 @@ export default function Navigation() {
               </button>
             </div>
             <motion.div
-              className="flex h-[calc(100%-60px)] flex-col items-center justify-center gap-8"
+              className="flex h-[calc(100%-60px)] flex-col items-center justify-center gap-8 -mt-20"
               initial="hidden"
               animate="visible"
               exit="hidden"
