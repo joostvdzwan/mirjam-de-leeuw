@@ -11,21 +11,20 @@ export default function Footer() {
     <footer className="border-t border-brown/5 bg-cream py-12">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
-          <div className="flex items-center gap-7">
+          <div className="flex items-center max-md:flex-col max-md:items-center gap-8 max-md:gap-6">
             <Logo className="w-40 text-sage" />
-            <div>
-
+            <div className="max-md:text-center">
               <p className="heading-md heading-md-medium text-brown">
                 {footer.practiceName}
               </p>
-              <p className="body-sm body-sm-regular text-brown-muted">
+              <p className="body-sm body-sm-regular text-brown-muted max-md:mt-2">
                 {footer.tagline} — {footer.location}
               </p>
             </div>
           </div>
           <a
             href={`mailto:${footer.email}`}
-            className="body-sm body-sm-medium text-sage-dark hover:text-sage transition-colors"
+            className="body-sm body-sm-medium text-sage-dark hover:text-sage transition-colors max-md:mt-8"
           >
             {footer.email}
           </a>

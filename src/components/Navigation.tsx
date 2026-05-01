@@ -3,8 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import content from "@/content/nl.json";
-import { ease, duration, stagger, fadeUp } from "@/lib/motion";
-
+import { ease, duration, stagger, fadeUp } from "@/lib/motion";     
 const { nav } = content;
 
 const sectionIds = nav.links.map((link) => link.href.replace("#", ""));
@@ -101,11 +100,10 @@ export default function Navigation() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`label-md label-md-medium relative py-1 transition-colors ${
-                    isActive
+                  className={`label-md label-md-medium relative py-1 transition-colors ${isActive
                       ? "text-sage-dark"
                       : "text-brown-muted hover:text-brown"
-                  }`}
+                    }`}
                   aria-current={isActive ? "true" : undefined}
                 >
                   {link.label}
@@ -184,7 +182,10 @@ export default function Navigation() {
             }}
             aria-hidden={!mobileMenuOpen}
           >
-            <div className="flex items-end justify-end px-6 py-4">
+            <div className="flex items-center justify-between px-6 py-4">
+              <span className="heading-md heading-md-semibold text-brown">
+                Coachingpraktijk De Leeuw
+              </span>
               <button
                 className="flex h-10 w-10 items-center justify-center"
                 onClick={() => setMobileMenuOpen(false)}
@@ -196,7 +197,6 @@ export default function Navigation() {
                 </div>
               </button>
             </div>
-
             <motion.div
               className="flex h-[calc(100%-60px)] flex-col items-center justify-center gap-8"
               initial="hidden"
@@ -216,11 +216,10 @@ export default function Navigation() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  className={`display-sm display-sm-regular transition-colors ${
-                    activeSection === link.href.replace("#", "")
+                  className={`display-sm display-sm-regular transition-colors ${activeSection === link.href.replace("#", "")
                       ? "text-sage-dark"
                       : "text-brown-muted hover:text-brown"
-                  }`}
+                    }`}
                   aria-current={
                     activeSection === link.href.replace("#", "")
                       ? "true"
