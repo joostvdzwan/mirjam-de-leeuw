@@ -50,7 +50,7 @@ export default function Contact() {
                   {contact.email}
                 </a>
               </div>
-              {"phone" in contact && (
+              {"phone" in contact && (contact as { phone: string }).phone && (
                 <div className="flex items-start gap-3">
                   <Phone
                     size={20}

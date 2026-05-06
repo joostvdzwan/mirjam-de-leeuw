@@ -3,6 +3,8 @@ import { Lora, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import content from "@/content/nl.json";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -135,7 +137,9 @@ export default function RootLayout({
         <a href="#main-content" className="skip-to-content">
           Ga naar inhoud
         </a>
+        <Navigation />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

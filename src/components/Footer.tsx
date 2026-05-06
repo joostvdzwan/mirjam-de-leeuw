@@ -32,7 +32,7 @@ export default function Footer() {
 
         <hr className="my-8 border-brown/5" />
 
-        <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left">
+        <div className="space-y-4 text-center md:text-left">
           <p className="body-xs body-xs-regular text-brown-muted">
             {footer.disclaimer}
           </p>
@@ -42,6 +42,15 @@ export default function Footer() {
               className="body-xs body-xs-regular text-brown-muted hover:text-sage-dark transition-colors"
             >
               Privacyverklaring
+            </Link>
+            <span className="hidden text-brown-muted md:inline" aria-hidden="true">
+              ·
+            </span>
+            <Link
+              href="/algemene-voorwaarden"
+              className="body-xs body-xs-regular text-brown-muted hover:text-sage-dark transition-colors"
+            >
+              Algemene voorwaarden
             </Link>
             <span className="hidden text-brown-muted md:inline" aria-hidden="true">
               ·

@@ -49,7 +49,7 @@ export default function ForWhom() {
       >
         {forWhom.groups.map((group) => (
           <StaggerItem key={group.title} variant="scaleIn">
-            <div className="rounded-2xl border border-brown/5 bg-cream p-5 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div className="h-full rounded-2xl border border-brown/5 bg-cream p-5 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="mb-5 text-sage">
                 <GroupIcon label={group.iconLabel} />
               </div>
