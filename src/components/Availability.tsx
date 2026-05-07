@@ -35,7 +35,7 @@ export default function Availability() {
                     {slot.time}
                   </p>
                 </div>
-                <span className="label-sm label-sm-medium rounded-full bg-sage/10 px-4 py-1.5 text-sage-dark">
+                <span className="label-sm label-sm-medium ml-auto rounded-full bg-sage/10 px-4 py-1.5 text-sage-dark">
                   {slot.format}
                 </span>
               </div>

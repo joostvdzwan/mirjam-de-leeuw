@@ -42,7 +42,7 @@
     },
     "disclaimer": {
       "heading": "Goed om te weten",
-      "text": "Bij ernstige klachten of acute problematiek past een GGZ-traject beter. Daarin denk ik graag met je mee."
+      "text": "Bij ernstige klachten of acute problematiek is mijn praktijk niet de juiste plek. In dat geval past een traject binnen de GGZ beter. Ik denk graag met je mee over welke vorm van hulp dan passend kan zijn."
     }
   },
   "aboutMe": {
@@ -69,17 +69,17 @@
     "groups": [
       {
         "title": "Jongeren (16+)",
-        "description": "Last van overprikkeling, twijfels over jezelf, school-/studiedruk of moeite met dagstructuur? Je hoeft het niet alleen uit te zoeken. Samen kijken we naar wat jou helpt om meer grip te krijgen.",
+        "description": "Last van overprikkeling, twijfels over jezelf, loop je vast op school/studie/werk of heb je moeite met dagstructuur? Je hoeft het niet alleen uit te zoeken. Samen kijken we naar wat jou helpt om meer grip te krijgen.",
         "iconLabel": "Jongeren"
       },
       {
         "title": "Ouders & gezinnen",
-        "description": "Opvoedvragen, vragen over gezinsdynamiek of speelt er overprikkeling binnen het gezin?\n\nSoms helpt een blik van buitenaf om patronen te herkennen en samen te zoeken naar wat wél werkt.",
+        "description": "Opvoedvragen, terugkerende gezinspatronen of vragen over gezinsdynamiek. Soms helpt een blik van buitenaf om patronen te herkennen en samen te zoeken naar wat wél werkt.",
         "iconLabel": "Gezin"
       },
       {
         "title": "Volwassenen",
-        "description": "Vastgelopen in een levensfase, last van stress of vroege burn-out klachten? Zijn er beperkende overtuigingen of terugkerende patronen die je remmen? Coaching biedt ruimte om stil te staan en weer in beweging te komen.",
+        "description": "Vastgelopen in een levensfase, last van stress, vroege burn-out klachten of heb je last van beperkende overtuigingen of terugkerende patronen die je remmen? Coaching biedt ruimte om stil te staan en weer in beweging te komen.",
         "iconLabel": "Volwassenen"
       }
     ]
