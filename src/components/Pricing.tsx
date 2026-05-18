@@ -27,7 +27,7 @@ export default function Pricing() {
         )}
       </MotionFadeIn>
 
-      <StaggerContainer className="mx-auto grid max-w-3xl gap-8 md:grid-cols-2">
+      <StaggerContainer className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
         {pricing.cards.map((card) => (
           <StaggerItem key={card.title} className="h-full">
             <div
@@ -75,11 +75,16 @@ export default function Pricing() {
       </StaggerContainer>
 
       {/* Bundles */}
-      <MotionFadeIn className="mx-auto mt-12 max-w-3xl" variant="fadeIn">
-        <h3 className="heading-md heading-md-medium mb-6 text-center text-brown">
+      <MotionFadeIn className="mx-auto mt-12 max-w-5xl" variant="fadeIn">
+        <h3 className="heading-md heading-md-medium mb-2 text-center text-brown">
           {pricing.bundles.heading}
         </h3>
-        <div className="grid gap-4 sm:grid-cols-2">
+        {"subheading" in pricing.bundles && (
+          <p className="body-sm body-sm-regular mb-6 text-center text-brown-muted">
+            {(pricing.bundles as { subheading: string }).subheading}
+          </p>
+        )}
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {pricing.bundles.items.map((bundle) => (
             <div
               key={bundle.title}

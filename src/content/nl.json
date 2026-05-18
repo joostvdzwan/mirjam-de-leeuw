@@ -16,7 +16,7 @@
     "title": "Coachingpraktijk De Leeuw",
     "subtitle": "Coaching & Gezinsbegeleiding",
     "tagline": "Meer rust in je hoofd. Meer overzicht in wat er speelt.",
-    "intro": "Voor jongeren, ouders en volwassenen die vastlopen in terugkerende situaties, die vol twijfels zitten of onrust ervaren. Samen kijken we met een frisse blik naar wat er speelt en wat kan helpen om weer vooruit te komen.",
+    "intro": "Loop je vast, pieker je veel of merk je dat je steeds in hetzelfde terechtkomt? Samen kijken we met een frisse blik naar wat er speelt — en wat jou helpt om weer verder te komen. Voor jongeren, ouders en volwassenen.",
     "ctaPrimary": "Plan een kennismakingsgesprek",
     "ctaSecondary": "Lees meer over de werkwijze",
     "imageAlt": "Wandelpad door de natuur — rustgevend groen landschap"
@@ -25,36 +25,46 @@
     "sectionLabel": "Over de praktijk",
     "heading": "Over de praktijk",
     "paragraphs": [
-      "Ruimte om even stil te staan. We kijken naar gedrag, onderliggende factoren en de omgeving — gezin, school/studie/werk, vrienden en familie. Altijd gericht op inzicht en overzicht."
+      "Ruimte om even stil te staan. We kijken naar wat er speelt, naar gedrag en naar wat daaronder ligt. Ook de invloed van je omgeving nemen we mee — zoals gezin, school, werk en relaties. Het doel is om meer inzicht en overzicht te krijgen, zodat je weer verder kunt."
     ],
     "formats": {
       "heading": "Coaching op jouw manier",
       "items": [
         {
+          "title": "PSYCH-K®",
+          "label": "Mijn aanpak",
+          "description": "Soms weet je precies wat je anders wilt, maar blijf je toch in hetzelfde patroon terechtkomen. Met PSYCH-K® werk je aan overtuigingen die je tegenhouden, op een diepere laag. We werken met een thema dat voor jou belangrijk is, zoals rust, zelfvertrouwen of grenzen. Jij bepaalt de richting, ik begeleid het proces.",
+          "logo": "/logo.svg",
+          "logoAlt": "",
+          "forYou": "Je merkt dat patronen blijven terugkomen, ook als je weet wat je anders wilt."
+        },
+        {
           "title": "Wandelcoaching",
-          "description": "Buiten, in beweging, in de natuur. Wandelen opent gesprekken op een ontspannen, natuurlijke manier."
+          "description": "Buiten zijn en in beweging helpt om ruimte te krijgen in je hoofd. Gesprekken ontstaan vaak vanzelf in een rustig tempo.",
+          "forYou": "Je denkt beter in beweging en de buitenlucht helpt je hoofd opklaren."
         },
         {
           "title": "Online coaching",
-          "description": "Flexibel en vanuit huis. Ideaal voor avondmomenten of als je liever in je eigen vertrouwde omgeving aan de slag gaat."
+          "description": "Een flexibel alternatief, vanuit je eigen omgeving. Fijn als je liever thuis bent of in de avond wilt afspreken.",
+          "forYou": "Reizen komt niet uit of de avond past beter."
         }
       ]
     },
     "disclaimer": {
-      "heading": "Goed om te weten",
-      "text": "Bij ernstige klachten of acute problematiek is mijn praktijk niet de juiste plek. In dat geval past een traject binnen de GGZ beter. Ik denk graag met je mee over welke vorm van hulp dan passend kan zijn."
+      "heading": "Belangrijk om te weten",
+      "text": "Ik bied coaching, geen diagnostiek of behandeling binnen de GGZ. Bij ernstige klachten of crisis denk ik met je mee over passende hulp."
     }
   },
   "aboutMe": {
     "sectionLabel": "Over mij",
     "heading": "Mirjam de Leeuw",
     "paragraphs": [
-      "Ik ben kinder- en jeugdpsycholoog en werk naast deze praktijk als gedragswetenschapper bij Stichting Jeugdteams Leidse Regio. Daarvoor heb ik een aantal jaar in de specialistische jeugd-GGZ gewerkt, waar ik ervaring opdeed met diagnostiek en behandeling van kinderen, jongeren en gezinnen met uiteenlopende — en vaak complexe — hulpvragen.",
-      "In die jaren zag ik van dichtbij hoe de zorg vaak is ingericht: gericht op diagnoses en trajecten, met steeds langere wachtlijsten als gevolg. Terwijl veel mensen juist geholpen zijn met op tijd stilstaan, overzicht krijgen en iemand die met hen meedenkt.",
-      "Die ervaring bracht mij ertoe mijn eigen praktijk te starten. Een plek waar het niet draait om labels, maar om wat er op dat moment speelt en wat iemand nodig heeft.",
-      "In mijn begeleiding kijk ik verder dan gedrag alleen. Gedrag is voor mij een ingang — een signaal van iets wat eronder ligt. Door samen te onderzoeken welke patronen een rol spelen, ontstaat er ruimte voor inzicht en verandering.",
-      "Naast mijn werk ben ik moeder van twee jonge kinderen. Dat maakt me ervan bewust hoe normaal het is om het soms even niet te weten, geraakt te worden of vast te lopen. Het hoort bij het leven — en bij het ouderschap. Die herkenning neem ik mee in mijn werk. Ik weet hoe helpend het kan zijn als iemand met je meekijkt zonder oordeel.",
-      "Mijn manier van werken is laagdrempelig, betrokken en praktisch. Geen standaardtrajecten, maar samen kijken naar wat helpt — zodat je verder kunt op een manier die bij jou past."
+      "Ik ben psycholoog en heb de master kinder- en jeugdpsychologie gevolgd. Daarna heb ik 6,5 jaar in de jeugd-GGZ gewerkt, waar ik ervaring heb opgedaan met intakes, diagnostiek en behandeling van kinderen, jongeren en gezinnen met uiteenlopende hulpvragen.",
+      "Op dit moment werk ik als gedragswetenschapper binnen het Jeugdteam. Daar denk ik inhoudelijk mee met mijn team over casuïstiek, ben ik betrokken bij (basis)diagnostiek en behandeling en draag ik bij aan de ontwikkeling van beleid en methodiek. In de afgelopen jaren heb ik veel ervaring opgebouwd in het werken met complexe hulpvragen en verschillende systemen rondom gezinnen.",
+      "Tegelijkertijd merkte ik — zowel in de GGZ als in mijn huidige werk — dat het zorgsysteem vaak is ingericht op classificaties en lange trajecten. De werkdruk is hoog en wachtlijsten lopen op, terwijl veel mensen juist geholpen zijn met eerder stilstaan, overzicht krijgen en praktische handvatten.",
+      "De wens om een eigen praktijk te starten was er al langer. In PSYCH-K® kwam voor mij veel samen van waar ik in geloof: werken op een diepere laag, maar wel praktisch en zonder dat het zwaar hoeft te worden. Dat maakte dat ik, naast mijn huidige baan, mijn eigen praktijk ben gestart.",
+      "In mijn werk kijk ik verder dan gedrag alleen. We onderzoeken samen patronen, overtuigingen en automatische reacties, en wat jou helpt om weer meer rust en richting te ervaren. Ik werk laagdrempelig, betrokken en praktisch — geen standaardtraject, maar afgestemd op wat jij nodig hebt.",
+      "Naast mijn werk ben ik moeder van twee jonge kinderen. Dat helpt me relativeren: vastlopen hoort bij het leven. Je hoeft het alleen niet alleen te doen."
     ],
     "credentials": [
       "SKJ geregistreerd – 130005177"
@@ -65,7 +75,7 @@
   "forWhom": {
     "sectionLabel": "Voor wie",
     "heading": "Voor jongeren, ouders en volwassenen",
-    "intro": "",
+    "intro": "Je hoeft geen duidelijke hulpvraag te hebben. Vaak begint het met het gevoel dat iets niet klopt.",
     "groups": [
       {
         "title": "Jongeren (16+)",
@@ -87,7 +97,7 @@
   "commonQuestions": {
     "sectionLabel": "Thema's",
     "heading": "Herken je iets in deze thema's?",
-    "intro": "Je hoeft geen duidelijke hulpvraag te hebben. Vaak begint het met een gevoel dat iets niet lekker loopt.",
+    "intro": "Misschien herken je iets in de onderwerpen die vaak terugkomen in gesprekken.",
     "items": [
       "Terugkerende situaties thuis of in relaties",
       "Vragen over gedrag of ontwikkeling",
@@ -104,12 +114,12 @@
       {
         "number": 1,
         "title": "Kennismaking",
-        "description": "Telefonisch, 20 à 30 minuten, kosteloos."
+        "description": "Telefonisch, 20 à 30 minuten, kosteloos en vrijblijvend. We kijken samen naar je vraag en of coaching passend is."
       },
       {
         "number": 2,
         "title": "Vervolggesprekken",
-        "description": "Online of wandelend. Wandelgesprekken brengen je letterlijk in beweging en helpen om gedachten makkelijker op gang te laten komen en situaties vanuit een ander perspectief te bekijken."
+        "description": "Online of wandelend. Er is geen vast traject; we stemmen samen af wat helpend is en plannen gesprekken die aansluiten bij wat jij nodig hebt."
       }
     ]
   },
@@ -119,7 +129,7 @@
     "intro": "Particulier — geen vergoeding via zorgverzekering.",
     "cards": [
       {
-        "title": "Wandelgesprek",
+        "title": "Wandelcoaching",
         "subtitle": "60–90 minuten",
         "price": "€125",
         "unit": "per sessie",
@@ -129,24 +139,36 @@
         "cta": "Plan een wandelgesprek"
       },
       {
+        "title": "PSYCH-K®",
+        "subtitle": "60–90 minuten",
+        "price": "€125",
+        "unit": "per sessie",
+        "description": "Werken aan overtuigingen die je tegenhouden, op een diepere laag. Jij bepaalt het thema, ik begeleid het proces.",
+        "highlighted": false,
+        "badge": null,
+        "cta": "Plan een PSYCH-K® sessie"
+      },
+      {
         "title": "Online gesprek",
         "subtitle": "60 minuten",
-        "price": "€110",
+        "price": "€95",
         "unit": "per sessie",
-        "description": "Flexibel en vanuit huis. Ideaal voor avondmomenten of wanneer je liever vanuit je eigen omgeving werkt.",
+        "description": "Flexibel en vanuit je eigen omgeving. Fijn voor avondmomenten of wanneer je liever thuis bent.",
         "highlighted": false,
         "badge": null,
         "cta": "Plan een online gesprek"
       }
     ],
     "bundles": {
-      "heading": "Bundels",
+      "heading": "Pakketten",
+      "subheading": "Een pakket bestaat uit drie sessies.",
       "items": [
-        { "title": "5 wandelgesprekken", "price": "€600" },
-        { "title": "5 online gesprekken", "price": "€525" }
+        { "title": "Wandelcoaching — 3 sessies", "price": "€345" },
+        { "title": "PSYCH-K® — 3 sessies", "price": "€345" },
+        { "title": "Online — 3 sessies", "price": "€255" }
       ]
     },
-    "note": "Na het gesprek ontvang je een factuur."
+    "note": "Na het gesprek ontvang je een factuur. De praktijk neemt deel aan de kleineondernemersregeling (KOR); momenteel wordt geen btw in rekening gebracht. Indien deze regeling wijzigt of vervalt, kan btw worden toegevoegd. Tarieven kunnen worden aangepast; wijzigingen worden tijdig en duidelijk gecommuniceerd."
   },
   "availability": {
     "sectionLabel": "Beschikbaarheid",
@@ -163,37 +185,37 @@
     "values": [
       {
         "title": "Rust & Ruimte",
-        "description": "Een veilige, rustige sfeer waarin je jezelf kunt zijn."
+        "description": "Een rustige sfeer waarin je jezelf kunt zijn."
       },
       {
         "title": "Inzicht",
-        "description": "Samen ontdekken wat er achter gedrag of gevoel zit."
+        "description": "Samen ontdekken wat er onder gedrag of gevoel ligt."
       },
       {
         "title": "Praktisch",
-        "description": "Geen vage theorie, maar concrete stappen die passen bij jouw leven."
+        "description": "Concrete stappen die passen bij jouw leven."
       },
       {
         "title": "Systeemgericht",
-        "description": "Ik kijk niet alleen naar jou, maar naar je hele context: gezin, relaties en omgeving."
+        "description": "Niet alleen jou, maar ook je context: gezin, relaties, omgeving."
       },
       {
         "title": "Verbinding",
-        "description": "Echt contact is de basis van verandering."
+        "description": "Echt contact als basis voor verandering."
       }
     ]
   },
   "contact": {
     "sectionLabel": "Contact",
     "heading": "Plan een kennismakingsgesprek",
-    "intro": "Plan een kennismakingsgesprek of stel je vraag.",
+    "intro": "Wil je kennismaken of heb je een vraag? Je bent welkom om contact op te nemen.",
     "subIntro": "",
     "email": "mirjam@deleeuw.nl",
     "phone": "",
     "formats": "Online of wandelend — in en rondom Leiden",
-    "kennismaking": "Telefonische kennismaking: kosteloos, zonder verplichtingen",
+    "kennismaking": "Een telefonische kennismaking is kosteloos en vrijblijvend.",
     "cta": "Plan een kennismakingsgesprek",
-    "closingQuote": "Je hoeft het niet alleen uit te zoeken.",
+    "closingQuote": "Je hoeft het niet alleen te doen.",
     "form": {
       "nameLabel": "Naam",
       "namePlaceholder": "Je naam",

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/algemene-voorwaarden" },
 };
 
-const lastUpdated = "6 mei 2026";
+const lastUpdated = "Mei 2026";
 
 export default function AlgemeneVoorwaardenPage() {
   return (
@@ -39,12 +39,11 @@ export default function AlgemeneVoorwaardenPage() {
             <ul className="body-md body-md-regular list-disc space-y-2 pl-6 text-brown-muted">
               <li>
                 <strong className="text-brown">Praktijk:</strong>{" "}
-                Coachingpraktijk De Leeuw, gevestigd aan de PJ Blokstraat 10 in
-                Leiden.
+                Coachingpraktijk De Leeuw (zie artikel 3 voor gegevens).
               </li>
               <li>
                 <strong className="text-brown">Coach:</strong> Mirjam de Leeuw,
-                kinder- en jeugdpsycholoog en SKJ-geregistreerd professional.
+                psycholoog en SKJ-geregistreerd professional.
               </li>
               <li>
                 <strong className="text-brown">Cliënt:</strong> de persoon die
@@ -205,34 +204,12 @@ export default function AlgemeneVoorwaardenPage() {
             <h2 className="heading-lg heading-lg-medium mb-3">
               6. Geen EPD, medisch dossier of behandeldossier
             </h2>
-            <p className="body-md body-md-regular mb-3 text-brown-muted">
-              Omdat Coachingpraktijk De Leeuw coaching aanbiedt en geen
-              diagnostiek, GGZ-behandeling of medische zorg, werkt de praktijk
-              niet met een elektronisch patiëntendossier, medisch dossier of
-              behandeldossier.
-            </p>
-            <p className="body-md body-md-regular mb-3 text-brown-muted">
-              De coach houdt wel een beperkte cliëntadministratie bij. Dit kan
-              bijvoorbeeld bestaan uit contactgegevens, afspraakgegevens,
-              facturen en betaalgegevens.
-            </p>
-            <p className="body-md body-md-regular mb-3 text-brown-muted">
-              Waar nodig kan de coach korte werknotities maken. Deze zijn
-              bedoeld om de coaching zorgvuldig te kunnen uitvoeren, bijvoorbeeld
-              om gemaakte afspraken, aandachtspunten of vervolgstappen te
-              onthouden. Er wordt niet meer vastgelegd dan nodig is voor het
-              coachingstraject en de normale praktijkvoering.
-            </p>
             <p className="body-md body-md-regular text-brown-muted">
-              Voor de verwerking, beveiliging en bewaartermijnen van
-              persoonsgegevens geldt de{" "}
-              <Link
-                href="/privacy"
-                className="text-sage-dark underline-offset-4 hover:underline"
-              >
-                privacyverklaring
-              </Link>{" "}
-              van Coachingpraktijk De Leeuw.
+              Omdat de praktijk coaching aanbiedt en geen diagnostiek,
+              GGZ-behandeling of medische zorg, wordt er niet gewerkt met een
+              elektronisch patiëntendossier, medisch dossier of behandeldossier.
+              De cliëntadministratie en werknotities zijn beschreven in artikel
+              17.
             </p>
           </section>
 
@@ -321,9 +298,7 @@ export default function AlgemeneVoorwaardenPage() {
               </li>
             </ul>
             <p className="body-md body-md-regular mt-3 text-brown-muted">
-              Bij jongeren van 16 en 17 jaar kan vooraf worden afgestemd of een
-              ouder of verzorger als opdrachtgever optreedt of toestemming
-              geeft.
+              Voor jongeren van 16 en 17 jaar geldt aanvullend artikel 7.
             </p>
           </section>
 
@@ -361,21 +336,26 @@ export default function AlgemeneVoorwaardenPage() {
               volgende tarieven:
             </p>
             <ul className="body-md body-md-regular list-disc space-y-2 pl-6 text-brown-muted">
-              <li>online gesprek van 60 minuten: €110 per sessie;</li>
               <li>
-                wandelgesprek van 60–90 minuten: €125 per sessie;
+                wandelcoaching van 60–90 minuten: €125 per sessie;
               </li>
-              <li>bundel van 5 online gesprekken: €525;</li>
-              <li>bundel van 5 wandelgesprekken: €600.</li>
+              <li>PSYCH-K® sessie van 60–90 minuten: €125 per sessie;</li>
+              <li>online gesprek van 60 minuten: €95 per sessie;</li>
+              <li>pakket van 3 wandel- of PSYCH-K® sessies: €345;</li>
+              <li>pakket van 3 online gesprekken: €255.</li>
             </ul>
             <p className="body-md body-md-regular mt-3 mb-3 text-brown-muted">
-              Coachingpraktijk De Leeuw neemt in 2026 deel aan de
-              kleineondernemersregeling. Daarom wordt er geen btw in rekening
-              gebracht.
+              De praktijk neemt deel aan de kleineondernemersregeling (KOR);
+              momenteel wordt geen btw in rekening gebracht. Indien deze regeling
+              wijzigt of vervalt, kan btw worden toegevoegd aan de tarieven.
             </p>
-            <p className="body-md body-md-regular text-brown-muted">
+            <p className="body-md body-md-regular mb-3 text-brown-muted">
               Op facturen wordt vermeld: &ldquo;Factuur vrijgesteld van
               omzetbelasting op grond van artikel 25 Wet OB.&rdquo;
+            </p>
+            <p className="body-md body-md-regular text-brown-muted">
+              Tarieven kunnen worden aangepast. Wijzigingen worden tijdig en
+              duidelijk gecommuniceerd.
             </p>
           </section>
 
@@ -554,14 +534,11 @@ export default function AlgemeneVoorwaardenPage() {
             <h2 className="heading-lg heading-lg-medium mb-3">
               18. SKJ-registratie en professioneel handelen
             </h2>
-            <p className="body-md body-md-regular mb-3 text-brown-muted">
-              Mirjam de Leeuw is SKJ-geregistreerd. Zij werkt zorgvuldig en
-              binnen de grenzen van haar professionele deskundigheid.
-            </p>
             <p className="body-md body-md-regular text-brown-muted">
-              Wanneer een vraag buiten de mogelijkheden van coaching valt, kan
-              zij adviseren om contact op te nemen met de huisarts, GGZ,
-              wijkteam, jeugdteam of andere passende hulpverlening.
+              Mirjam de Leeuw is SKJ-geregistreerd (130005177) en werkt
+              zorgvuldig en binnen de grenzen van haar professionele
+              deskundigheid. Voor de gevolgen wanneer een vraag buiten de
+              mogelijkheden van coaching valt, zie artikel 5.
             </p>
           </section>
 
@@ -589,16 +566,11 @@ export default function AlgemeneVoorwaardenPage() {
               binnen 14 dagen. Samen kijken we naar een passende oplossing.
             </p>
             <p className="body-md body-md-regular mb-3 text-brown-muted">
-              Coachingpraktijk De Leeuw biedt particuliere coaching en
-              gezinsbegeleiding. Er wordt geen diagnostiek, GGZ-behandeling,
-              medische zorg of crisisinterventie geboden.
-            </p>
-            <p className="body-md body-md-regular mb-3 text-brown-muted">
               Voor zover een klacht betrekking heeft op mijn beroepsmatig
-              handelen als SKJ-geregistreerde professional, kan het in sommige
-              gevallen mogelijk zijn om een klacht in te dienen bij SKJ.
-              SKJ-tuchtrecht is bedoeld voor toetsing van professioneel handelen
-              en is geen algemene klachtenregeling voor praktische, financiële of
+              handelen als SKJ-geregistreerde professional, kan een klacht in
+              sommige gevallen worden ingediend bij SKJ. SKJ-tuchtrecht is
+              bedoeld voor toetsing van professioneel handelen en is geen
+              algemene klachtenregeling voor praktische, financiële of
               organisatorische geschillen.
             </p>
             <p className="body-md body-md-regular text-brown-muted">

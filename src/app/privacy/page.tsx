@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const lastUpdated = "6 mei 2026";
+const lastUpdated = "Mei 2026";
 
 export default function PrivacyPage() {
   return (
@@ -92,9 +92,7 @@ export default function PrivacyPage() {
               3. Welke persoonsgegevens verwerk ik?
             </h2>
             <p className="body-md body-md-regular mb-3 text-brown-muted">
-              Ik verwerk alleen persoonsgegevens die nodig zijn voor contact,
-              planning, uitvoering van coaching, administratie en zorgvuldige
-              praktijkvoering. Het kan gaan om:
+              Ik verwerk de volgende categorieën persoonsgegevens:
             </p>
             <ul className="body-md body-md-regular list-disc space-y-2 pl-6 text-brown-muted">
               <li>naam en achternaam;</li>
@@ -135,21 +133,14 @@ export default function PrivacyPage() {
               4. Geen EPD of behandeldossier
             </h2>
             <p className="body-md body-md-regular mb-3 text-brown-muted">
-              Coachingpraktijk De Leeuw biedt coaching en gezinsbegeleiding. Er
-              wordt geen diagnostiek, GGZ-behandeling, medische zorg of
-              crisisinterventie geboden.
-            </p>
-            <p className="body-md body-md-regular mb-3 text-brown-muted">
-              Daarom werk ik niet met een elektronisch patiëntendossier, medisch
-              dossier of behandeldossier. Ik houd wel een beperkte
-              cliëntadministratie bij, zoals contactgegevens, afspraken, facturen
-              en betaalgegevens.
+              Omdat ik coaching aanbied en geen diagnostiek, GGZ-behandeling of
+              medische zorg, werk ik niet met een elektronisch patiëntendossier,
+              medisch dossier of behandeldossier.
             </p>
             <p className="body-md body-md-regular text-brown-muted">
-              Waar nodig maak ik korte werknotities. Deze zijn bedoeld om de
-              coaching zorgvuldig te kunnen uitvoeren, bijvoorbeeld om gemaakte
-              afspraken, aandachtspunten of vervolgstappen te onthouden. Ik leg
-              niet meer vast dan nodig is voor het coachingstraject.
+              Ik houd wel een beperkte cliëntadministratie bij (contactgegevens,
+              afspraken, facturen) en kan korte werknotities maken om de coaching
+              zorgvuldig te kunnen uitvoeren. Bewaartermijnen staan in artikel 11.
             </p>
           </section>
 
@@ -297,13 +288,8 @@ export default function PrivacyPage() {
             </ul>
             <p className="body-md body-md-regular mt-3 text-brown-muted">
               Met partijen die namens mij persoonsgegevens verwerken, sluit ik
-              waar nodig een verwerkersovereenkomst.
-            </p>
-            <p className="body-md body-md-regular mt-3 text-brown-muted">
-              Informatie uit gesprekken wordt niet gedeeld met derden zonder
-              toestemming, behalve wanneer er sprake is van een wettelijke
-              verplichting, acute of ernstige onveiligheid, of een zwaarwegende
-              professionele verantwoordelijkheid.
+              waar nodig een verwerkersovereenkomst. Wanneer een uitzondering op
+              de vertrouwelijkheid geldt, staat dit beschreven in artikel 8.
             </p>
           </section>
 
@@ -415,12 +401,8 @@ export default function PrivacyPage() {
               Soms kan ik een verzoek niet volledig uitvoeren, bijvoorbeeld
               wanneer ik gegevens nog moet bewaren vanwege een wettelijke
               verplichting, professionele verantwoordelijkheid of de rechten van
-              anderen.
-            </p>
-            <p className="body-md body-md-regular mt-3 text-brown-muted">
-              Bij jongeren van 16 en 17 jaar wordt zorgvuldig gekeken naar de
-              privacy van de jongere, de rol van ouder(s) of verzorger(s), en wat
-              in de situatie passend en zorgvuldig is.
+              anderen. Voor jongeren van 16 en 17 jaar geldt aanvullend wat in
+              artikel 7 is beschreven.
             </p>
           </section>
 
