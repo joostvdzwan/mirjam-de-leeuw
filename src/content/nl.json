@@ -13,10 +13,10 @@
     "cta": "Plan een kennismakingsgesprek"
   },
   "hero": {
-    "title": "Coachingpraktijk De Leeuw",
+    "title": ["Coachingpraktijk", "De Leeuw"],
     "subtitle": "Coaching & Gezinsbegeleiding",
     "tagline": "Meer rust in je hoofd. Meer overzicht in wat er speelt.",
-    "intro": "Loop je vast, pieker je veel of merk je dat je steeds in hetzelfde terechtkomt? Samen kijken we met een frisse blik naar wat er speelt — en wat jou helpt om weer verder te komen. Voor jongeren, ouders en volwassenen.",
+    "intro": "Loop je vast, pieker je veel of merk je dat je steeds in hetzelfde terechtkomt? Samen kijken we naar wat er speelt — en wat jou helpt om weer verder te komen. Voor jongeren, ouders en volwassenen.",
     "ctaPrimary": "Plan een kennismakingsgesprek",
     "ctaSecondary": "Lees meer over de werkwijze",
     "imageAlt": "Wandelpad door de natuur — rustgevend groen landschap"
@@ -40,13 +40,13 @@
         },
         {
           "title": "Wandelcoaching",
-          "description": "Buiten zijn en in beweging helpt om ruimte te krijgen in je hoofd. Gesprekken ontstaan vaak vanzelf in een rustig tempo.",
-          "forYou": "Je denkt beter in beweging en de buitenlucht helpt je hoofd opklaren."
+          "description": "Buiten, in beweging, in de natuur. Wandelen opent gesprekken op een ontspannen, natuurlijke manier.",
+          "forYou": "Je denkt en praat makkelijker terwijl je in beweging bent."
         },
         {
           "title": "Online coaching",
           "description": "Een flexibel alternatief, vanuit je eigen omgeving. Fijn als je liever thuis bent of in de avond wilt afspreken.",
-          "forYou": "Reizen komt niet uit of de avond past beter."
+          "forYou": "Je spreekt liever in de avond af of zonder dat je hoeft te reizen."
         }
       ]
     },

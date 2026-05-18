@@ -11,7 +11,7 @@ const { hero } = content;
 
 export default function Hero() {
   const shouldReduceMotion = useReducedMotion();
-  const words = hero.title.split(" ");
+  const titleLines = Array.isArray(hero.title) ? hero.title : [hero.title];
 
   const containerVariants = {
     hidden: {},
@@ -95,13 +95,21 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
             >
-              {words.map((word, i) => (
+              {titleLines.map((line, lineIdx) => (
                 <motion.span
-                  key={i}
-                  variants={wordVariants}
-                  className="mr-[0.3em] inline-block"
+                  key={lineIdx}
+                  className="block"
+                  variants={containerVariants}
                 >
-                  {word}
+                  {line.split(" ").map((word, wordIdx) => (
+                    <motion.span
+                      key={`${lineIdx}-${wordIdx}`}
+                      variants={wordVariants}
+                      className="mr-[0.3em] inline-block"
+                    >
+                      {word}
+                    </motion.span>
+                  ))}
                 </motion.span>
               ))}
             </motion.h1>
@@ -183,7 +191,7 @@ export default function Hero() {
                     quality={85}
                     priority
                   />
-                  <Logo className="absolute z-10 w-24 bottom-8 right-8 text-white opacity-100" />
+                  {/* <Logo className="absolute z-10 w-24 bottom-8 right-8 text-white opacity-100" /> */}
                 </div>
               </div>
             </div>
