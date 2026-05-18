@@ -35,9 +35,16 @@ export default function Availability() {
                     {slot.time}
                   </p>
                 </div>
-                <span className="label-sm label-sm-medium ml-auto rounded-full bg-sage/10 px-4 py-1.5 text-sage-dark">
-                  {slot.format}
-                </span>
+                <div className="flex items-center gap-x-2 max-sm:flex-col max-sm:items-start max-sm:gap-y-2">
+                  <span className="label-sm label-sm-medium rounded-full bg-sage/10 px-4 py-1.5 text-sage-dark">
+                    {slot.format}
+                  </span>
+                  {slot.extra && (
+                    <span className="label-sm label-sm-medium rounded-full bg-sage/10 px-4 py-1.5 text-sage-dark">
+                      {slot.extra}
+                    </span>
+                  )}
+                </div>
               </div>
             ))}
           </div>

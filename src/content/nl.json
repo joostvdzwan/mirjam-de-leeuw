@@ -62,7 +62,7 @@
       "Ik ben psycholoog en heb de master kinder- en jeugdpsychologie gevolgd. Daarna heb ik 6,5 jaar in de jeugd-GGZ gewerkt, waar ik ervaring heb opgedaan met intakes, diagnostiek en behandeling van kinderen, jongeren en gezinnen met uiteenlopende hulpvragen.",
       "Op dit moment werk ik als gedragswetenschapper binnen het Jeugdteam. Daar denk ik inhoudelijk mee met mijn team over casuïstiek, ben ik betrokken bij (basis)diagnostiek en behandeling en draag ik bij aan de ontwikkeling van beleid en methodiek. In de afgelopen jaren heb ik veel ervaring opgebouwd in het werken met complexe hulpvragen en verschillende systemen rondom gezinnen.",
       "Tegelijkertijd merkte ik — zowel in de GGZ als in mijn huidige werk — dat het zorgsysteem vaak is ingericht op classificaties en lange trajecten. De werkdruk is hoog en wachtlijsten lopen op, terwijl veel mensen juist geholpen zijn met eerder stilstaan, overzicht krijgen en praktische handvatten.",
-      "De wens om een eigen praktijk te starten was er al langer. In PSYCH-K® kwam voor mij veel samen van waar ik in geloof: werken op een diepere laag, maar wel praktisch en zonder dat het zwaar hoeft te worden. Dat maakte dat ik, naast mijn huidige baan, mijn eigen praktijk ben gestart.",
+      "De wens om een eigen praktijk te starten was er al langer. In PSYCH-K® kwam voor mij veel samen van waar ik in geloof: werken op een diepere laag, maar wel praktisch en zonder dat het zwaar hoeft te worden. Dat maakt dat ik, naast mijn huidige baan, mijn eigen praktijk ben gestart.",
       "In mijn werk kijk ik verder dan gedrag alleen. We onderzoeken samen patronen, overtuigingen en automatische reacties, en wat jou helpt om weer meer rust en richting te ervaren. Ik werk laagdrempelig, betrokken en praktisch — geen standaardtraject, maar afgestemd op wat jij nodig hebt.",
       "Naast mijn werk ben ik moeder van twee jonge kinderen. Dat helpt me relativeren: vastlopen hoort bij het leven. Je hoeft het alleen niet alleen te doen."
     ],
@@ -174,9 +174,9 @@
     "sectionLabel": "Beschikbaarheid",
     "heading": "Momenten voor gesprekken",
     "slots": [
-      { "day": "Zaterdagochtend", "time": "09:00 – 13:00", "format": "Wandelgesprekken" },
-      { "day": "Dinsdagavond", "time": "20:00 – 22:00", "format": "Online gesprekken" },
-      { "day": "Woensdagavond", "time": "20:00 – 22:00", "format": "Online gesprekken" }
+      { "day": "Zaterdagochtend", "time": "09:00 – 13:00", "format": "Wandelcoaching", "extra": "PSYCH-K® coaching" },
+      { "day": "Dinsdagavond", "time": "20:00 – 22:00", "format": "Online coaching" },
+      { "day": "Woensdagavond", "time": "20:00 – 22:00", "format": "Online coaching" }
     ]
   },
   "coreValues": {
