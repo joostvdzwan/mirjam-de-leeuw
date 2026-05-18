@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import content from "@/content/nl.json";
 import { ease, duration, stagger, fadeUp } from "@/lib/motion";     
 const { nav } = content;
@@ -13,8 +14,17 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const shouldReduceMotion = useReducedMotion();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const toLink = (hash: string) => (isHome ? hash : `/${hash}`);
+  const homeHref = isHome ? "#" : "/";
 
   useEffect(() => {
+    if (!isHome) {
+      setActiveSection("");
+      return;
+    }
+
     const observers: IntersectionObserver[] = [];
 
     sectionIds.forEach((id) => {
@@ -35,7 +45,7 @@ export default function Navigation() {
     });
 
     return () => observers.forEach((o) => o.disconnect());
-  }, []);
+  }, [isHome]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -85,7 +95,7 @@ export default function Navigation() {
           aria-label="Hoofdnavigatie"
         >
           <a
-            href="#"
+            href={homeHref}
             className="heading-md heading-md-semibold text-brown hover:text-sage-dark transition-colors"
             onClick={handleNavClick}
           >
@@ -99,7 +109,7 @@ export default function Navigation() {
               return (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={toLink(link.href)}
                   className={`label-md label-md-medium relative py-1 transition-colors ${isActive
                       ? "text-sage-dark"
                       : "text-brown-muted hover:text-brown"
@@ -122,7 +132,7 @@ export default function Navigation() {
               );
             })}
             <motion.a
-              href="#contact"
+              href={toLink("#contact")}
               className="label-md label-md-medium rounded-full bg-sage-dark px-4 py-2.5 text-white transition-colors hover:bg-sage xl:px-5"
               whileHover={{ scale: 1.02, boxShadow: "0 4px 16px rgba(94, 107, 82, 0.2)" }}
               whileTap={{ scale: 0.98 }}
@@ -215,7 +225,7 @@ export default function Navigation() {
               {nav.links.map((link) => (
                 <motion.a
                   key={link.href}
-                  href={link.href}
+                  href={toLink(link.href)}
                   className={`display-sm display-sm-regular transition-colors ${activeSection === link.href.replace("#", "")
                       ? "text-sage-dark"
                       : "text-brown-muted hover:text-brown"
@@ -240,7 +250,7 @@ export default function Navigation() {
                 </motion.a>
               ))}
               <motion.a
-                href="#contact"
+                href={toLink("#contact")}
                 className="label-md label-md-medium mt-4 rounded-full bg-sage-dark px-8 py-3 text-white transition-colors hover:bg-sage"
                 onClick={handleNavClick}
                 variants={

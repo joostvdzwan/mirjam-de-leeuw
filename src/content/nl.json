@@ -31,7 +31,7 @@
       "heading": "Coaching op jouw manier",
       "items": [
         {
-          "title": "PSYCH-K®",
+          "title": "PSYCH-K® coaching",
           "label": "Mijn aanpak",
           "description": "Soms weet je precies wat je anders wilt, maar blijf je toch in hetzelfde patroon terechtkomen. Met PSYCH-K® werk je aan overtuigingen die je tegenhouden, op een diepere laag. We werken met een thema dat voor jou belangrijk is, zoals rust, zelfvertrouwen of grenzen. Jij bepaalt de richting, ik begeleid het proces.",
           "logo": "/logo.svg",
@@ -134,22 +134,22 @@
         "price": "€125",
         "unit": "per sessie",
         "description": "Coaching in de buitenlucht. Wandelen opent gesprekken op een natuurlijke manier.",
-        "highlighted": true,
-        "badge": "Meest gekozen",
+        "highlighted": false,
+        "badge": null,
         "cta": "Plan een wandelgesprek"
       },
       {
-        "title": "PSYCH-K®",
+        "title": "PSYCH-K® coaching",
         "subtitle": "60–90 minuten",
         "price": "€125",
         "unit": "per sessie",
         "description": "Werken aan overtuigingen die je tegenhouden, op een diepere laag. Jij bepaalt het thema, ik begeleid het proces.",
-        "highlighted": false,
+        "highlighted": true,
         "badge": null,
         "cta": "Plan een PSYCH-K® sessie"
       },
       {
-        "title": "Online gesprek",
+        "title": "Online coaching",
         "subtitle": "60 minuten",
         "price": "€95",
         "unit": "per sessie",
@@ -208,7 +208,7 @@
   "contact": {
     "sectionLabel": "Contact",
     "heading": "Plan een kennismakingsgesprek",
-    "intro": "Wil je kennismaken of heb je een vraag? Je bent welkom om contact op te nemen.",
+    "intro": "Wil je kennismaken of heb je een vraag? Neem gerust contact op.",
     "subIntro": "",
     "email": "mirjam@deleeuw.nl",
     "phone": "",

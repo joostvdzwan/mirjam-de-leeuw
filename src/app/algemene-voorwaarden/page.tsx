@@ -107,7 +107,7 @@ export default function AlgemeneVoorwaardenPage() {
             <ul className="body-md body-md-regular space-y-1 text-brown-muted">
               <li>Praktijknaam: Coachingpraktijk De Leeuw</li>
               <li>Eigenaar: Mirjam de Leeuw</li>
-              <li>Vestigingsadres: PJ Blokstraat 10, Leiden</li>
+              <li>Vestigingsadres: Leiden</li>
               <li>
                 E-mail:{" "}
                 <a
