@@ -57,9 +57,12 @@ export default function Contact() {
                     className="mt-0.5 shrink-0 text-sage-dark"
                     aria-hidden="true"
                   />
-                  <span className="body-md body-md-regular text-brown-muted">
+                  <a
+                    href={`tel:${(contact as { phone: string }).phone.replace(/\s/g, "")}`}
+                    className="body-md body-md-medium text-brown hover:text-sage-dark transition-colors"
+                  >
                     {(contact as { phone: string }).phone}
-                  </span>
+                  </a>
                 </div>
               )}
               <div className="flex items-start gap-3">
