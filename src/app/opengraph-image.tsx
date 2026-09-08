@@ -99,7 +99,7 @@ export default async function OpenGraphImage() {
             fontFamily: "Lora",
           }}
         >
-          <span>praktijkdeleeuw.nl</span>
+          <span>coachingpraktijk.deleeuw.nl</span>
           <span style={{ fontStyle: "italic" }}>
             Kosteloos kennismakingsgesprek
           </span>

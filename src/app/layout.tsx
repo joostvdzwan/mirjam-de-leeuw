@@ -18,7 +18,7 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const SITE_URL = "https://praktijkdeleeuw.nl";
+const SITE_URL = "https://coachingpraktijk.deleeuw.nl";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

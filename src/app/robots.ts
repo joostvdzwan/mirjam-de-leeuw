@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://praktijkdeleeuw.nl/sitemap.xml",
-    host: "https://praktijkdeleeuw.nl",
+    sitemap: "https://coachingpraktijk.deleeuw.nl/sitemap.xml",
+    host: "https://coachingpraktijk.deleeuw.nl",
   };
 }
