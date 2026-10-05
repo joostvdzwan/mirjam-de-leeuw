@@ -24,7 +24,7 @@ export default function Availability() {
           <div className="space-y-4">
             {availability.slots.map((slot) => (
               <div
-                key={`${slot.day}-${slot.format}`}
+                key={slot.day}
                 className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-brown/5 bg-cream px-6 py-5"
               >
                 <div>
@@ -35,20 +35,14 @@ export default function Availability() {
                     {slot.time}
                   </p>
                 </div>
-                <div className="flex items-center gap-x-2 max-sm:flex-col max-sm:items-start max-sm:gap-y-2">
-                  {slot.extra && (
-                    <span className="label-sm label-sm-medium rounded-full bg-sage/10 px-4 py-1.5 text-sage-dark">
-                      {slot.extra}
-                    </span>
-                  )}
-                  <span className="label-sm label-sm-medium rounded-full bg-sage/10 px-4 py-1.5 text-sage-dark">
-                    {slot.format}
-                  </span>
-
-                </div>
               </div>
             ))}
           </div>
+          {availability.note && (
+            <p className="body-sm body-sm-regular mt-4 text-brown-muted">
+              {availability.note}
+            </p>
+          )}
         </div>
       </MotionFadeIn>
     </SectionWrapper>

@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "coaching jongeren",
     "systeemgerichte coaching",
     "online coaching",
-    "gezinsbegeleiding",
     "overprikkeling",
     "burn-out coaching",
   ],
@@ -120,7 +119,6 @@ export default function RootLayout({
     serviceType: [
       "Wandelcoaching",
       "Online coaching",
-      "Gezinsbegeleiding",
     ],
     priceRange: "€110 - €125",
   };

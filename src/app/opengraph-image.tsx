@@ -74,7 +74,7 @@ export default async function OpenGraphImage() {
               color: "#3B3229",
             }}
           >
-            Coaching & Gezinsbegeleiding in Leiden
+            Coaching in Leiden
           </div>
           <div
             style={{
@@ -84,8 +84,8 @@ export default async function OpenGraphImage() {
               fontFamily: "Lora",
             }}
           >
-            Wandelcoaching, online coaching en systeemgerichte
-            gezinsbegeleiding voor jongeren, ouders en volwassenen.
+            Wandelcoaching, online coaching en PSYCH-K® coaching
+            voor iedereen vanaf 16 jaar.
           </div>
         </div>
 

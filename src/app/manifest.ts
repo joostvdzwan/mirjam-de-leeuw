@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Coachingpraktijk De Leeuw",
     short_name: "De Leeuw",
-    description: "Coaching & gezinsbegeleiding in Leiden",
+    description: "Coaching in Leiden",
     start_url: "/",
     display: "standalone",
     background_color: "#FAF7F2",

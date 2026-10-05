@@ -1,6 +1,6 @@
 {
-  "siteTitle": "Coachingpraktijk De Leeuw — Coaching & Gezinsbegeleiding in Leiden",
-  "siteDescription": "Wandelcoaching en online coaching in Leiden. Praktische begeleiding voor jongeren, ouders en volwassenen. Kosteloos kennismakingsgesprek.",
+  "siteTitle": "Coachingpraktijk De Leeuw — Coaching in Leiden",
+  "siteDescription": "Wandelcoaching en online coaching in Leiden. Praktische begeleiding voor iedereen vanaf 16 jaar. Kosteloos kennismakingsgesprek.",
   "nav": {
     "links": [
       { "label": "Over de praktijk", "href": "#over-de-praktijk" },
@@ -14,9 +14,9 @@
   },
   "hero": {
     "title": ["Coachingpraktijk", "De Leeuw"],
-    "subtitle": "Coaching & Gezinsbegeleiding",
+    "subtitle": "Coaching",
     "tagline": "Meer rust in je hoofd. Meer overzicht in wat er speelt.",
-    "intro": "Loop je vast, pieker je veel of merk je dat je steeds in hetzelfde terechtkomt? Samen kijken we naar wat er speelt — en wat jou helpt om weer verder te komen. Voor jongeren, ouders en volwassenen.",
+    "intro": "Loop je vast, pieker je veel of merk je dat je steeds in hetzelfde terechtkomt? Samen kijken we naar wat er speelt — en wat jou helpt om weer verder te komen. Voor iedereen vanaf 16 jaar.",
     "ctaPrimary": "Plan een kennismakingsgesprek",
     "ctaSecondary": "Lees meer over de werkwijze",
     "imageAlt": "Wandelpad door de natuur — rustgevend groen landschap"
@@ -52,25 +52,28 @@
     },
     "disclaimer": {
       "heading": "Belangrijk om te weten",
-      "text": "Ik bied coaching, geen diagnostiek of behandeling binnen de GGZ. Bij ernstige klachten of crisis denk ik met je mee over passende hulp."
+      "text": "Ik bied coaching, geen diagnostiek of behandeling. Bij ernstige klachten of crisis denk ik met je mee over passende hulp."
     }
   },
   "aboutMe": {
     "sectionLabel": "Over mij",
-    "heading": "Mirjam de Leeuw",
+    "heading": "Mirjam van der Zwan - de Leeuw",
     "paragraphs": [
-      "Ik ben psycholoog en heb de master kinder- en jeugdpsychologie gevolgd. Daarna heb ik 6,5 jaar in de jeugd-GGZ gewerkt, waar ik ervaring heb opgedaan met intakes, diagnostiek en behandeling van kinderen, jongeren en gezinnen met uiteenlopende hulpvragen.",
-      "Op dit moment werk ik als gedragswetenschapper binnen het Jeugdteam. Daar denk ik inhoudelijk mee met mijn team over casuïstiek, ben ik betrokken bij (basis)diagnostiek en behandeling en draag ik bij aan de ontwikkeling van beleid en methodiek. In de afgelopen jaren heb ik veel ervaring opgebouwd in het werken met complexe hulpvragen en verschillende systemen rondom gezinnen.",
-      "Tegelijkertijd merkte ik — zowel in de GGZ als in mijn huidige werk — dat het zorgsysteem vaak is ingericht op classificaties en lange trajecten. De werkdruk is hoog en wachtlijsten lopen op, terwijl veel mensen juist geholpen zijn met eerder stilstaan, overzicht krijgen en praktische handvatten.",
-      "De wens om een eigen praktijk te starten was er al langer. In PSYCH-K® kwam voor mij veel samen van waar ik in geloof: werken op een diepere laag, maar wel praktisch en zonder dat het zwaar hoeft te worden. Dat maakt dat ik, naast mijn huidige baan, mijn eigen praktijk ben gestart.",
-      "In mijn werk kijk ik verder dan gedrag alleen. We onderzoeken samen patronen, overtuigingen en automatische reacties, en wat jou helpt om weer meer rust en richting te ervaren. Ik werk laagdrempelig, betrokken en praktisch — geen standaardtraject, maar afgestemd op wat jij nodig hebt.",
-      "Naast mijn werk ben ik moeder van twee jonge kinderen. Dat helpt me relativeren: vastlopen hoort bij het leven. Je hoeft het alleen niet alleen te doen."
+      "Ik ben psycholoog en heb de master Kinder- en Jeugdpsychologie gevolgd. Daarna werkte ik 6,5 jaar in de jeugd-GGZ, waar ik ervaring opdeed met intakes, diagnostiek en behandeling van kinderen, jongeren en gezinnen met uiteenlopende hulpvragen.",
+      "Vervolgens werkte ik als gedragswetenschapper binnen een Jeugdteam. Daar dacht ik mee bij uiteenlopende casuïstiek, was ik betrokken bij diagnostiek en behandeling en droeg ik bij aan beleid en methodiek.",
+      "In beide werkvelden heb ik veel geleerd over gedrag, ontwikkeling en de invloed van de omgeving. Tegelijkertijd merkte ik steeds vaker dat ik anders wilde werken. Minder vanuit classificaties en vaste trajecten, en meer vanuit de vraag: wat ligt er onder datgene waar iemand steeds tegenaan loopt, en wat is er nodig om daadwerkelijk iets te veranderen?",
+      "Op dat moment kwam PSYCH-K® op mijn pad. Voor mij vielen daarin verschillende dingen samen. We weten vaak heel goed wat we anders zouden willen, maar toch lukt het niet altijd om dat ook te voelen of te doen. Overtuigingen en automatische patronen kunnen daar een belangrijke rol in spelen. Juist die laag miste ik soms in de manier waarop ik tot dan toe gewend was te werken.",
+      "PSYCH-K® richt zich op het herkennen en veranderen van belemmerende overtuigingen. Met behulp van onder andere spiertesten en balansprocessen onderzoeken we wat onbewust meespeelt en werken we aan overtuigingen die beter passen bij hoe je wilt denken, voelen en handelen. Wat mij daarin aanspreekt, is dat er op een diepere laag gewerkt wordt, terwijl de methode tegelijkertijd praktisch en toegankelijk is.",
+      "PSYCH-K® gaf daarmee richting aan een wens die al langer bestond: een eigen praktijk waarin ik mijn psychologische achtergrond kan combineren met een manier van begeleiden die beter past bij mijn visie op verandering.",
+      "In mijn praktijk is PSYCH-K® daarom een belangrijke methode, maar niet de enige vorm van begeleiding. Soms past een gesprek beter, soms wandelcoaching of online coaching. We kijken naar wat jij nodig hebt, zonder vast standaardtraject.",
+      "Ik werk betrokken, laagdrempelig en praktisch, met aandacht voor wat er onder de oppervlakte meespeelt én voor wat je in het dagelijks leven verder helpt.",
+      "Naast mijn werk ben ik moeder van twee jonge kinderen. Dat helpt me relativeren: vastlopen hoort soms bij het leven. Je hoeft het alleen niet alleen te doen."
     ],
     "credentials": [
-      "SKJ geregistreerd – 130005177"
+      "SKJ-geregistreerd – 130005177"
     ],
     "quote": "Gedrag is vaak een signaal van wat iemand nodig heeft.",
-    "imageAlt": "Mirjam de Leeuw — wandelend in de natuur"
+    "imageAlt": "Mirjam van der Zwan - de Leeuw — wandelend in de natuur"
   },
   "forWhom": {
     "sectionLabel": "Voor wie",
@@ -174,10 +177,11 @@
     "sectionLabel": "Beschikbaarheid",
     "heading": "Momenten voor gesprekken",
     "slots": [
-      { "day": "Zaterdagochtend", "time": "09:00 – 13:00", "format": "Wandelcoaching", "extra": "PSYCH-K® coaching" },
-      { "day": "Dinsdagavond", "time": "20:00 – 22:00", "format": "Online coaching" },
-      { "day": "Woensdagavond", "time": "20:00 – 22:00", "format": "Online coaching" }
-    ]
+      { "day": "Dinsdag", "time": "09:00 – 17:00" },
+      { "day": "Donderdag", "time": "09:00 – 17:00" },
+      { "day": "Zaterdagochtend", "time": "09:00 – 13:00" }
+    ],
+    "note": "*Avonden op aanvraag"
   },
   "coreValues": {
     "sectionLabel": "Kernwaarden",
@@ -228,7 +232,7 @@
   },
   "footer": {
     "practiceName": "Coachingpraktijk De Leeuw",
-    "tagline": "Coaching & Gezinsbegeleiding",
+    "tagline": "Coaching",
     "location": "Leiden en omgeving",
     "email": "mirjam@deleeuw.nl",
     "disclaimer": "Coachingpraktijk De Leeuw biedt coaching en geen diagnostiek, behandeling of crisisinterventie.",
