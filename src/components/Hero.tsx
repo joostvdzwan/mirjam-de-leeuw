@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import content from "@/content/nl.json";
 import { ease, duration, stagger, fadeUp, fadeIn } from "@/lib/motion";
-import mirjamHero from "@/assets/mirjam-kind-1.jpg";
+import mirjamHero from "@/assets/mirjam-portret-hero.jpg";
 import Logo from "./Logo";
 
 const { hero } = content;
@@ -17,7 +17,16 @@ export default function Hero() {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: shouldReduceMotion ? 0 : stagger.lazy,
+        staggerChildren: shouldReduceMotion ? 0 : 0.45,
+      },
+    },
+  };
+
+  const lineVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: shouldReduceMotion ? 0 : stagger.tight * 1.5,
       },
     },
   };
@@ -62,25 +71,18 @@ export default function Hero() {
   });
 
   return (
-    <section className="relative flex min-h-dvh items-center bg-cream pt-20">
-
+    <section className="relative bg-cream pt-20">
       {/* Background with slow breathe animation */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-linear-to-br from-sage-light/10 via-cream to-sand/40 hero-breathe-bg"
-          role="img"
-          aria-label={hero.imageAlt}
-        />
+      <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute inset-0 bg-linear-to-br from-sage-light/10 via-cream to-sand/40 hero-breathe-bg" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-cream to-transparent" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6 py-20 md:py-32">
-        
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
-          <div className="max-w-2xl lg:flex-1">
-            {/* Subtitle */}
+      <div className="relative z-10 mx-auto max-w-6xl px-6 pt-12 pb-20 md:pt-20 lg:pb-0">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-center lg:gap-16">
+          <div className="lg:col-span-7 lg:pb-20">
             <motion.p
-              className="heading-sm heading-sm-medium mb-4 text-sage-dark"
+              className="heading-sm heading-sm-medium mb-5 text-sage-dark"
               variants={gentleFadeIn(0)}
               initial="hidden"
               animate="visible"
@@ -88,9 +90,9 @@ export default function Hero() {
               {hero.subtitle}
             </motion.p>
 
-            {/* Title - word by word */}
+            {/* Title - line by line, word by word */}
             <motion.h1
-              className="display-lg display-lg-regular mb-6 text-brown"
+              className="display-lg display-lg-regular mb-8 text-balance text-brown"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -99,13 +101,13 @@ export default function Hero() {
                 <motion.span
                   key={lineIdx}
                   className="block"
-                  variants={containerVariants}
+                  variants={lineVariants}
                 >
                   {line.split(" ").map((word, wordIdx) => (
                     <motion.span
                       key={`${lineIdx}-${wordIdx}`}
                       variants={wordVariants}
-                      className="mr-[0.3em] inline-block"
+                      className="mr-[0.25em] inline-block"
                     >
                       {word}
                     </motion.span>
@@ -114,27 +116,15 @@ export default function Hero() {
               ))}
             </motion.h1>
 
-            {/* Tagline */}
-            <motion.p
-              className="quote mb-8 text-brown-muted"
-              variants={gentleFadeUp(1.2)}
-              initial="hidden"
-              animate="visible"
-            >
-              {hero.tagline}
-            </motion.p>
-
-            {/* Opening line */}
             <motion.p
               className="body-lg body-lg-regular mb-10 max-w-xl text-brown-muted"
-              variants={gentleFadeIn(1.6)}
+              variants={gentleFadeIn(1.2)}
               initial="hidden"
               animate="visible"
             >
               {hero.intro}
             </motion.p>
 
-            {/* CTA buttons */}
             <motion.div
               className="flex flex-col gap-4 sm:flex-row"
               initial="hidden"
@@ -143,7 +133,7 @@ export default function Hero() {
                 hidden: {},
                 visible: {
                   transition: {
-                    delayChildren: shouldReduceMotion ? 0 : 2.0,
+                    delayChildren: shouldReduceMotion ? 0 : 1.6,
                     staggerChildren: shouldReduceMotion ? 0 : stagger.normal,
                   },
                 },
@@ -160,7 +150,7 @@ export default function Hero() {
                 {hero.ctaPrimary}
               </motion.a>
               <motion.a
-                href="#tarieven"
+                href="#werkwijze"
                 className="label-md label-md-medium inline-flex items-center justify-center rounded-full border-2 border-sage-dark px-8 py-3.5 text-sage-dark transition-colors hover:bg-sage-dark/10"
                 variants={shouldReduceMotion ? { hidden: { opacity: 0 }, visible: { opacity: 1 } } : fadeUp}
                 whileHover={{ scale: 1.02 }}
@@ -172,28 +162,27 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Portrait photo -- small, warm, secondary to the text */}
+          {/* From lg the portrait hangs over the edge into the next section */}
           <motion.div
-            className="hidden lg:block lg:shrink-0"
-            variants={gentleFadeIn(1.8)}
+            className="relative max-w-sm sm:max-w-md lg:col-span-5 lg:-mb-24 lg:max-w-none lg:self-end"
+            variants={gentleFadeUp(0.5)}
             initial="hidden"
             animate="visible"
           >
-            <div className="relative w-64 xl:w-80">
-              <div className="rounded-4xl border border-sage/75 p-3">
-                <div className="overflow-hidden rounded-3xl">
-                  <Image
-                    src={mirjamHero}
-                    alt="Mirjam de Leeuw"
-                    className="w-full h-auto object-cover"
-                    sizes="256px"
-                    placeholder="blur"
-                    quality={85}
-                    priority
-                  />
-                  {/* <Logo className="absolute z-10 w-24 bottom-8 right-8 text-white opacity-100" /> */}
-                </div>
-              </div>
+            <div
+              className="absolute inset-0 translate-x-4 translate-y-4 rounded-3xl border border-sage/50"
+              aria-hidden="true"
+            />
+            <div className="relative overflow-hidden rounded-3xl">
+              <Image
+                src={mirjamHero}
+                alt={hero.imageAlt}
+                className="photo-warm aspect-4/5 w-full h-auto object-cover object-top"
+                sizes="(min-width: 1280px) 460px, (min-width: 1024px) 38vw, 448px"
+                placeholder="blur"
+                quality={85}
+                priority
+              />
             </div>
           </motion.div>
         </div>

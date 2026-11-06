@@ -4,14 +4,14 @@ import MotionFadeIn from "./motion/MotionFadeIn";
 import { StaggerContainer, StaggerItem } from "./motion/MotionStagger";
 import content from "@/content/nl.json";
 import { duration } from "@/lib/motion";
-import mirjamPhoto from "@/assets/mirjam-camera-2.jpg";
+import mirjamPhoto from "@/assets/mirjam-portret-zittend.jpg";
 
 const { aboutMe } = content;
 
 export default function AboutMe() {
   return (
     <SectionWrapper id="over-mij" background="cream">
-      <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+      <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
         <div>
           <MotionFadeIn>
             <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
@@ -55,13 +55,13 @@ export default function AboutMe() {
         <MotionFadeIn
           variant="scaleIn"
           duration={duration.slow}
-          className="flex items-center justify-center"
+          className="order-first flex justify-center lg:order-none lg:sticky lg:top-28"
         >
           <div className="relative w-full max-w-md overflow-hidden rounded-2xl">
             <Image
               src={mirjamPhoto}
               alt={aboutMe.imageAlt}
-              className="w-full h-auto object-cover"
+              className="photo-warm aspect-4/5 w-full h-auto object-cover object-top lg:aspect-auto"
               sizes="(max-width: 1024px) 100vw, 448px"
               placeholder="blur"
               quality={85}

@@ -244,6 +244,11 @@ body {
   letter-spacing: 0;
 }
 
+/* Nudges black-and-white photography toward the warm brown palette */
+.photo-warm {
+  filter: sepia(0.14) saturate(0.85) contrast(0.97);
+}
+
 /* ==========================================================================
    6. HERO BACKGROUND ANIMATION
    ========================================================================== */

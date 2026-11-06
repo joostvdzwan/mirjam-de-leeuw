@@ -1,9 +1,15 @@
+import Image, { type StaticImageData } from "next/image";
 import SectionWrapper from "./SectionWrapper";
 import MotionFadeIn from "./motion/MotionFadeIn";
 import { StaggerContainer, StaggerItem } from "./motion/MotionStagger";
 import content from "@/content/nl.json";
+import psychkPhoto from "@/assets/mirjam-psychk-spiertest.jpg";
 
 const { aboutPractice } = content;
+
+const formatImages: Record<string, StaticImageData> = {
+  "PSYCH-K® coaching": psychkPhoto,
+};
 
 export default function AboutPractice() {
   return (
@@ -44,7 +50,9 @@ export default function AboutPractice() {
               forYou?: string;
               logo?: string;
               logoAlt?: string;
+              imageAlt?: string;
             };
+            const photo = formatImages[item.title];
             return (
               <StaggerItem
                 key={item.title}
@@ -54,7 +62,7 @@ export default function AboutPractice() {
                 }`}
               >
                 <div
-                  className={`group flex h-full flex-col rounded-2xl border bg-cream p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+                  className={`group flex h-full flex-col overflow-hidden rounded-2xl border bg-cream p-6 md:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
                     isFeatured
                       ? "border-sage/25 hover:border-sage/50"
                       : "border-brown/5 hover:border-sage/30"
@@ -77,7 +85,19 @@ export default function AboutPractice() {
                   <p className="body-md body-md-regular text-brown-muted">
                     {item.description}
                   </p>
-                  {meta.logo && (
+                  {photo && (
+                    <div className="-mx-6 mt-6 overflow-hidden md:-mx-8">
+                      <Image
+                        src={photo}
+                        alt={meta.imageAlt ?? ""}
+                        className="photo-warm aspect-3/2 w-full object-cover object-[60%_40%] transition-transform lg:aspect-16/9 duration-1000 ease-out group-hover:scale-[1.03]"
+                        sizes="(min-width: 1152px) 760px, (min-width: 1024px) 66vw, 100vw"
+                        placeholder="blur"
+                        quality={80}
+                      />
+                    </div>
+                  )}
+                  {!photo && meta.logo && (
                     <div
                       role="img"
                       aria-label={meta.logoAlt ?? meta.title}
@@ -96,7 +116,7 @@ export default function AboutPractice() {
                   )}
                   {meta.forYou && (
                     <div className="mt-auto pt-6">
-                      <div className="border-t border-brown/10 pt-5">
+                      <div className={photo ? "" : "border-t border-brown/10 pt-5"}>
                         <p className="label-sm label-sm-medium mb-1.5 uppercase tracking-[0.12em] text-sage-dark">
                           Voor jou als
                         </p>

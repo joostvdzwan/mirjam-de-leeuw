@@ -13,13 +13,12 @@
     "cta": "Plan een kennismakingsgesprek"
   },
   "hero": {
-    "title": ["Coachingpraktijk", "De Leeuw"],
-    "subtitle": "Coaching",
-    "tagline": "Meer rust in je hoofd. Meer overzicht in wat er speelt.",
+    "title": ["Meer rust in je hoofd.", "Meer overzicht in wat er speelt."],
+    "subtitle": "Coachingpraktijk De Leeuw",
     "intro": "Loop je vast, pieker je veel of merk je dat je steeds in hetzelfde terechtkomt? Samen kijken we naar wat er speelt — en wat jou helpt om weer verder te komen. Voor iedereen vanaf 16 jaar.",
     "ctaPrimary": "Plan een kennismakingsgesprek",
     "ctaSecondary": "Lees meer over de werkwijze",
-    "imageAlt": "Wandelpad door de natuur — rustgevend groen landschap"
+    "imageAlt": "Mirjam van der Zwan - de Leeuw, coach in Leiden, zittend en glimlachend"
   },
   "aboutPractice": {
     "sectionLabel": "Over de praktijk",
@@ -34,8 +33,7 @@
           "title": "PSYCH-K® coaching",
           "label": "Mijn aanpak",
           "description": "Soms weet je precies wat je anders wilt, maar blijf je toch in hetzelfde patroon terechtkomen. Met PSYCH-K® werk je aan overtuigingen die je tegenhouden, op een diepere laag. We werken met een thema dat voor jou belangrijk is, zoals rust, zelfvertrouwen of grenzen. Jij bepaalt de richting, ik begeleid het proces.",
-          "logo": "/logo.svg",
-          "logoAlt": "",
+          "imageAlt": "Mirjam begeleidt een spiertest: een cliënt houdt haar arm gestrekt terwijl Mirjam meekijkt",
           "forYou": "Je merkt dat patronen blijven terugkomen, ook als je weet wat je anders wilt."
         },
         {
@@ -73,12 +71,13 @@
       "SKJ-geregistreerd – 130005177"
     ],
     "quote": "Gedrag is vaak een signaal van wat iemand nodig heeft.",
-    "imageAlt": "Mirjam van der Zwan - de Leeuw — wandelend in de natuur"
+    "imageAlt": "Mirjam van der Zwan - de Leeuw — zittend en glimlachend, naast een kamerplant"
   },
   "forWhom": {
     "sectionLabel": "Voor wie",
     "heading": "Voor jongeren, ouders en volwassenen",
     "intro": "Je hoeft geen duidelijke hulpvraag te hebben. Vaak begint het met het gevoel dat iets niet klopt.",
+    "imageAlt": "Mirjam in gesprek met een jongere op de bank, die aantekeningen maakt in een schrift",
     "groups": [
       {
         "title": "Jongeren (16+)",
@@ -108,6 +107,11 @@
       "Opvoedvragen of onzekerheid in het ouderschap",
       "Behoefte aan inzicht en overzicht"
     ]
+  },
+  "walkingBand": {
+    "label": "Wandelcoaching",
+    "quote": "Je hoeft het niet alleen te doen.",
+    "imageAlt": "Mirjam en een cliënt wandelen samen over een pad langs het water"
   },
   "approach": {
     "sectionLabel": "Werkwijze",

@@ -3,6 +3,7 @@ import AboutPractice from "@/components/AboutPractice";
 import AboutMe from "@/components/AboutMe";
 import ForWhom from "@/components/ForWhom";
 import CommonQuestions from "@/components/CommonQuestions";
+import WalkingBand from "@/components/WalkingBand";
 import Approach from "@/components/Approach";
 import Pricing from "@/components/Pricing";
 import Availability from "@/components/Availability";
@@ -17,6 +18,7 @@ export default function Home() {
       <AboutMe />
       <ForWhom />
       <CommonQuestions />
+      <WalkingBand />
       <Approach />
       <Pricing />
       <Availability />
