@@ -5,6 +5,9 @@ import "./globals.css";
 import content from "@/content/nl.json";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { businessJsonLd, graph, personJsonLd } from "@/lib/structured-data";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -18,13 +21,14 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const SITE_URL = "https://coachingpraktijk.deleeuw.nl";
-
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: content.siteTitle,
   description: content.siteDescription,
   keywords: [
+    "PSYCH-K",
+    "PSYCH-K coaching Leiden",
+    "psycholoog coaching Leiden",
     "wandelcoaching",
     "wandelcoaching Leiden",
     "coaching Leiden",
@@ -44,7 +48,7 @@ export const metadata: Metadata = {
     description: content.siteDescription,
     locale: "nl_NL",
     type: "website",
-    siteName: "Coachingpraktijk De Leeuw",
+    siteName: SITE_NAME,
     url: "/",
   },
   twitter: {
@@ -52,7 +56,7 @@ export const metadata: Metadata = {
     title: content.siteTitle,
     description: content.siteDescription,
   },
-  applicationName: "Coachingpraktijk De Leeuw",
+  applicationName: SITE_NAME,
   appleWebApp: {
     title: "De Leeuw",
   },
@@ -70,40 +74,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Coachingpraktijk De Leeuw",
-    description: content.siteDescription,
-    url: SITE_URL,
-    email: "mirjam@deleeuw.nl",
-    image: `${SITE_URL}/opengraph-image`,
-    logo: `${SITE_URL}/icons/icon-512.png`,
-    inLanguage: "nl-NL",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Leiden",
-      addressRegion: "Zuid-Holland",
-      addressCountry: "NL",
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Leiden",
-    },
-    serviceType: [
-      "Wandelcoaching",
-      "Online coaching",
-    ],
-    priceRange: "€110 - €125",
-  };
-
   return (
     <html lang="nl-NL" className={`${lora.variable} ${dmSans.variable}`}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={graph(businessJsonLd(), personJsonLd())} />
       </head>
       <body>
         <a href="#main-content" className="skip-to-content">

@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import content from "@/content/nl.json";
@@ -104,13 +105,14 @@ export default function Hero() {
                   variants={lineVariants}
                 >
                   {line.split(" ").map((word, wordIdx) => (
-                    <motion.span
-                      key={`${lineIdx}-${wordIdx}`}
-                      variants={wordVariants}
-                      className="mr-[0.25em] inline-block"
-                    >
-                      {word}
-                    </motion.span>
+                    <Fragment key={`${lineIdx}-${wordIdx}`}>
+                      <motion.span
+                        variants={wordVariants}
+                        className="inline-block"
+                      >
+                        {word}
+                      </motion.span>{" "}
+                    </Fragment>
                   ))}
                 </motion.span>
               ))}

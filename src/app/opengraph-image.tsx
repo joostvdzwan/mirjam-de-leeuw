@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Coachingpraktijk De Leeuw — Mirjam van der Zwan - de Leeuw, coach in Leiden";
+  "Coachingpraktijk De Leeuw — Mirjam van der Zwan - de Leeuw, psycholoog (MSc) en coach in Leiden";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -60,13 +60,16 @@ export default async function OpenGraphImage() {
           <div
             style={{
               display: "flex",
+              flexDirection: "column",
+              gap: 8,
               fontFamily: "DM Sans",
               fontSize: 30,
               color: colors.cream,
               opacity: 0.8,
             }}
           >
-            Coaching in Leiden · vanaf 16 jaar
+            <span>Coaching in Leiden · vanaf 16 jaar</span>
+            <span>Psycholoog (MSc) en coach</span>
           </div>
         </div>
 

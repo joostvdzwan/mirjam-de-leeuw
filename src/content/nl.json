@@ -1,6 +1,6 @@
 {
-  "siteTitle": "Coachingpraktijk De Leeuw — Coaching in Leiden",
-  "siteDescription": "Wandelcoaching en online coaching in Leiden. Praktische begeleiding voor iedereen vanaf 16 jaar. Kosteloos kennismakingsgesprek.",
+  "siteTitle": "Coachingpraktijk De Leeuw — Coaching door een psycholoog in Leiden",
+  "siteDescription": "Coaching in Leiden door psycholoog (MSc) Mirjam van der Zwan - de Leeuw. PSYCH-K®, wandelcoaching en online coaching, vanaf 16 jaar. Kosteloos kennismakingsgesprek.",
   "nav": {
     "links": [
       { "label": "Over de praktijk", "href": "#over-de-praktijk" },
@@ -240,6 +240,342 @@
     "location": "Leiden en omgeving",
     "email": "mirjam@deleeuw.nl",
     "disclaimer": "Coachingpraktijk De Leeuw biedt coaching en geen diagnostiek, behandeling of crisisinterventie.",
-    "copyright": "© {year} Coachingpraktijk De Leeuw. Alle rechten voorbehouden."
+    "copyright": "© {year} Coachingpraktijk De Leeuw. Alle rechten voorbehouden.",
+    "poweredBy": {
+      "label": "Powered by",
+      "name": "Tetrifox",
+      "url": "https://tetrifox.com/?utm_source=coachingpraktijk.deleeuw.nl&utm_medium=referral&utm_campaign=powered-by"
+    }
+  },
+  "footerLinks": [
+    {
+      "heading": "Coaching",
+      "links": ["psych-k-coaching-leiden", "wandelcoaching-leiden", "online-coaching"]
+    },
+    {
+      "heading": "Voor wie",
+      "links": ["coaching-jongeren-leiden", "gezinscoaching-leiden", "over-mirjam"]
+    }
+  ],
+  "contentPage": {
+    "homeLabel": "Home",
+    "faqHeading": "Veelgestelde vragen",
+    "relatedHeading": "Lees ook",
+    "priceLabel": "Tarief",
+    "ctaHeading": "Kennismaken?",
+    "ctaText": "Een telefonische kennismaking van 20 à 30 minuten is kosteloos en vrijblijvend. We kijken samen naar je vraag en of coaching passend is.",
+    "ctaButton": "Plan een kennismakingsgesprek",
+    "phoneLabel": "Bel of app",
+    "emailLabel": "Mail",
+    "aboutLabel": "Over Mirjam",
+    "credentialLine": "Psycholoog (MSc) · SKJ-geregistreerd"
+  },
+  "pages": {
+    "psych-k-coaching-leiden": {
+      "label": "PSYCH-K® coaching",
+      "summary": "Werk aan overtuigingen die je tegenhouden, op een diepere laag.",
+      "metaTitle": "PSYCH-K® coaching in Leiden — Coachingpraktijk De Leeuw",
+      "metaDescription": "PSYCH-K® coaching in Leiden bij psycholoog (MSc) Mirjam van der Zwan - de Leeuw. Werk aan overtuigingen die je tegenhouden. Kosteloos kennismakingsgesprek.",
+      "eyebrow": "Coaching",
+      "heading": "PSYCH-K® coaching in Leiden",
+      "intro": "Soms weet je precies wat je anders wilt, maar blijf je toch in hetzelfde patroon terechtkomen. Met PSYCH-K® werk je aan overtuigingen die je tegenhouden, op een diepere laag.",
+      "image": "psychk",
+      "imageAlt": "Mirjam begeleidt een spiertest: een cliënt houdt haar arm gestrekt terwijl Mirjam meekijkt",
+      "priceCard": "PSYCH-K® coaching",
+      "sections": [
+        {
+          "heading": "Wat is PSYCH-K®?",
+          "paragraphs": [
+            "We weten vaak heel goed wat we anders zouden willen, maar toch lukt het niet altijd om dat ook te voelen of te doen. Overtuigingen en automatische patronen kunnen daar een belangrijke rol in spelen.",
+            "PSYCH-K® richt zich op het herkennen en veranderen van belemmerende overtuigingen. Met behulp van onder andere spiertesten en balansprocessen onderzoeken we wat onbewust meespeelt en werken we aan overtuigingen die beter passen bij hoe je wilt denken, voelen en handelen."
+          ]
+        },
+        {
+          "heading": "Hoe een sessie verloopt",
+          "paragraphs": [
+            "We werken met een thema dat voor jou belangrijk is, zoals rust, zelfvertrouwen of grenzen. Jij bepaalt de richting, ik begeleid het proces.",
+            "Een sessie duurt 60 tot 90 minuten. Er is geen vast traject: we stemmen samen af wat helpend is en hoeveel sessies daarbij passen."
+          ]
+        },
+        {
+          "heading": "Voor jou als",
+          "items": [
+            "je merkt dat patronen blijven terugkomen, ook als je weet wat je anders wilt;",
+            "je vastloopt in een levensfase of veel spanning ervaart;",
+            "overtuigingen over jezelf je remmen, bijvoorbeeld rond zelfvertrouwen of grenzen."
+          ]
+        },
+        {
+          "heading": "PSYCH-K® bij een psycholoog",
+          "paragraphs": [
+            "Ik ben psycholoog (MSc Kinder- en Jeugdpsychologie, Universiteit Leiden) en werkte jarenlang in de jeugd-GGZ en binnen een Jeugdteam. Die kennis van gedrag, ontwikkeling en de invloed van je omgeving neem ik mee in elke sessie.",
+            "PSYCH-K® is in mijn praktijk een belangrijke methode, maar niet de enige. Soms past een gesprek beter, soms wandelcoaching of online coaching."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Moet ik een duidelijke hulpvraag hebben?",
+          "answer": "Nee. Vaak begint het met het gevoel dat iets niet klopt. In het kosteloze kennismakingsgesprek kijken we samen naar je vraag en of coaching passend is."
+        },
+        {
+          "question": "Wat kost een PSYCH-K® sessie?",
+          "answer": "Een sessie van 60 tot 90 minuten kost €125. Een pakket van drie sessies kost €345. Coaching is particulier en wordt niet vergoed via de zorgverzekering."
+        },
+        {
+          "question": "Is PSYCH-K® een vorm van therapie?",
+          "answer": "Nee. PSYCH-K® zet ik in als coachingsmethode, gericht op overtuigingen en patronen in je dagelijks leven."
+        }
+      ],
+      "related": ["wandelcoaching-leiden", "over-mirjam", "coaching-jongeren-leiden"]
+    },
+    "wandelcoaching-leiden": {
+      "label": "Wandelcoaching",
+      "summary": "Coaching in beweging, buiten in en rondom Leiden.",
+      "metaTitle": "Wandelcoaching in Leiden — Coachingpraktijk De Leeuw",
+      "metaDescription": "Wandelcoaching in en rondom Leiden bij psycholoog (MSc) Mirjam van der Zwan - de Leeuw. Buiten, in beweging, in gesprek. Kosteloos kennismakingsgesprek.",
+      "eyebrow": "Coaching",
+      "heading": "Wandelcoaching in Leiden",
+      "intro": "Buiten, in beweging, in de natuur. Wandelen opent gesprekken op een ontspannen, natuurlijke manier.",
+      "image": "walking",
+      "imageAlt": "Mirjam en een cliënt wandelen samen over een pad langs het water",
+      "priceCard": "Wandelcoaching",
+      "sections": [
+        {
+          "heading": "Waarom wandelen?",
+          "paragraphs": [
+            "Veel mensen denken en praten makkelijker terwijl ze in beweging zijn. Naast elkaar lopen geeft ruimte om even stil te staan bij wat er speelt, zonder dat het zwaar hoeft te voelen.",
+            "We kijken naar wat er speelt, naar gedrag en naar wat daaronder ligt. Ook de invloed van je omgeving nemen we mee, zoals gezin, school, werk en relaties."
+          ],
+          "quote": "Je hoeft het niet alleen te doen."
+        },
+        {
+          "heading": "Hoe een wandelsessie verloopt",
+          "paragraphs": [
+            "We wandelen in en rondom Leiden. Een sessie duurt 60 tot 90 minuten. Er is geen vast traject: we stemmen samen af wat helpend is en plannen gesprekken die aansluiten bij wat jij nodig hebt."
+          ]
+        },
+        {
+          "heading": "Voor jou als",
+          "items": [
+            "je makkelijker denkt en praat terwijl je in beweging bent;",
+            "je even afstand wilt nemen van wat er speelt in werk, studie, gezin of relaties;",
+            "je graag buiten bent."
+          ]
+        },
+        {
+          "heading": "Coaching door een psycholoog",
+          "paragraphs": [
+            "Ik ben psycholoog (MSc Kinder- en Jeugdpsychologie, Universiteit Leiden) en SKJ-geregistreerd. In mijn praktijk combineer ik die achtergrond met een praktische, laagdrempelige manier van coachen."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Wat kost wandelcoaching?",
+          "answer": "Een wandelsessie van 60 tot 90 minuten kost €125. Een pakket van drie sessies kost €345. Coaching is particulier en wordt niet vergoed via de zorgverzekering."
+        },
+        {
+          "question": "Wanneer kunnen we wandelen?",
+          "answer": "Vaste momenten zijn dinsdag en donderdag (09:00–17:00) en zaterdagochtend (09:00–13:00)."
+        },
+        {
+          "question": "Moet ik een duidelijke hulpvraag hebben?",
+          "answer": "Nee. Vaak begint het met het gevoel dat iets niet klopt. In het kosteloze kennismakingsgesprek kijken we samen naar je vraag en of coaching passend is."
+        }
+      ],
+      "related": ["psych-k-coaching-leiden", "online-coaching", "over-mirjam"]
+    },
+    "online-coaching": {
+      "label": "Online coaching",
+      "summary": "Flexibel vanuit je eigen omgeving, ook in de avond.",
+      "metaTitle": "Online coaching door een psycholoog — Coachingpraktijk De Leeuw",
+      "metaDescription": "Online coaching door psycholoog (MSc) Mirjam van der Zwan - de Leeuw. Flexibel, vanuit je eigen omgeving, ook in de avond. Kosteloos kennismakingsgesprek.",
+      "eyebrow": "Coaching",
+      "heading": "Online coaching",
+      "intro": "Een flexibel alternatief, vanuit je eigen omgeving. Fijn als je liever thuis bent of in de avond wilt afspreken.",
+      "image": "portrait",
+      "imageAlt": "Mirjam van der Zwan - de Leeuw, coach in Leiden, zittend en glimlachend",
+      "priceCard": "Online coaching",
+      "sections": [
+        {
+          "heading": "Hoe online coaching werkt",
+          "paragraphs": [
+            "Een online sessie duurt 60 minuten. Je hoeft niet te reizen, dus je kunt ook meedoen als je niet in de buurt van Leiden woont.",
+            "We kijken naar wat er speelt, naar gedrag en naar wat daaronder ligt, en naar wat jou helpt om weer verder te komen. Er is geen vast traject; we stemmen samen af wat helpend is."
+          ]
+        },
+        {
+          "heading": "Voor jou als",
+          "items": [
+            "je liever in de avond afspreekt;",
+            "je liever thuis bent of niet wilt reizen;",
+            "je een druk schema hebt en flexibel wilt plannen."
+          ]
+        },
+        {
+          "heading": "Coaching door een psycholoog",
+          "paragraphs": [
+            "Ik ben psycholoog (MSc Kinder- en Jeugdpsychologie, Universiteit Leiden) en SKJ-geregistreerd. Ook online neem ik die achtergrond mee: aandacht voor wat er onder de oppervlakte meespeelt én voor wat je in het dagelijks leven verder helpt."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Wat kost online coaching?",
+          "answer": "Een online sessie van 60 minuten kost €95. Een pakket van drie sessies kost €255. Coaching is particulier en wordt niet vergoed via de zorgverzekering."
+        },
+        {
+          "question": "Kan ik in de avond afspreken?",
+          "answer": "Ja, avonden zijn op aanvraag mogelijk. Vaste momenten zijn dinsdag en donderdag (09:00–17:00) en zaterdagochtend (09:00–13:00)."
+        }
+      ],
+      "related": ["psych-k-coaching-leiden", "wandelcoaching-leiden", "over-mirjam"]
+    },
+    "coaching-jongeren-leiden": {
+      "label": "Jongeren (16+)",
+      "summary": "Voor jongeren vanaf 16 jaar die vastlopen of meer grip willen.",
+      "metaTitle": "Coaching voor jongeren (16+) in Leiden — Coachingpraktijk De Leeuw",
+      "metaDescription": "Coaching voor jongeren vanaf 16 jaar in Leiden, door psycholoog (MSc Kinder- en Jeugdpsychologie) Mirjam van der Zwan - de Leeuw. Bij overprikkeling, twijfels of vastlopen.",
+      "eyebrow": "Voor wie",
+      "heading": "Coaching voor jongeren (16+) in Leiden",
+      "intro": "Last van overprikkeling, twijfels over jezelf, loop je vast op school, studie of werk of heb je moeite met dagstructuur? Je hoeft het niet alleen uit te zoeken. Samen kijken we naar wat jou helpt om meer grip te krijgen.",
+      "image": "conversation",
+      "imageAlt": "Mirjam in gesprek met een jongere op de bank, die aantekeningen maakt in een schrift",
+      "sections": [
+        {
+          "heading": "Waar jongeren mee komen",
+          "items": [
+            "Overprikkeling, spanning of moeite met balans",
+            "Twijfels over jezelf",
+            "Vastlopen op school, studie of werk",
+            "Moeite met dagstructuur"
+          ]
+        },
+        {
+          "heading": "Een psycholoog met ervaring met jongeren",
+          "paragraphs": [
+            "Ik heb de master Kinder- en Jeugdpsychologie gevolgd aan de Universiteit Leiden. Daarna werkte ik 6,5 jaar in de jeugd-GGZ en als gedragswetenschapper binnen een Jeugdteam, met kinderen, jongeren en gezinnen met uiteenlopende vragen.",
+            "In mijn praktijk bied ik coaching: betrokken, laagdrempelig en praktisch, zonder vast standaardtraject."
+          ]
+        },
+        {
+          "heading": "Hoe we werken",
+          "paragraphs": [
+            "Je kiest wat bij je past: een gesprek in m'n praktijkruimte, wandelend of online. We kijken naar wat er speelt en nemen ook je omgeving mee, zoals school, werk en thuis.",
+            "Waar het helpt, werken we met PSYCH-K® aan overtuigingen die je tegenhouden."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Vanaf welke leeftijd kan ik terecht?",
+          "answer": "Coaching is voor iedereen vanaf 16 jaar."
+        },
+        {
+          "question": "Wordt coaching vergoed?",
+          "answer": "Nee, coaching is particulier en wordt niet vergoed via de zorgverzekering."
+        },
+        {
+          "question": "Is dit hetzelfde als hulp vanuit de GGZ?",
+          "answer": "Nee. Ik heb in de jeugd-GGZ gewerkt, maar in mijn praktijk bied ik coaching. Merk je dat je meer nodig hebt, dan zoeken we samen naar passende hulp."
+        }
+      ],
+      "related": ["psych-k-coaching-leiden", "wandelcoaching-leiden", "gezinscoaching-leiden"]
+    },
+    "gezinscoaching-leiden": {
+      "label": "Ouders & gezinnen",
+      "summary": "Bij opvoedvragen en terugkerende patronen in het gezin.",
+      "metaTitle": "Coaching voor ouders en gezinnen in Leiden — Coachingpraktijk De Leeuw",
+      "metaDescription": "Gezinscoaching in Leiden door psycholoog (MSc Kinder- en Jeugdpsychologie) Mirjam van der Zwan - de Leeuw. Bij opvoedvragen, terugkerende gezinspatronen en vragen over gedrag.",
+      "eyebrow": "Voor wie",
+      "heading": "Coaching voor ouders en gezinnen in Leiden",
+      "intro": "Opvoedvragen, terugkerende gezinspatronen of vragen over gezinsdynamiek. Soms helpt een blik van buitenaf om patronen te herkennen en samen te zoeken naar wat wél werkt.",
+      "image": "seated",
+      "imageAlt": "Mirjam van der Zwan - de Leeuw — zittend en glimlachend, naast een kamerplant",
+      "sections": [
+        {
+          "heading": "Herken je dit?",
+          "items": [
+            "Terugkerende situaties thuis of in relaties",
+            "Vragen over gedrag of ontwikkeling",
+            "Opvoedvragen of onzekerheid in het ouderschap",
+            "Behoefte aan inzicht en overzicht"
+          ]
+        },
+        {
+          "heading": "Systeemgericht kijken",
+          "paragraphs": [
+            "Niet alleen jou, maar ook je context: gezin, relaties, omgeving. We kijken naar wat er speelt, naar onderliggende patronen en naar de omgeving. Van daaruit kijken we wat helpend is."
+          ],
+          "quote": "Gedrag is vaak een signaal van wat iemand nodig heeft."
+        },
+        {
+          "heading": "Ervaring met kinderen, jongeren en gezinnen",
+          "paragraphs": [
+            "Als psycholoog (MSc Kinder- en Jeugdpsychologie, Universiteit Leiden) werkte ik 6,5 jaar in de jeugd-GGZ en daarna als gedragswetenschapper binnen een Jeugdteam. Daar leerde ik veel over gedrag, ontwikkeling en de invloed van de omgeving.",
+            "Daarnaast ben ik moeder van twee jonge kinderen. Dat helpt me relativeren: vastlopen hoort soms bij het leven."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Hoe begin ik?",
+          "answer": "Met een telefonische kennismaking van 20 à 30 minuten, kosteloos en vrijblijvend. We kijken samen naar je vraag en of coaching passend is."
+        },
+        {
+          "question": "Kan ik bij jou terecht voor onderzoek of een diagnose?",
+          "answer": "Nee. Ik doe geen onderzoek en stel geen diagnoses. Is dat wel nodig, dan denk ik met je mee over waar je terecht kunt."
+        },
+        {
+          "question": "Wordt coaching vergoed?",
+          "answer": "Nee, coaching is particulier en wordt niet vergoed via de zorgverzekering."
+        }
+      ],
+      "related": ["coaching-jongeren-leiden", "over-mirjam", "wandelcoaching-leiden"]
+    },
+    "over-mirjam": {
+      "label": "Over Mirjam",
+      "summary": "Psycholoog (MSc) en coach met ervaring in de jeugd-GGZ.",
+      "metaTitle": "Over Mirjam van der Zwan - de Leeuw, psycholoog (MSc) en coach",
+      "metaDescription": "Mirjam van der Zwan - de Leeuw is psycholoog (MSc Kinder- en Jeugdpsychologie, Universiteit Leiden), SKJ-geregistreerd en coach in Leiden. Lees over haar achtergrond en werkwijze.",
+      "eyebrow": "Psycholoog (MSc) en coach",
+      "heading": "Mirjam van der Zwan - de Leeuw",
+      "intro": "Ik ben psycholoog en coach in Leiden. In mijn praktijk combineer ik mijn achtergrond in de kinder- en jeugdpsychologie met PSYCH-K®, wandelcoaching en online coaching.",
+      "image": "seated",
+      "imageAlt": "Mirjam van der Zwan - de Leeuw — zittend en glimlachend, naast een kamerplant",
+      "sections": [
+        {
+          "heading": "Opleiding en registratie",
+          "variant": "credentials",
+          "items": [
+            "MSc Kinder- en Jeugdpsychologie — Universiteit Leiden",
+            "SKJ-geregistreerd — 130005177",
+            "6,5 jaar werkervaring in de jeugd-GGZ",
+            "Gedragswetenschapper binnen een Jeugdteam"
+          ]
+        },
+        {
+          "heading": "Mijn achtergrond",
+          "aboutMeParagraphs": [0, 3]
+        },
+        {
+          "heading": "Hoe PSYCH-K® op mijn pad kwam",
+          "aboutMeParagraphs": [3, 7]
+        },
+        {
+          "heading": "Hoe ik werk",
+          "aboutMeParagraphs": [7, 9],
+          "quote": "Gedrag is vaak een signaal van wat iemand nodig heeft."
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ben je psycholoog of coach?",
+          "answer": "Allebei: ik ben psycholoog (MSc) en werk in mijn praktijk als coach. Mijn psychologische kennis neem ik mee in de coaching."
+        }
+      ],
+      "related": ["psych-k-coaching-leiden", "coaching-jongeren-leiden", "gezinscoaching-leiden"]
+    }
   }
 }

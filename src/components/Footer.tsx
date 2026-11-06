@@ -1,8 +1,9 @@
 import Link from "next/link";
 import content from "@/content/nl.json";
+import { type PageSlug, getPage, pagePath } from "@/lib/content-pages";
 import Logo from "./Logo";
 
-const { footer } = content;
+const { footer, footerLinks } = content;
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -32,6 +33,29 @@ export default function Footer() {
 
         <hr className="my-8 border-brown/5" />
 
+        <nav
+          aria-label="Meer over de praktijk"
+          className="mb-8 flex flex-col items-center gap-4 text-center md:items-start md:text-left"
+        >
+          {footerLinks.map((group) => (
+            <div
+              key={group.heading}
+              className="flex flex-col items-center gap-2 md:flex-row md:gap-4"
+            >
+              <p className="body-xs body-xs-medium text-brown">{group.heading}</p>
+              {group.links.map((slug) => (
+                <Link
+                  key={slug}
+                  href={pagePath(slug as PageSlug)}
+                  className="body-xs body-xs-regular text-brown-muted hover:text-sage-dark transition-colors"
+                >
+                  {getPage(slug as PageSlug).label}
+                </Link>
+              ))}
+            </div>
+          ))}
+        </nav>
+
         <div className="space-y-4 text-center md:text-left">
           <p className="body-xs body-xs-regular text-brown-muted">
             {footer.disclaimer}
@@ -57,6 +81,20 @@ export default function Footer() {
             </span>
             <p className="body-xs body-xs-regular text-brown-muted">
               {footer.copyright.replace("{year}", String(year))}
+            </p>
+            <span className="hidden text-brown-muted md:inline" aria-hidden="true">
+              ·
+            </span>
+            <p className="body-xs body-xs-regular text-brown-muted/70">
+              {footer.poweredBy.label}{" "}
+              <a
+                href={footer.poweredBy.url}
+                target="_blank"
+                rel="noopener"
+                className="hover:text-sage-dark transition-colors"
+              >
+                {footer.poweredBy.name}
+              </a>
             </p>
           </div>
         </div>
