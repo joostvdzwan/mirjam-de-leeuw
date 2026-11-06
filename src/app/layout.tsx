@@ -52,36 +52,9 @@ export const metadata: Metadata = {
     title: content.siteTitle,
     description: content.siteDescription,
   },
-  icons: {
-    icon: [
-      { url: "/favicon-mirjam/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-mirjam/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-mirjam/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon-mirjam/favicon-128x128.png", sizes: "128x128", type: "image/png" },
-      { url: "/favicon-mirjam/favicon-196x196.png", sizes: "196x196", type: "image/png" },
-    ],
-    apple: [
-      { url: "/favicon-mirjam/apple-touch-icon-57x57.png", sizes: "57x57" },
-      { url: "/favicon-mirjam/apple-touch-icon-60x60.png", sizes: "60x60" },
-      { url: "/favicon-mirjam/apple-touch-icon-72x72.png", sizes: "72x72" },
-      { url: "/favicon-mirjam/apple-touch-icon-76x76.png", sizes: "76x76" },
-      { url: "/favicon-mirjam/apple-touch-icon-114x114.png", sizes: "114x114" },
-      { url: "/favicon-mirjam/apple-touch-icon-120x120.png", sizes: "120x120" },
-      { url: "/favicon-mirjam/apple-touch-icon-144x144.png", sizes: "144x144" },
-      { url: "/favicon-mirjam/apple-touch-icon-152x152.png", sizes: "152x152" },
-      { url: "/favicon-mirjam/apple-touch-icon-167x167.png", sizes: "167x167" },
-      { url: "/favicon-mirjam/apple-touch-icon-180x180.png", sizes: "180x180" },
-    ],
-  },
-  manifest: "/manifest.webmanifest",
-  other: {
-    "msapplication-TileColor": "#FFFFFF",
-    "msapplication-TileImage": "/favicon-mirjam/mstile-144x144.png",
-    "msapplication-square70x70logo": "/favicon-mirjam/mstile-70x70.png",
-    "msapplication-square150x150logo": "/favicon-mirjam/mstile-150x150.png",
-    "msapplication-wide310x150logo": "/favicon-mirjam/mstile-310x150.png",
-    "msapplication-square310x310logo": "/favicon-mirjam/mstile-310x310.png",
-    "application-name": "Coachingpraktijk De Leeuw",
+  applicationName: "Coachingpraktijk De Leeuw",
+  appleWebApp: {
+    title: "De Leeuw",
   },
 };
 
@@ -104,7 +77,8 @@ export default function RootLayout({
     description: content.siteDescription,
     url: SITE_URL,
     email: "mirjam@deleeuw.nl",
-    image: `${SITE_URL}/favicon-mirjam/android-chrome-512x512.png`,
+    image: `${SITE_URL}/opengraph-image`,
+    logo: `${SITE_URL}/icons/icon-512.png`,
     inLanguage: "nl-NL",
     address: {
       "@type": "PostalAddress",
