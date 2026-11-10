@@ -339,7 +339,7 @@ export default function AlgemeneVoorwaardenPage() {
               <li>
                 wandelcoaching van 60–90 minuten: €125 per sessie;
               </li>
-              <li>PSYCH-K® sessie van 60–90 minuten: €125 per sessie;</li>
+              <li>PSYCH-K® sessie van 60 minuten: €125 per sessie;</li>
               <li>online gesprek van 60 minuten: €95 per sessie;</li>
               <li>pakket van 3 wandel- of PSYCH-K® sessies: €345;</li>
               <li>pakket van 3 online gesprekken: €255.</li>
