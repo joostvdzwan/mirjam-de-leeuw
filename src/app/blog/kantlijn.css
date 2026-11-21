@@ -1,0 +1,616 @@
+/*
+  Kantlijn — blog styles.
+  Ported from design/reference/styles.css and design/tokens.css. Every rule is scoped
+  to `.kantlijn` (via :where, so the reference specificity is unchanged) and the file
+  is unlayered, so it wins over Tailwind's base and utility layers inside the blog
+  without touching the rest of the site.
+*/
+
+/* ── Tokens ───────────────────────────────────────────────────── */
+.kantlijn {
+  --color-cream: #FAF7F2;
+  --color-sand: #F0EBE1;
+  --color-brown: #3B3229;
+  --color-sage: #5E6B52;
+  --color-white: #FFFFFF;
+
+  --color-grachtwater: #4F6E78;
+  --color-grachtwater-ink: #2E434A;
+  --color-grachtwater-tint: #D3DEE0;
+  --color-kastanje: #A85A3A;
+  --color-kastanje-ink: #8E4A2E;
+  --color-kastanje-tint: #EBCFC0;
+
+  --color-ink-soft: #5A5047;
+  --color-muted: #7A6F63;
+  --color-number-muted: #A89D90;
+  --color-rule-soft: #CFC5B5;
+  --color-rule-faint: #E9E1D3;
+  --color-field-border: #8C8174;
+  --color-error: #9A3B20;
+  --color-on-sage-accent: #E7DDCB;
+
+  --font-serif: var(--font-lora, 'Lora'), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-dm-sans, 'DM Sans'), system-ui, -apple-system, sans-serif;
+
+  --text-masthead: 92px;
+  --text-masthead-bar: 24px;
+  --text-h1: 46px;
+  --text-lead-title: 36px;
+  --text-h2: 27px;
+  --text-quote: 31px;
+  --text-index-title: 24px;
+  --text-short-answer: 21px;
+  --text-faq-q: 21px;
+  --text-bubble: 18px;
+  --text-body: 18px;
+  --text-standfirst: 18px;
+  --text-faq-a: 17px;
+  --text-ui: 15px;
+  --text-small: 14px;
+  --text-meta: 13px;
+
+  --leading-tight: 1.0;
+  --leading-heading: 1.2;
+  --leading-body: 1.68;
+  --leading-ui: 1.55;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --gutter: 24px;
+
+  /* Rules stay quiet: one hairline weight, warm grey, never brown or a track colour */
+  --rule-strong: 1px solid var(--color-rule-soft);
+  --rule: 1px solid var(--color-rule-soft);
+  --rule-soft: 1px solid #DED5C7;
+
+  --radius-bubble: 22px 22px 6px 22px;
+  --radius-pill: 999px;
+  --radius-field: 10px;
+  --radius-sheet: 20px 20px 0 0;
+  --radius-none: 0;
+
+  --measure-text: 640px;
+  --margin-column: 240px;
+  --number-gutter: 48px;
+  --page-max: 1160px;
+  /* Height of the shared site header (fixed, outside .kantlijn) */
+  --site-header-h: 73px;
+  --kantlijn: calc(var(--margin-column) + var(--space-6));
+  --article-max: calc(var(--measure-text) + var(--kantlijn) + var(--number-gutter) + var(--space-6) + 2 * var(--gutter));
+
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --dur-bubble: 450ms;
+  --dur-fade: 500ms;
+}
+
+[data-track="psych-k"] {
+  --track: var(--color-grachtwater);
+  --track-ink: var(--color-grachtwater-ink);
+  --track-tint: var(--color-grachtwater-tint);
+}
+[data-track="mijn-verhaal"] {
+  --track: var(--color-kastanje);
+  --track-ink: var(--color-kastanje-ink);
+  --track-tint: var(--color-kastanje-tint);
+}
+
+@media (min-width: 1024px) {
+  .kantlijn { --site-header-h: 74px; }
+}
+@media (min-width: 1060px) {
+  .kantlijn {
+    --text-masthead: 128px;
+    --text-h1: 68px;
+    --text-lead-title: 44px;
+    --text-h2: 32px;
+    --text-quote: 44px;
+    --text-index-title: 28px;
+    --text-short-answer: 24px;
+    --text-faq-q: 23px;
+    --text-bubble: 20px;
+    --text-body: 20px;
+    --text-faq-a: 18px;
+    --leading-body: 1.72;
+    --gutter: 32px;
+  }
+}
+
+/* ── Base ─────────────────────────────────────────────────────── */
+.kantlijn {
+  min-height: 100vh;
+  padding-top: var(--site-header-h);
+  background: var(--color-cream);
+  color: var(--color-brown);
+  font-family: var(--font-sans);
+  font-size: var(--text-ui);
+  line-height: var(--leading-ui);
+  -webkit-font-smoothing: antialiased;
+}
+:where(.kantlijn) img { display: block; max-width: 100%; height: auto; }
+:where(.kantlijn) a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+:where(.kantlijn) a:hover { color: var(--color-sage); }
+:where(.kantlijn) button { font: inherit; color: inherit; }
+:where(.kantlijn) em { font-style: italic; }
+:where(.kantlijn) :focus-visible { outline: 2px solid var(--color-grachtwater); outline-offset: 3px; border-radius: 0; }
+:where(.kantlijn) h1:focus, :where(.kantlijn) h2:focus { outline: none; }
+:where(.kantlijn) [hidden] { display: none !important; } /* the one allowed !important: `hidden` must always win */
+:where(.kantlijn) ::selection { background: var(--color-grachtwater-tint); color: var(--color-brown); }
+:where(.kantlijn) .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:where(.kantlijn) .nowrap { white-space: nowrap; }
+:where(.kantlijn) .container { width: auto; max-width: var(--page-max); margin-inline: auto; padding-inline: var(--gutter); }
+
+/* ── Buttons ──────────────────────────────────────────────────── */
+:where(.kantlijn) .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; border: 0; border-radius: var(--radius-pill); font-weight: 600; font-size: 17px; text-decoration: none; cursor: pointer; }
+:where(.kantlijn) .btn--sage { background: var(--color-sage); color: var(--color-cream); }
+:where(.kantlijn) .btn--cream { background: var(--color-cream); color: var(--color-brown); }
+:where(.kantlijn) .btn--outline { background: transparent; border: 1.5px solid var(--color-sage); color: var(--color-brown); }
+:where(.kantlijn) .btn--small { min-height: 44px; padding: 0 20px; font-size: var(--text-ui); font-weight: 500; }
+:where(.kantlijn) .btn--block { width: 100%; }
+:where(.kantlijn) .btn--sage:hover { color: var(--color-cream); background: #525E47; }
+:where(.kantlijn) .btn--cream:hover { color: var(--color-brown); background: #FFFFFF; }
+:where(.kantlijn) .btn[disabled] { opacity: .7; cursor: progress; }
+
+/* ── Masthead (front page) ────────────────────────────────────── */
+:where(.kantlijn) .masthead { border-bottom: var(--rule-strong); padding: 18px 0 22px; margin-top: var(--space-2); }
+:where(.kantlijn) .masthead__title { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: var(--text-masthead); line-height: .86; letter-spacing: -0.035em; }
+:where(.kantlijn) .masthead__intro { margin: 18px 0 0; max-width: 34ch; font-family: var(--font-serif); font-size: 18px; line-height: 1.5; }
+@media (min-width: 760px) {
+  :where(.kantlijn) .masthead { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); padding: 24px 0 28px; }
+  :where(.kantlijn) .masthead__intro { margin: 0 0 10px; font-size: 20px; }
+}
+
+:where(.kantlijn) .masthead-strip { border-bottom: var(--rule); padding: 18px 0 12px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+:where(.kantlijn) .masthead-strip__title { font-family: var(--font-serif); font-style: italic; font-size: var(--text-masthead-bar); line-height: 1; letter-spacing: -0.03em; text-decoration: none; }
+:where(.kantlijn) .masthead-strip__intro { display: none; margin: 0; font-family: var(--font-serif); font-size: 16px; color: var(--color-ink-soft); }
+:where(.kantlijn) .article-head { max-width: var(--article-max); }
+@media (min-width: 760px) {
+  :where(.kantlijn) .masthead-strip { padding: 24px 0 14px; }
+  :where(.kantlijn) .masthead-strip__title { font-size: 40px; }
+  :where(.kantlijn) .masthead-strip__intro { display: block; }
+}
+
+/* ── Track filter (real links with aria-current) ──────────────── */
+:where(.kantlijn) .track-filter { display: flex; flex-wrap: wrap; gap: 0 22px; padding-top: 6px; }
+:where(.kantlijn) .track-filter a { display: inline-flex; align-items: center; min-height: 44px; padding: 0; font-size: var(--text-ui); color: var(--color-ink-soft); text-decoration: none; text-underline-offset: 7px; text-decoration-thickness: 2px; }
+:where(.kantlijn) .track-filter a[aria-current="page"] { font-weight: 600; text-decoration-line: underline; color: var(--track, var(--color-brown)); }
+:where(.kantlijn) .track-filter a:hover { text-decoration-line: underline; color: var(--track, var(--color-brown)); }
+
+/* ── Front page layout ────────────────────────────────────────── */
+:where(.kantlijn) .front { display: grid; gap: var(--space-8); margin-top: var(--space-4); }
+@media (min-width: 760px) {
+  :where(.kantlijn) .front { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr); gap: var(--space-8); align-items: start; margin-top: var(--space-6); }
+}
+
+:where(.kantlijn) .label { margin: 0 0 14px; font-size: var(--text-meta); color: var(--color-muted); }
+:where(.kantlijn) .lead-story__link { display: block; text-decoration: none; color: inherit; }
+:where(.kantlijn) .lead-story__link:hover { color: inherit; }
+:where(.kantlijn) .lead-story__photo { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
+@media (min-width: 760px) { :where(.kantlijn) .lead-story__photo { aspect-ratio: 4 / 5; } }
+:where(.kantlijn) .lead-story__img { width: 100%; height: 100%; object-fit: cover; }
+:where(.kantlijn) .lead-story__track { margin: 20px 0 8px; font-size: var(--text-small); color: var(--track); }
+:where(.kantlijn) .lead-story__title { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: var(--text-lead-title); line-height: 1.08; letter-spacing: -0.02em; }
+:where(.kantlijn) .accent { font-style: italic; color: var(--track); }
+:where(.kantlijn) .lead-story__standfirst { margin: 14px 0 0; font-family: var(--font-serif); font-style: italic; font-size: var(--text-standfirst); line-height: 1.5; color: var(--color-ink-soft); }
+:where(.kantlijn) .meta { margin: 14px 0 0; font-size: var(--text-meta); color: var(--color-muted); }
+
+/* Signature: the reader's question as a text message, Mirjam's short reply, then the title */
+:where(.kantlijn) .thread { display: flex; flex-direction: column; gap: 6px; }
+:where(.kantlijn) .thread__stamp { margin: 0 0 6px; align-self: center; font-size: 12px; line-height: 1.4; color: var(--color-muted); }
+:where(.kantlijn) .thread__day { font-weight: 600; }
+:where(.kantlijn) .msg {
+  position: relative; margin: 0; width: fit-content; max-width: 90%;
+  padding: 11px 16px 12px; border-radius: 20px;
+  font-family: var(--font-sans); font-size: 17px; font-weight: 400; line-height: 1.4; text-wrap: pretty;
+  filter: drop-shadow(0 1px 1px rgb(58 48 40 / 0.08)) drop-shadow(0 6px 10px rgb(58 48 40 / 0.1));
+}
+/* The tail: the bubble's side sweeps out into a tapered tip. It reaches 21px into the bubble
+   so it covers the 20px corner radius without a notch, and sticks out 7px. */
+:where(.kantlijn) .msg::after {
+  content: ""; position: absolute; z-index: -1; bottom: 0; width: 28px; height: 20px; background: inherit;
+  -webkit-mask: var(--msg-tail) no-repeat 0 0 / 100% 100%; mask: var(--msg-tail) no-repeat 0 0 / 100% 100%;
+}
+.kantlijn { --msg-tail: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'%3E%3Cpath d='M0 0H21V4C21 12 22.6 16.4 27 18.6C27.9 19.1 27.7 20 26.7 20H0Z'/%3E%3C/svg%3E"); }
+/* Bubbles sit 8px in, so the tail's tip (not the bubble) lines up with the text column */
+:where(.kantlijn) .msg--in { align-self: flex-start; margin-left: 8px; background: var(--color-white); color: var(--color-brown); }
+:where(.kantlijn) .msg--in::after { left: -7px; transform: scaleX(-1); }
+:where(.kantlijn) .msg--out { background: var(--color-grachtwater); color: var(--color-cream); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+:where(.kantlijn) .msg--out::after { right: -7px; }
+:where(.kantlijn) .msg--solo { align-self: flex-end; margin-right: 8px; }
+:where(.kantlijn) .thread__out { position: relative; align-self: flex-end; display: flex; align-items: flex-end; justify-content: flex-end; gap: 14px; max-width: 90%; margin-top: 4px; }
+:where(.kantlijn) .thread__out .msg { max-width: none; }
+:where(.kantlijn) .thread__receipt { margin: 2px 0 0; align-self: flex-end; padding-right: 42px; font-size: 12px; line-height: 1.4; color: var(--color-muted); font-variant-numeric: tabular-nums; }
+:where(.kantlijn) .thread__receipt--solo { padding-right: 8px; }
+:where(.kantlijn) .thread__typing { display: none; }
+@media (min-width: 760px) {
+  :where(.kantlijn) .msg { font-size: 18px; }
+}
+
+:where(.kantlijn) .lead-story .thread { margin-top: 20px; }
+:where(.kantlijn) .lead-story--no-photo .thread { margin-top: 0; }
+:where(.kantlijn) .lead-story .thread + .lead-story__track { margin-top: 24px; }
+
+/* Numbered index ("Alle notities") */
+:where(.kantlijn) .section-label { margin: 0; padding-bottom: 14px; border-bottom: var(--rule-strong); font-size: var(--text-small); font-weight: 600; }
+:where(.kantlijn) .notes-index { list-style: none; margin: 0; padding: 0; }
+:where(.kantlijn) .notes-index__item { border-bottom: var(--rule-soft); }
+:where(.kantlijn) .notes-index__link, :where(.kantlijn) .notes-index__upcoming { display: flex; gap: 18px; padding: 22px 0; text-decoration: none; color: inherit; }
+:where(.kantlijn) .notes-index__link:hover { color: inherit; }
+:where(.kantlijn) .notes-index__num { flex: 0 0 44px; font-family: var(--font-serif); font-size: 30px; line-height: 1; color: var(--track); }
+:where(.kantlijn) .notes-index__title { display: block; font-family: var(--font-serif); font-size: var(--text-index-title); line-height: 1.18; }
+:where(.kantlijn) .notes-index__meta { display: block; margin-top: 8px; font-size: var(--text-meta); color: var(--color-ink-soft); }
+:where(.kantlijn) .notes-index__upcoming { padding: 18px 0; }
+:where(.kantlijn) .notes-index__upcoming .notes-index__num { font-size: 22px; line-height: 1.1; color: var(--color-muted); }
+:where(.kantlijn) .notes-index__upcoming .notes-index__title { font-size: 19px; line-height: 1.25; color: var(--color-muted); }
+:where(.kantlijn) .notes-index__upcoming .notes-index__meta { color: var(--color-muted); }
+
+/* Signature: hovering a row draws its kantlijn, a line in the margin. Nothing reflows. */
+:where(.kantlijn) .notes-index__link { position: relative; }
+:where(.kantlijn) .notes-index__link::before {
+  content: ""; position: absolute; left: -14px; top: 18px; bottom: 18px; width: 1px;
+  background: var(--track); transform: scaleY(0); transform-origin: top;
+  transition: transform 200ms var(--ease-out);
+}
+:where(.kantlijn) .notes-index__ask::before { background: var(--color-sage); }
+:where(.kantlijn) .notes-index__link:hover::before,
+:where(.kantlijn) .notes-index__link:focus-visible::before { transform: scaleY(1); }
+:where(.kantlijn) .notes-index__link .notes-index__title {
+  text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 5px;
+  text-decoration-color: transparent; transition: text-decoration-color 200ms ease;
+}
+:where(.kantlijn) .notes-index__link:hover .notes-index__title,
+:where(.kantlijn) .notes-index__link:focus-visible .notes-index__title { text-decoration-color: var(--track); }
+:where(.kantlijn) .notes-index__ask:hover .notes-index__title,
+:where(.kantlijn) .notes-index__ask:focus-visible .notes-index__title { text-decoration-color: var(--color-sage); }
+
+/* Planned titles: a promise, not empty slots */
+:where(.kantlijn) .notes-soon { padding: 24px 0 8px; }
+:where(.kantlijn) .notes > .notes-soon:first-child { border-top: var(--rule-strong); }
+:where(.kantlijn) .notes-soon__label { margin: 0 0 12px; font-size: var(--text-meta); font-weight: 600; color: var(--color-muted); }
+:where(.kantlijn) .notes-soon__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-family: var(--font-serif); font-size: 18px; line-height: 1.35; color: var(--color-muted); }
+
+/* Signature: "Jouw vraag?" row */
+:where(.kantlijn) .notes-index__ask { width: 100%; border: 0; border-bottom: var(--rule-soft); background: transparent; text-align: left; cursor: pointer; padding: 22px 0; }
+:where(.kantlijn) .notes-soon + .notes-index__ask { margin-top: 16px; border-top: var(--rule-soft); }
+:where(.kantlijn) .notes > .notes-index__ask:first-child { border-top: var(--rule-strong); }
+:where(.kantlijn) .notes-index__ask .notes-index__num { font-size: 30px; line-height: 1; color: var(--color-sage); }
+:where(.kantlijn) .notes-index__ask .notes-index__title { font-style: italic; font-size: 21px; line-height: 1.25; }
+:where(.kantlijn) .notes-index__ask .notes-index__meta { color: var(--color-sage); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+:where(.kantlijn) .notes-index__empty { padding: 22px 0; margin: 0; font-family: var(--font-serif); font-style: italic; color: var(--color-ink-soft); }
+
+/* Author card (front page) */
+:where(.kantlijn) .author-card { margin-top: var(--space-6); display: flex; gap: 18px; align-items: flex-start; }
+:where(.kantlijn) .author-card__img { flex: 0 0 auto; width: 112px; height: 146px; object-fit: cover; object-position: 50% 14%; }
+:where(.kantlijn) .author-card .label { margin-bottom: 4px; }
+:where(.kantlijn) .author-card__name { margin: 0; font-family: var(--font-serif); font-size: 22px; line-height: 1.2; }
+:where(.kantlijn) .author-card__bio { margin: 8px 0 0; font-size: var(--text-small); line-height: 1.55; color: var(--color-ink-soft); }
+:where(.kantlijn) .link-action { display: inline-flex; align-items: center; min-height: 44px; font-size: var(--text-ui); font-weight: 500; }
+
+/* ── CTA band ─────────────────────────────────────────────────── */
+:where(.kantlijn) .cta-band { margin-top: var(--space-8); }
+:where(.kantlijn) .cta-band__photo { position: relative; height: 240px; }
+:where(.kantlijn) .cta-band__img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 32%; }
+:where(.kantlijn) .cta-band__inner { background: var(--color-sand); color: var(--color-brown); padding: var(--space-4) var(--gutter) 34px; }
+:where(.kantlijn) .cta-band__line { margin: 0; font-family: var(--font-serif); font-size: 30px; line-height: 1.15; }
+:where(.kantlijn) .cta-band__line em { color: var(--color-sage); }
+:where(.kantlijn) .cta-band__text { margin: 14px 0 var(--space-3); font-size: 16px; line-height: 1.6; max-width: 52ch; color: var(--color-ink-soft); }
+@media (min-width: 760px) {
+  :where(.kantlijn) .cta-band { display: grid; grid-template-columns: 1fr 1fr; max-width: var(--page-max); margin-inline: auto; padding-inline: var(--gutter); }
+  :where(.kantlijn) .cta-band__photo { height: 100%; min-height: 360px; }
+  :where(.kantlijn) .cta-band__inner { padding: var(--space-6); display: flex; flex-direction: column; justify-content: center; }
+  :where(.kantlijn) .cta-band__line { font-size: 36px; }
+  :where(.kantlijn) .cta-band .btn { align-self: flex-start; }
+}
+
+/* ══ ARTICLE ═════════════════════════════════════════════════════ */
+
+:where(.kantlijn) .icon-btn { position: relative; width: 44px; height: 44px; border: 0; background: transparent; display: grid; place-items: center; cursor: pointer; }
+:where(.kantlijn) .share-status { position: absolute; right: 4px; top: calc(100% + 6px); white-space: nowrap; padding: 6px 12px; background: var(--color-brown); color: var(--color-cream); font-size: var(--text-meta); border-radius: var(--radius-pill); }
+:where(.kantlijn) .progress { position: fixed; top: var(--site-header-h); left: 0; right: 0; z-index: 49; height: 2px; }
+:where(.kantlijn) .progress__bar { height: 2px; width: var(--progress, 0%); background: var(--track); }
+@media (min-width: 1280px) { :where(.kantlijn) .progress { display: none; } }
+:where(.kantlijn) .byline .icon-btn { margin-left: auto; }
+
+/* Hero */
+:where(.kantlijn) .article-hero__photo { margin: 0; }
+:where(.kantlijn) .article-hero__frame { position: relative; height: 360px; }
+:where(.kantlijn) .article-hero__frame img { width: 100%; height: 100%; object-fit: cover; }
+:where(.kantlijn) .caption { padding: 10px var(--gutter) 0; font-size: var(--text-meta); color: var(--color-muted); }
+:where(.kantlijn) .article-hero__text { max-width: calc(var(--measure-text) + 2 * var(--gutter)); margin-inline: auto; padding: var(--space-4) var(--gutter) 0; }
+:where(.kantlijn) .breadcrumb { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: var(--text-small); color: var(--track); }
+:where(.kantlijn) .breadcrumb a { color: var(--track); }
+:where(.kantlijn) .article-title { margin: 16px 0 0; font-family: var(--font-serif); font-weight: 400; font-size: var(--text-h1); line-height: 1.0; letter-spacing: -0.025em; }
+:where(.kantlijn) .article-title .accent { white-space: nowrap; }
+
+:where(.kantlijn) .article-hero__text .thread { margin-top: 36px; }
+
+:where(.kantlijn) .short-answer { margin-top: 28px; border-top: var(--rule); padding: 20px 0 4px; }
+:where(.kantlijn) .short-answer__label { margin: 0 0 10px; font-size: var(--text-meta); font-weight: 600; color: var(--color-sage); }
+:where(.kantlijn) .short-answer__text { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: var(--text-short-answer); line-height: 1.45; }
+
+:where(.kantlijn) .byline { margin-top: 14px; display: flex; align-items: center; gap: 10px; font-size: var(--text-meta); line-height: 1.5; color: var(--color-ink-soft); }
+:where(.kantlijn) .byline p { margin: 0; }
+:where(.kantlijn) .byline a { color: var(--color-brown); font-weight: 600; }
+:where(.kantlijn) .avatar { border-radius: 50%; object-fit: cover; flex: 0 0 auto; }
+
+:where(.kantlijn) .article-hero__number { display: none; }
+@media (min-width: 1060px) {
+  :where(.kantlijn) .article-hero { max-width: var(--article-max); margin: 88px auto 0; padding: 0 var(--gutter) 0 calc(var(--gutter) + var(--number-gutter) + var(--space-6)); display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 56px; align-items: start; }
+  :where(.kantlijn) .article-hero__photo { order: 2; }
+  :where(.kantlijn) .article-hero__frame { height: auto; aspect-ratio: 4 / 5; }
+  :where(.kantlijn) .article-hero__photo .caption { padding-inline: 0; }
+  :where(.kantlijn) .article-hero__text { padding: 0; }
+  :where(.kantlijn) .article-hero__text .thread { margin-top: 40px; }
+  :where(.kantlijn) .article-hero__text .msg { max-width: 460px; }
+  :where(.kantlijn) .short-answer { margin-top: 40px; padding: 22px 0 24px; }
+  :where(.kantlijn) .article-hero--no-photo { grid-template-columns: minmax(0, var(--measure-text)) var(--margin-column); gap: var(--space-6); }
+  :where(.kantlijn) .article-hero__number { display: block; order: 2; margin: 0; margin-top: 24px; padding-top: 44px; border-top: var(--rule); font-family: var(--font-serif); font-size: 132px; line-height: 0.9; letter-spacing: -0.04em; color: var(--track); }
+}
+
+/* Body: text column plus the kantlijn (floats with a negative margin) */
+:where(.kantlijn) .article-body { max-width: calc(var(--measure-text) + 2 * var(--gutter)); margin-inline: auto; padding: var(--space-4) var(--gutter) 0; }
+@media (min-width: 1060px) {
+  :where(.kantlijn) .article-body {
+    position: relative;
+    max-width: var(--article-max);
+    margin-inline: auto;
+    padding: var(--space-10) calc(var(--kantlijn) + var(--gutter)) 0 calc(var(--gutter) + var(--number-gutter) + var(--space-6));
+  }
+  :where(.kantlijn) .article-body::after { content: ""; display: table; clear: both; }
+  :where(.kantlijn) .article-body .is-side { float: right; clear: right; width: var(--margin-column); margin-right: calc(-1 * var(--kantlijn)); }
+  :where(.kantlijn) .article-body .is-wide { margin-right: calc(-1 * var(--kantlijn)); }
+}
+
+:where(.kantlijn) .annotated { display: flex; flex-direction: column; }
+:where(.kantlijn) .annotated > .margin-note { order: 2; }
+@media (min-width: 1060px) { :where(.kantlijn) .annotated { display: block; } :where(.kantlijn) .annotated > .margin-note { order: 0; } }
+
+/* Table of contents */
+:where(.kantlijn) .toc { border-top: var(--rule-soft); border-bottom: var(--rule-soft); margin-bottom: 8px; }
+:where(.kantlijn) .toc summary { min-height: 48px; display: flex; align-items: center; justify-content: space-between; font-size: var(--text-ui); font-weight: 600; list-style: none; cursor: pointer; }
+:where(.kantlijn) .toc summary::-webkit-details-marker { display: none; }
+:where(.kantlijn) .chev { transition: transform .2s ease; }
+:where(.kantlijn) .toc[open] .chev { transform: rotate(180deg); }
+:where(.kantlijn) .toc ol { margin: 0 0 14px; padding: 0; list-style: none; font-size: 16px; line-height: 1.45; }
+:where(.kantlijn) .toc li { display: flex; gap: 12px; padding: 7px 0; }
+:where(.kantlijn) .toc li > span { flex: 0 0 24px; color: var(--track); font-weight: 600; }
+:where(.kantlijn) .toc-side { display: none; }
+:where(.kantlijn) .toc-side h2 { margin: 0 0 14px; font-size: var(--text-small); font-weight: 600; }
+
+/* Signature: the left margin is your route through the text. A rail with a node per
+   section; --toc-fill (0–1, set by the scrollspy) fills the rail below each node. */
+:where(.kantlijn) .toc-rail { margin: 0; padding: 0; list-style: none; }
+:where(.kantlijn) .toc-rail li { position: relative; padding-bottom: 14px; }
+:where(.kantlijn) .toc-rail li:last-child { padding-bottom: 0; }
+:where(.kantlijn) .toc-rail li:not(:last-child)::before,
+:where(.kantlijn) .toc-rail li:not(:last-child)::after { content: ""; position: absolute; left: 5.5px; top: 17px; bottom: -5px; width: 1px; background: var(--color-rule-soft); }
+:where(.kantlijn) .toc-rail li:not(:last-child)::after { background: var(--track); transform: scaleY(var(--toc-fill, 0)); transform-origin: top; }
+:where(.kantlijn) .toc-rail a { display: grid; grid-template-columns: 12px 22px minmax(0, 1fr); column-gap: 10px; align-items: start; padding: 2px 0; font-size: var(--text-small); line-height: 1.4; text-decoration: none; color: var(--color-muted); transition: color 200ms ease; }
+:where(.kantlijn) .toc-rail a:hover .toc-rail__label { text-decoration: underline; text-underline-offset: 3px; }
+:where(.kantlijn) .toc-rail__node { width: 12px; height: 12px; margin-top: 3px; border-radius: 50%; border: 1px solid var(--color-number-muted); background: var(--color-cream); position: relative; z-index: 1; transition: background-color 200ms ease, border-color 200ms ease, transform 200ms var(--ease-out); }
+:where(.kantlijn) .toc-rail__n { font-weight: 600; font-variant-numeric: tabular-nums; }
+:where(.kantlijn) .toc-rail li[data-state="read"] a { color: var(--color-ink-soft); }
+:where(.kantlijn) .toc-rail li[data-state="read"] .toc-rail__node { background: var(--track); border-color: var(--track); }
+:where(.kantlijn) .toc-rail li[data-state="current"] a { color: var(--color-brown); font-weight: 600; }
+:where(.kantlijn) .toc-rail li[data-state="current"] .toc-rail__node { background: var(--track); border-color: var(--track); transform: scale(1.25); }
+:where(.kantlijn) .toc-rail li[data-state="current"] .toc-rail__n,
+:where(.kantlijn) .toc-rail li[data-state="read"] .toc-rail__n { color: var(--track); }
+
+@media (min-width: 1060px) {
+  :where(.kantlijn) .toc { display: none; }
+  :where(.kantlijn) .toc-side { display: block; border-top: var(--rule); padding-top: 10px; margin-bottom: var(--space-4); }
+}
+/* From 1280px the list leaves the right column and becomes a sticky rail in the left margin. */
+@media (min-width: 1280px) {
+  .kantlijn { --number-gutter: 184px; }
+  :where(.kantlijn) .article-body .toc-side {
+    float: left; clear: none; position: sticky; top: calc(var(--site-header-h) + 32px);
+    width: var(--number-gutter); margin: 0 0 0 calc(-1 * (var(--number-gutter) + var(--space-6)));
+    border-top: 0; padding-top: 0;
+  }
+}
+
+/* Prose */
+:where(.kantlijn) .article-body > h2 { margin: var(--space-8) 0 var(--space-3); font-family: var(--font-serif); font-weight: 400; font-size: var(--text-h2); line-height: var(--leading-heading); scroll-margin-top: calc(var(--site-header-h) + 24px); }
+:where(.kantlijn) .article-body > h2 .num { display: block; margin-bottom: 10px; font-family: var(--font-sans); font-size: 14px; font-weight: 600; letter-spacing: .04em; line-height: 1; color: var(--track); }
+:where(.kantlijn) .article-body > h2:first-of-type, :where(.kantlijn) .toc + h2 { margin-top: var(--space-6); }
+@media (min-width: 1060px) {
+  :where(.kantlijn) .article-body > h2 { margin-top: 88px; }
+  :where(.kantlijn) .article-body > h2:first-of-type { margin-top: 0; }
+}
+:where(.kantlijn) .article-body > p, :where(.kantlijn) .annotated > p { margin: 0 0 26px; font-family: var(--font-serif); font-size: var(--text-body); line-height: var(--leading-body); }
+:where(.kantlijn) .article-body > p.drop::first-letter, :where(.kantlijn) .annotated > p.drop::first-letter { float: left; font-size: 3.7em; line-height: .82; padding: 6px 9px 0 0; color: var(--track); }
+
+:where(.kantlijn) .margin-note { margin: 6px 0 26px 32px; padding-top: 10px; border-top: var(--rule); font-size: var(--text-ui); line-height: 1.55; color: var(--track-ink); }
+:where(.kantlijn) .margin-note strong { font-weight: 600; }
+:where(.kantlijn) .margin-note--action { color: var(--color-brown); }
+:where(.kantlijn) .margin-note--action strong, :where(.kantlijn) .margin-note--action a { color: var(--color-sage); }
+:where(.kantlijn) .margin-note--action a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; text-underline-offset: 4px; }
+@media (min-width: 1060px) { :where(.kantlijn) .margin-note { margin-left: 0; margin-top: 4px; margin-bottom: 24px; } :where(.kantlijn) .annotated > .margin-note { margin-top: 6px; } }
+
+:where(.kantlijn) .pull-quote { margin: var(--space-5) 0; }
+:where(.kantlijn) .pull-quote blockquote { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: var(--text-quote); line-height: 1.14; letter-spacing: -0.015em; }
+@media (min-width: 1060px) { :where(.kantlijn) .pull-quote { margin: 80px 0; } :where(.kantlijn) .pull-quote blockquote { padding-right: 120px; } }
+
+:where(.kantlijn) .photo-wide { margin: var(--space-5) calc(-1 * var(--gutter)); }
+:where(.kantlijn) .photo-wide__frame { position: relative; height: 270px; }
+:where(.kantlijn) .photo-wide__frame img { width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 1060px) { :where(.kantlijn) .photo-wide { margin: 80px 0; } :where(.kantlijn) .photo-wide__frame { height: 440px; } :where(.kantlijn) .photo-wide .caption { padding-inline: 0; } }
+
+:where(.kantlijn) .rule-list { margin: 4px 0 22px; padding: 0; list-style: none; border-top: var(--rule-soft); }
+:where(.kantlijn) .rule-list li { display: flex; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: var(--rule-soft); font-family: var(--font-serif); font-size: var(--text-body); line-height: 1.5; }
+:where(.kantlijn) .rule-list--numbered { counter-reset: step; }
+:where(.kantlijn) .rule-list--numbered li::before { counter-increment: step; content: counter(step); flex: 0 0 18px; font-size: 22px; line-height: 1; color: var(--track); }
+
+:where(.kantlijn) .footnote-ref { font-family: var(--font-sans); font-size: 13px; font-weight: 600; color: var(--track); text-decoration: none; vertical-align: super; line-height: 0; padding: 0 3px 0 1px; }
+
+:where(.kantlijn) .know-well { margin-top: var(--space-6); background: var(--color-sand); padding: 20px 20px 22px; }
+:where(.kantlijn) .know-well h2 { margin: 0 0 6px; font-size: var(--text-ui); font-weight: 600; line-height: 1.4; }
+:where(.kantlijn) .know-well p { margin: 0; font-size: var(--text-ui); line-height: 1.55; }
+@media (min-width: 1060px) { :where(.kantlijn) .know-well.is-side { margin-top: 64px; padding: 16px 18px 18px; } :where(.kantlijn) .know-well.is-side p, :where(.kantlijn) .know-well.is-side h2 { font-size: var(--text-small); } }
+
+/* FAQ */
+:where(.kantlijn) .faq { margin-top: var(--space-8); }
+:where(.kantlijn) .faq__kicker { margin: 0 0 6px; font-size: var(--text-meta); color: var(--color-muted); }
+:where(.kantlijn) .faq h2 { margin: 0; padding-bottom: 16px; border-bottom: var(--rule-strong); font-family: var(--font-serif); font-weight: 400; font-size: var(--text-h2); line-height: var(--leading-heading); scroll-margin-top: calc(var(--site-header-h) + 24px); }
+:where(.kantlijn) .faq__item { padding: 20px 0; border-bottom: var(--rule-soft); }
+:where(.kantlijn) .faq__item h3 { margin: 0; font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: var(--text-faq-q); line-height: 1.3; }
+:where(.kantlijn) .faq__item p { margin: 8px 0 0; font-family: var(--font-serif); font-size: var(--text-faq-a); line-height: 1.55; }
+
+/* Author block */
+:where(.kantlijn) .author-block { margin-top: var(--space-8); }
+:where(.kantlijn) .author-block__row { display: flex; gap: var(--space-2); align-items: flex-start; }
+:where(.kantlijn) .author-block__img { flex: 0 0 auto; width: 84px; height: 108px; object-fit: cover; object-position: 50% 14%; }
+:where(.kantlijn) .author-block__name { margin: 0; font-family: var(--font-serif); font-size: 21px; line-height: 1.2; }
+:where(.kantlijn) .author-block__bio { margin: 6px 0 0; font-size: var(--text-small); line-height: 1.55; color: var(--color-ink-soft); }
+:where(.kantlijn) .author-block__review { margin: var(--space-2) 0 0; font-size: var(--text-small); line-height: 1.55; color: var(--color-ink-soft); }
+@media (min-width: 1060px) { :where(.kantlijn) .author-block__img { width: 112px; height: 144px; } }
+
+/* Sources */
+:where(.kantlijn) .sources { margin-top: var(--space-6); font-size: var(--text-small); line-height: 1.6; color: var(--color-ink-soft); scroll-margin-top: calc(var(--site-header-h) + 24px); }
+:where(.kantlijn) .sources h2 { margin: 0 0 6px; font-size: var(--text-small); font-weight: 600; color: var(--color-brown); }
+:where(.kantlijn) .sources ol { margin: 0; padding-left: 18px; list-style: decimal; }
+:where(.kantlijn) .sources li { scroll-margin-top: calc(var(--site-header-h) + 24px); }
+
+/* Related */
+:where(.kantlijn) .related { margin: var(--space-8) 0; padding-inline: var(--gutter); }
+@media (min-width: 1060px) {
+  :where(.kantlijn) .faq, :where(.kantlijn) .author-block { margin-top: 96px; }
+  :where(.kantlijn) .article-body + .cta-band { margin-top: 120px; }
+}
+@media (min-width: 1060px) {
+  :where(.kantlijn) .related { max-width: 1056px; margin: 96px auto var(--space-8); padding-inline: var(--gutter); }
+  :where(.kantlijn) .related .notes-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--space-3); }
+}
+
+/* ── Booking dialog ───────────────────────────────────────────── */
+:where(.kantlijn) .booking { border: 0; padding: 0; margin: auto auto 0; width: 100%; max-width: 560px; max-height: calc(100dvh - 40px); background: var(--color-cream); color: var(--color-brown); border-radius: var(--radius-sheet); overflow-y: auto; overscroll-behavior: contain; }
+:where(.kantlijn) .booking::backdrop { background: rgb(59 50 41 / .45); }
+@media (min-width: 760px) { :where(.kantlijn) .booking { margin: auto; border-radius: 20px; } }
+:where(.kantlijn) .booking__inner { padding: 8px var(--gutter) var(--space-4); display: flex; flex-direction: column; gap: 20px; }
+:where(.kantlijn) .booking form, :where(.kantlijn) .booking__done { display: flex; flex-direction: column; gap: 20px; }
+:where(.kantlijn) .booking__top { display: flex; justify-content: space-between; align-items: center; }
+:where(.kantlijn) .booking__brand { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: 22px; letter-spacing: -0.02em; }
+:where(.kantlijn) .booking__head { border-top: var(--rule-strong); padding-top: 18px; }
+:where(.kantlijn) .booking__title { margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 30px; line-height: 1.1; letter-spacing: -0.015em; }
+:where(.kantlijn) .booking__title em { color: var(--color-sage); }
+:where(.kantlijn) .booking__intro { margin: 12px 0 0; font-family: var(--font-serif); font-style: italic; font-size: 17px; line-height: 1.5; }
+:where(.kantlijn) .signature { margin-top: 12px; display: flex; align-items: center; gap: 8px; font-size: var(--text-meta); color: var(--color-ink-soft); }
+:where(.kantlijn) .field { display: flex; flex-direction: column; gap: 6px; }
+:where(.kantlijn) .field label { font-size: var(--text-small); font-weight: 600; }
+:where(.kantlijn) .field label span { font-weight: 400; color: var(--color-ink-soft); }
+:where(.kantlijn) .field input, :where(.kantlijn) .field textarea { min-height: 48px; border: 1.5px solid var(--color-field-border); border-radius: var(--radius-field); padding: 0 14px; background: var(--color-white); font: 16px var(--font-sans); color: var(--color-brown); }
+:where(.kantlijn) .field textarea { padding: 12px 14px; font: 17px/1.45 var(--font-serif); resize: vertical; }
+:where(.kantlijn) .field textarea::placeholder { color: var(--color-muted); }
+:where(.kantlijn) .field input[aria-invalid="true"], :where(.kantlijn) .field textarea[aria-invalid="true"] { border-color: var(--color-error); }
+:where(.kantlijn) .field__hint { margin: 0; font-size: var(--text-meta); line-height: 1.5; color: var(--color-ink-soft); }
+:where(.kantlijn) .field__error { margin: 0; font-size: var(--text-small); color: var(--color-error); }
+:where(.kantlijn) .consent { display: flex; gap: 12px; align-items: flex-start; font-size: var(--text-small); line-height: 1.5; cursor: pointer; }
+:where(.kantlijn) .consent input { flex: 0 0 auto; width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--color-sage); }
+:where(.kantlijn) .booking__safety { margin: 0; font-size: var(--text-meta); line-height: 1.5; color: var(--color-ink-soft); }
+:where(.kantlijn) .booking__trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+:where(.kantlijn) .next-steps { margin: 0; padding: 0; list-style: none; border-top: var(--rule-soft); counter-reset: step; }
+:where(.kantlijn) .next-steps li { display: flex; gap: 14px; padding: 12px 0; border-bottom: var(--rule-soft); font-size: var(--text-ui); line-height: 1.5; }
+:where(.kantlijn) .next-steps li::before { counter-increment: step; content: counter(step); font-family: var(--font-serif); font-size: 18px; color: var(--color-sage); }
+:where(.kantlijn) .next-steps__title { margin: 0 0 10px; font-weight: 600; }
+:where(.kantlijn) .reply { border-top: var(--rule); padding: 18px 0 4px; }
+:where(.kantlijn) .reply__text { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: 22px; line-height: 1.35; }
+
+/* ── Blog 404 ─────────────────────────────────────────────────── */
+:where(.kantlijn) .not-found { padding-block: var(--space-6) var(--space-8); }
+:where(.kantlijn) .not-found__title { margin: var(--space-4) 0 0; font-family: var(--font-serif); font-weight: 400; font-size: var(--text-h1); line-height: 1.05; letter-spacing: -0.025em; }
+:where(.kantlijn) .not-found__index { margin-top: var(--space-6); max-width: 720px; }
+:where(.kantlijn) .not-found__text { margin: var(--space-2) 0 var(--space-3); max-width: 46ch; font-family: var(--font-serif); font-style: italic; font-size: var(--text-standfirst); line-height: 1.5; color: var(--color-ink-soft); }
+
+/* ── Signature: linked asides (desktop, CSS only) ─────────────── */
+@media (min-width: 1060px) {
+  :where(.kantlijn) .annotated > p,
+  :where(.kantlijn) .annotated > ul > li,
+  :where(.kantlijn) .annotated > ol > li {
+    text-decoration-line: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: .42em;
+    text-underline-offset: -.28em;
+    text-decoration-skip-ink: none;
+    transition: text-decoration-color 280ms ease;
+  }
+  :where(.kantlijn) .annotated:has(> .margin-note:hover, > .margin-note:focus-within) > p,
+  :where(.kantlijn) .annotated:has(> .margin-note:hover, > .margin-note:focus-within) > ul > li,
+  :where(.kantlijn) .annotated:has(> .margin-note:hover, > .margin-note:focus-within) > ol > li {
+    text-decoration-color: color-mix(in srgb, var(--track-tint) 85%, transparent);
+  }
+  :where(.kantlijn) .annotated:has(> .margin-note--action:hover, > .margin-note--action:focus-within) > ul > li,
+  :where(.kantlijn) .annotated:has(> .margin-note--action:hover, > .margin-note--action:focus-within) > p {
+    text-decoration-color: color-mix(in srgb, var(--color-sage) 22%, transparent);
+  }
+}
+
+/* ── Motion: first visit only, never with reduced motion ─────── */
+@keyframes kl-pop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes kl-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kl-typing { 0% { opacity: 0; transform: scale(.85); } 15%, 85% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@keyframes kl-dot { 0%, 60%, 100% { opacity: .35; transform: none; } 30% { opacity: 1; transform: translateY(-2px); } }
+@media (prefers-reduced-motion: no-preference) {
+  .first-visit :where(.kantlijn) .article-hero .msg--in { animation: kl-pop var(--dur-bubble) var(--ease-out) both; }
+
+  /* Lead thread: the question arrives, Mirjam types, her reply lands, then "Gelezen" */
+  .kl-first-front :where(.kantlijn) .lead-story .msg--in { animation: kl-pop var(--dur-bubble) 250ms var(--ease-out) both; }
+  .kl-first-front :where(.kantlijn) .lead-story .thread__typing {
+    position: absolute; right: 42px; bottom: 0; display: flex; gap: 4px; padding: 13px 14px; border-radius: 18px;
+    background: var(--color-grachtwater-tint); animation: kl-typing 900ms 750ms both;
+  }
+  .kl-first-front :where(.kantlijn) .lead-story .thread__typing span {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--color-grachtwater);
+    animation: kl-dot 900ms 750ms ease-in-out infinite;
+  }
+  .kl-first-front :where(.kantlijn) .lead-story .thread__typing span:nth-child(2) { animation-delay: 900ms; }
+  .kl-first-front :where(.kantlijn) .lead-story .thread__typing span:nth-child(3) { animation-delay: 1050ms; }
+  .kl-first-front :where(.kantlijn) .lead-story .msg--out { animation: kl-pop var(--dur-bubble) 1650ms var(--ease-out) both; }
+  .kl-first-front :where(.kantlijn) .lead-story .thread__out .avatar { animation: kl-fade 300ms 750ms ease both; }
+  .kl-first-front :where(.kantlijn) .lead-story .thread__receipt { animation: kl-fade 300ms 2200ms ease both; }
+  .first-visit :where(.kantlijn) .short-answer { animation: kl-fade var(--dur-fade) 380ms ease both; }
+  :where(.kantlijn) .booking[open] { animation: kl-pop 340ms var(--ease-out) both; }
+
+  /* Signature: margin rules draw themselves (class set by JS only) */
+  .kl-draw :where(.kantlijn) .margin-note { position: relative; border-top-color: transparent; }
+  .kl-draw :where(.kantlijn) .margin-note::before {
+    content: ""; position: absolute; top: -1px; left: 0; right: 0; height: 1px;
+    background: var(--color-rule-soft); transform: scaleX(0); transform-origin: left;
+    transition: transform 600ms var(--ease-out);
+  }
+  .kl-draw :where(.kantlijn) .margin-note.is-drawn::before { transform: scaleX(1); }
+
+  ::view-transition-group(*) { animation-duration: 480ms; animation-timing-function: cubic-bezier(.2, .8, .2, 1); }
+  /* Track filter: the list crossfades in place, pinned to the top while its height changes */
+  ::view-transition-group(kl-front), ::view-transition-old(kl-front), ::view-transition-new(kl-front) { animation-duration: 200ms; }
+  ::view-transition-old(kl-front), ::view-transition-new(kl-front) { height: 100%; object-fit: none; object-position: top; }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+  :where(.kantlijn) .notes-index__link::before,
+  :where(.kantlijn) .toc-rail a, :where(.kantlijn) .toc-rail__node { transition: none; }
+}
+
+/* ── Print ────────────────────────────────────────────────────── */
+@media print {
+  :where(.kantlijn) .progress, :where(.kantlijn) .masthead-strip,
+  :where(.kantlijn) .cta-band, :where(.kantlijn) .related, :where(.kantlijn) .booking, :where(.kantlijn) .toc,
+  :where(.kantlijn) .toc-side,
+  :where(.kantlijn) .margin-note--action { display: none !important; }
+  .kantlijn { --text-body: 11.5pt; --text-h1: 30pt; --text-h2: 16pt; --text-quote: 18pt; min-height: 0; }
+  :where(.kantlijn) .article-body, :where(.kantlijn) .article-hero { padding: 0 !important; margin: 0 !important; max-width: none !important; display: block !important; }
+  :where(.kantlijn) .article-body .is-side, :where(.kantlijn) .article-body .is-wide { float: none !important; width: auto !important; margin-right: 0 !important; }
+  :where(.kantlijn) .annotated { display: flex; }
+  :where(.kantlijn) .margin-note { margin: 0 0 12pt 18pt; border-top: 0 !important; border-left: 1px solid var(--color-rule-soft); padding: 0 0 0 10pt; font-style: italic; }
+  :where(.kantlijn) .margin-note::before { display: none; }
+  :where(.kantlijn) .article-body > h2 .num { margin-bottom: 4pt; }
+  :where(.kantlijn) .msg { filter: none; border: 1px solid var(--color-grachtwater); background: none; color: var(--color-brown); }
+  :where(.kantlijn) .msg::after, :where(.kantlijn) .thread__out .avatar, :where(.kantlijn) .thread__receipt { display: none; }
+  :where(.kantlijn) .sources a[href^="http"]::after { content: " (" attr(href) ")"; }
+}

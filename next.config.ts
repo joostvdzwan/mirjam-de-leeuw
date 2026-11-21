@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizePackageImports: ["@phosphor-icons/react"],
+    viewTransition: true,
   },
   turbopack: {
     root: projectRoot,

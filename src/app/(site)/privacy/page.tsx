@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const lastUpdated = "Mei 2026";
+const lastUpdated = "November 2026";
 
 export default function PrivacyPage() {
   return (
@@ -284,6 +284,11 @@ export default function PrivacyPage() {
               <li>Microsoft Teams voor online gesprekken;</li>
               <li>Moneybird voor facturatie en administratie;</li>
               <li>hosting- en websitediensten voor de website;</li>
+              <li>
+                Resend voor het versturen van berichten die je via het
+                contactformulier op de website of het formulier op Kantlijn (de
+                blog) achterlaat;
+              </li>
               <li>eventueel een boekhouder of administratieve ondersteuning.</li>
             </ul>
             <p className="body-md body-md-regular mt-3 text-brown-muted">
@@ -302,10 +307,19 @@ export default function PrivacyPage() {
               bezoekersstatistieken om inzicht te krijgen in het gebruik en
               functioneren van de website.
             </p>
-            <p className="body-md body-md-regular text-brown-muted">
+            <p className="body-md body-md-regular mb-3 text-brown-muted">
               De website gebruikt geen trackingcookies voor
               marketingdoeleinden, tenzij dit uitdrukkelijk anders wordt
               vermeld.
+            </p>
+            <p className="body-md body-md-regular text-brown-muted">
+              Via het contactformulier op de website kun je een kennismaking
+              aanvragen; via het formulier op Kantlijn kun je dat ook, of een
+              vraag stellen. Wat je invult (je naam, e-mailadres en je bericht,
+              eerste zin of vraag) wordt alleen per e-mail naar mij verstuurd,
+              met jouw toestemming. Het wordt niet in een database of in logs
+              van de website bewaard. Deel in deze formulieren liever geen
+              details over je gezondheid; dat bespreken we in het gesprek.
             </p>
           </section>
 
@@ -320,8 +334,8 @@ export default function PrivacyPage() {
             </p>
             <ul className="body-md body-md-regular list-disc space-y-2 pl-6 text-brown-muted">
               <li>
-                contactaanvragen die niet tot een traject leiden: maximaal 12
-                maanden;
+                contactaanvragen die niet tot een traject leiden, ook via de
+                formulieren op de website en Kantlijn: maximaal 12 maanden;
               </li>
               <li>
                 gegevens rondom kennismaking en planning: maximaal 12 maanden,

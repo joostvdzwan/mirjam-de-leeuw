@@ -1,9 +1,11 @@
 import Link from "next/link";
 import content from "@/content/nl.json";
 import { type PageSlug, getPage, pagePath } from "@/lib/content-pages";
+import { KANTLIJN } from "@/lib/kantlijn/config";
 import Logo from "./Logo";
 
 const { footer, footerLinks } = content;
+const crisisLead = "Acute nood?";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -54,9 +56,32 @@ export default function Footer() {
               ))}
             </div>
           ))}
+          <div className="flex flex-col items-center gap-2 md:flex-row md:gap-4">
+            <p className="body-xs body-xs-medium text-brown">Kantlijn</p>
+            <Link
+              href="/blog"
+              className="body-xs body-xs-regular text-brown-muted hover:text-sage-dark transition-colors"
+            >
+              Notities van Mirjam
+            </Link>
+            {KANTLIJN.instagramUrl && (
+              <a
+                href={KANTLIJN.instagramUrl}
+                rel="me noopener"
+                target="_blank"
+                className="body-xs body-xs-regular text-brown-muted hover:text-sage-dark transition-colors"
+              >
+                Kantlijn op Instagram
+              </a>
+            )}
+          </div>
         </nav>
 
         <div className="space-y-4 text-center md:text-left">
+          <p className="body-sm body-sm-regular text-brown">
+            <strong className="font-semibold">{crisisLead}</strong>{" "}
+            {KANTLIJN.crisisLine.slice(crisisLead.length + 1)}
+          </p>
           <p className="body-xs body-xs-regular text-brown-muted">
             {footer.disclaimer}
           </p>

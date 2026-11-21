@@ -14,6 +14,9 @@ import {
 import type { Icon } from "@phosphor-icons/react";
 import content from "@/content/nl.json";
 import JsonLd from "./JsonLd";
+import KantlijnQuestion, { SiteAccentTitle } from "./KantlijnQuestion";
+import { getFeatured } from "@/lib/kantlijn/content";
+import { articlePath } from "@/lib/kantlijn/seo";
 import MotionFadeIn from "./motion/MotionFadeIn";
 import { StaggerContainer, StaggerItem } from "./motion/MotionStagger";
 import seatedPhoto from "@/assets/mirjam-portret-zittend.jpg";
@@ -292,6 +295,42 @@ function Aside({ slug }: { slug: PageSlug }) {
   );
 }
 
+/** The note in Kantlijn that goes deeper into this page's subject; hidden until it is published. */
+function ReadInKantlijn({ slug }: { slug: string }) {
+  const note = getFeatured(slug);
+  if (!note) return null;
+  return (
+    <MotionFadeIn className="mb-20 border-t border-brown/15 pt-10">
+      <div className="grid items-center gap-12 md:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] md:gap-16">
+        <div>
+          <p className="heading-sm heading-sm-medium mb-3 text-sage-dark">
+            Lees in <em className="font-[family-name:var(--font-heading)]">Kantlijn</em>
+          </p>
+          <h2 className="display-sm display-sm-regular mb-4 text-brown">
+            <Link
+              href={articlePath(note.slug)}
+              className="underline decoration-transparent decoration-1 underline-offset-[6px] transition-colors hover:decoration-current"
+            >
+              <SiteAccentTitle article={note} />
+            </Link>
+          </h2>
+          <p className="body-lg body-lg-regular max-w-xl text-brown-muted">{note.shortAnswer}</p>
+          <Link
+            href={articlePath(note.slug)}
+            className="label-md label-md-medium mt-6 inline-flex min-h-11 items-center gap-2 text-sage-dark underline decoration-1 underline-offset-4 transition-colors hover:text-brown"
+          >
+            Lees de notitie ({note.readingMinutes} min)
+            <ArrowRight size={18} aria-hidden="true" />
+          </Link>
+        </div>
+        <Link href={articlePath(note.slug)} className="group block" tabIndex={-1} aria-hidden="true">
+          <KantlijnQuestion article={note} sizes="(min-width: 768px) 460px, 100vw" />
+        </Link>
+      </div>
+    </MotionFadeIn>
+  );
+}
+
 export default function ContentPage({ slug }: { slug: PageSlug }) {
   const page = getPage(slug);
 
@@ -384,6 +423,8 @@ export default function ContentPage({ slug }: { slug: PageSlug }) {
               </dl>
             </MotionFadeIn>
           )}
+
+          {page.kantlijn && <ReadInKantlijn slug={page.kantlijn} />}
 
           <MotionFadeIn className="mb-20 rounded-3xl bg-sage-dark p-8 text-cream md:p-12">
             <h2 className="display-sm display-sm-regular mb-4">

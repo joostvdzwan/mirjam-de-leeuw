@@ -1,0 +1,45 @@
+/*
+  Kantlijn tokens for Tailwind CSS v4 (CSS-first config).
+  Use this INSTEAD of tokens.css if the project uses Tailwind v4:
+    @import "tailwindcss";
+    @import "./tokens.tailwind.css";
+  If the project uses Tailwind v3 or no Tailwind, use tokens.css and plain CSS modules.
+  Values are identical to tokens.css.
+*/
+
+@theme {
+  --color-cream: #FAF7F2;
+  --color-sand: #F0EBE1;
+  --color-brown: #3B3229;
+  --color-sage: #5E6B52;
+  --color-grachtwater: #4F6E78;
+  --color-grachtwater-ink: #2E434A;
+  --color-grachtwater-tint: #D3DEE0;
+  --color-kastanje: #A85A3A;
+  --color-kastanje-ink: #8E4A2E;
+  --color-kastanje-tint: #EBCFC0;
+  --color-ink-soft: #5A5047;
+  --color-muted: #7A6F63;
+  --color-number-muted: #A89D90;
+  --color-rule-soft: #CFC5B5;
+  --color-rule-faint: #E9E1D3;
+  --color-field-border: #8C8174;
+  --color-error: #9A3B20;
+  --color-on-sage-accent: #E7DDCB;
+
+  --font-serif: var(--font-lora), Georgia, serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+
+  --spacing: 8px; /* p-1 = 8px, p-2 = 16px, p-3 = 24px, p-4 = 32px, p-6 = 48px, p-8 = 64px */
+
+  --radius-field: 10px;
+  --radius-pill: 999px;
+
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+
+  --breakpoint-article: 66.25rem; /* 1060px: article grid with margin column */
+}
+
+/* Track theming stays as plain CSS custom properties */
+[data-track="psych-k"] { --track: var(--color-grachtwater); --track-ink: var(--color-grachtwater-ink); --track-tint: var(--color-grachtwater-tint); }
+[data-track="mijn-verhaal"] { --track: var(--color-kastanje); --track-ink: var(--color-kastanje-ink); --track-tint: var(--color-kastanje-tint); }

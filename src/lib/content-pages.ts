@@ -19,6 +19,8 @@ export interface ContentSection {
 
 export interface ContentPageData {
   label: string;
+  /** Slug of a Kantlijn note that goes deeper; shown as "Lees in Kantlijn". */
+  kantlijn?: string;
   summary: string;
   metaTitle: string;
   metaDescription: string;
