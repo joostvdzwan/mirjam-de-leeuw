@@ -1,0 +1,52 @@
+---
+description: Kantlijn — the blog of Coachingpraktijk De Leeuw. Design and content rules for everything under /blog.
+globs: ["src/app/blog/**", "app/blog/**", "src/components/kantlijn/**", "components/kantlijn/**", "content/kantlijn/**", "src/lib/kantlijn/**"]
+alwaysApply: false
+---
+
+# Kantlijn — rules
+
+You are building **Kantlijn**, the blog of Coachingpraktijk De Leeuw (Mirjam de Leeuw,
+coach in Leiden). The design source is `design/`. Read `design/components.md` before
+writing any component and match `design/screenshots/` pixel-for-pixel where possible.
+The static pages in `design/reference/` are the ground truth for markup, spacing and
+class names. Port them; don't reinvent.
+
+## Never break these
+1. **Answer-first, server-rendered.** The `h1`, reader question, short answer and all FAQ
+   answers are in the initial HTML. Never fetch, inject or reveal them with client JS.
+2. **One chat bubble per article:** the reader's question (grachtwater `#4F6E78`, right-aligned,
+   radius `22px 22px 6px 22px`). Mirjam never speaks in a bubble. Her voice is italic Lora
+   between 1px rules (short answer, booking reply), or margin notes.
+3. **Lines, not cards.** 2px brown rule starts a section, 1px brown rule frames, 1px
+   `#CFC5B5` separates rows. No box shadows, no rounded tinted cards. The only filled
+   surfaces: the sage CTA band, the sand "Goed om te weten" box and the reader bubble.
+4. **Tokens only.** Colours, sizes, spacing (8/16/24/32/40/48/64/80) and radii come from
+   `design/tokens.css` (or `tokens.tailwind.css`). No new hex values.
+5. **No uppercase for secondary text** (labels, captions, meta, buttons). No `text-transform: uppercase`, no letter-spaced caps.
+6. **Track colour is for small things:** numbers, labels, the accent word, rules, progress bar.
+   PSYCH-K = grachtwater `#4F6E78`; Mijn verhaal = kastanje `#A85A3A`. Set via `data-track`.
+7. **Crisis line is fixed copy** in the footer, "Goed om te weten" and the booking dialog:
+   "Acute nood? Bel 112 of je huisarts(enpost). Denk je aan zelfdoding? Bel 113 of gratis 0800-0113."
+8. **Real links.** Every navigation is `<a href>` / `<Link>`. Filters have real URLs.
+9. **"PSYCH-K" never breaks at the hyphen:** wrap it in `<span class="nowrap">` (a remark plugin does this for MDX).
+10. **Motion is optional:** the bubble pop and answer fade happen on the first visit only, under
+    `prefers-reduced-motion: no-preference`. Content is visible without JS.
+11. **Fonts via `next/font/google`** (self-hosted at build): Lora 400/500 + italics, DM Sans 400/500/600, exposed as `--font-lora` / `--font-dm-sans`.
+12. **Placeholders** like `[aantal]` or `[Mirjam: …]` are content gaps for Mirjam. Never invent facts to fill them; `assertNoPlaceholders` blocks them in production.
+
+## Architecture
+- App Router. Server Components by default. Client components only: `TrackFilter`,
+  `ArticleBar` (share), `ReadingProgress`, `BookingDialog`, and the tiny first-visit script.
+- Content: MDX files in `content/kantlijn/*.mdx`, frontmatter validated with
+  `design/content-schema.ts` (Zod). `generateStaticParams` with `dynamicParams = false`.
+- MDX components are mapped in `mdx-components.tsx`: `Kantlijn`, `Citaat`, `Foto`, `Stappen`, `Voetnoot`.
+- The desktop margin (kantlijn) uses right floats with a negative margin (`.is-side`), not CSS grid.
+  Keep the note first in the DOM inside `.annotated`.
+- Images through `next/image` from `public/kantlijn/`, with `sizes` set and `object-position` from frontmatter `photo.focus`.
+- JSON-LD per page as in the reference `<head>`: BlogPosting + Person + BreadcrumbList.
+- Booking: native `<dialog>`, a Server Action that emails Mirjam, a honeypot, rate limiting, no storage of the message body.
+
+## Language
+UI copy is Dutch and already written in the reference pages. Copy it exactly. Use
+"je/jij", never "u". Sentence case everywhere.

@@ -3,15 +3,16 @@ import { Lora, DM_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import content from "@/content/nl.json";
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import Navigation from "@/components/Navigation";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { businessJsonLd, graph, personJsonLd } from "@/lib/structured-data";
 
 const lora = Lora({
   variable: "--font-lora",
   subsets: ["latin", "latin-ext"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -75,7 +76,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="nl-NL" className={`${lora.variable} ${dmSans.variable}`}>
+    <html
+      lang="nl-NL"
+      className={`${lora.variable} ${dmSans.variable}`}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
       <head>
         <JsonLd data={graph(businessJsonLd(), personJsonLd())} />
       </head>

@@ -3,14 +3,13 @@
   "siteDescription": "Coaching in Leiden door psycholoog (MSc) Mirjam van der Zwan - de Leeuw. PSYCH-K®, wandelcoaching en online coaching, vanaf 16 jaar. Kosteloos kennismakingsgesprek.",
   "nav": {
     "links": [
-      { "label": "Over de praktijk", "href": "#over-de-praktijk" },
-      { "label": "Over mij", "href": "#over-mij" },
-      { "label": "Voor wie", "href": "#voor-wie" },
       { "label": "Werkwijze", "href": "#werkwijze" },
+      { "label": "Voor wie", "href": "#voor-wie" },
       { "label": "Tarieven", "href": "#tarieven" },
-      { "label": "Contact", "href": "#contact" }
+      { "label": "Over Mirjam", "href": "/over-mirjam" }
     ],
-    "cta": "Plan een kennismakingsgesprek"
+    "blog": { "label": "Kantlijn", "href": "/blog" },
+    "cta": "Plan een kennismaking"
   },
   "hero": {
     "title": ["Meer rust in je hoofd.", "Meer overzicht in wat er speelt."],
@@ -273,6 +272,7 @@
   "pages": {
     "psych-k-coaching-leiden": {
       "label": "PSYCH-K® coaching",
+      "kantlijn": "wat-is-psych-k",
       "summary": "Werk aan overtuigingen die je tegenhouden, op een diepere laag.",
       "metaTitle": "PSYCH-K® coaching in Leiden — Coachingpraktijk De Leeuw",
       "metaDescription": "PSYCH-K® coaching in Leiden bij psycholoog (MSc) Mirjam van der Zwan - de Leeuw. Werk aan overtuigingen die je tegenhouden. Kosteloos kennismakingsgesprek.",
@@ -536,6 +536,7 @@
     },
     "over-mirjam": {
       "label": "Over Mirjam",
+      "kantlijn": "waarom-ik-een-eigen-praktijk-begon",
       "summary": "Psycholoog (MSc) en coach met ervaring in de jeugd-GGZ.",
       "metaTitle": "Over Mirjam van der Zwan - de Leeuw, psycholoog (MSc) en coach",
       "metaDescription": "Mirjam van der Zwan - de Leeuw is psycholoog (MSc Kinder- en Jeugdpsychologie, Universiteit Leiden), SKJ-geregistreerd en coach in Leiden. Lees over haar achtergrond en werkwijze.",

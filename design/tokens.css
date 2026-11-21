@@ -1,0 +1,135 @@
+/*
+  Kantlijn — design tokens
+  Coachingpraktijk De Leeuw · blog
+
+  Single source of truth for colour, type, spacing and shape.
+  Every value in styles.css and in the React components must come from here.
+  Fonts: load Lora (400, 500, 400 italic, 500 italic) and DM Sans (400, 500, 600)
+  with next/font so they are self-hosted (no requests to Google at runtime).
+*/
+
+:root {
+  /* ── Brand colours ─────────────────────────────────────────── */
+  --color-cream: #FAF7F2;        /* page background */
+  --color-sand: #F0EBE1;         /* "Goed om te weten" box, quiet surfaces */
+  --color-brown: #3B3229;        /* text, strong rules */
+  --color-sage: #5E6B52;         /* actions: buttons, CTA band, "Kort antwoord" label */
+  --color-white: #FFFFFF;        /* form fields */
+
+  /* Accents: one per track. Used for small things only (numbers, labels,
+     italic accent words, rules, progress bar). Never as large fills. */
+  --color-grachtwater: #4F6E78;  /* track: Over PSYCH-K · also the reader's bubble */
+  --color-grachtwater-ink: #2E434A;
+  --color-grachtwater-tint: #D3DEE0;
+  --color-kastanje: #A85A3A;     /* track: Mijn verhaal */
+  --color-kastanje-ink: #8E4A2E;
+  --color-kastanje-tint: #EBCFC0;
+
+  /* ── Neutrals (all pass WCAG AA on cream for their use) ───── */
+  --color-ink-soft: #5A5047;     /* secondary text, captions on cream (7.0:1) */
+  --color-muted: #7A6F63;        /* meta, upcoming titles (4.6:1) — never on sand */
+  --color-number-muted: #A89D90; /* decorative numbers of unpublished items only (aria-hidden) */
+  --color-rule-soft: #CFC5B5;    /* 1px dividers inside lists */
+  --color-rule-faint: #E9E1D3;   /* hairlines on chrome */
+  --color-field-border: #8C8174; /* input borders (3.3:1 on white) */
+  --color-error: #9A3B20;
+  --color-on-sage-accent: #E7DDCB; /* italic accent words on the sage band */
+
+  /* ── Type ──────────────────────────────────────────────────── */
+  --font-serif: var(--font-lora, 'Lora'), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-dm-sans, 'DM Sans'), system-ui, -apple-system, sans-serif;
+
+  /* Mobile-first sizes; the desktop overrides sit in the media query below. */
+  --text-masthead: 92px;     /* "Kantlijn" on the front page, italic 400, lh .86, ls -0.035em */
+  --text-masthead-bar: 24px; /* "Kantlijn" in the article bar */
+  --text-h1: 46px;           /* article title, 400, lh 1.0, ls -0.025em */
+  --text-lead-title: 36px;   /* "Lees eerst" title on the front page */
+  --text-h2: 27px;           /* section headings, 400, lh 1.2 */
+  --text-quote: 31px;        /* pull quote, 400, lh 1.14 */
+  --text-index-title: 24px;  /* numbered index rows */
+  --text-short-answer: 21px; /* italic short answer, lh 1.45 */
+  --text-faq-q: 21px;        /* italic FAQ question */
+  --text-bubble: 18px;       /* reader's question bubble, 500 */
+  --text-body: 18px;         /* serif body, lh 1.62 */
+  --text-standfirst: 18px;   /* italic standfirst */
+  --text-faq-a: 17px;
+  --text-ui: 15px;           /* buttons, nav, notes */
+  --text-small: 14px;        /* breadcrumb, author bio, sources */
+  --text-meta: 13px;         /* dates, reading time, labels, captions */
+
+  --leading-tight: 1.0;
+  --leading-heading: 1.2;
+  --leading-body: 1.62;
+  --leading-ui: 1.55;
+
+  /* ── Spacing scale (use only these) ────────────────────────── */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --gutter: 24px;            /* page side margin on mobile */
+
+  /* ── Rules (the Kantlijn signature: lines, not cards) ──────── */
+  --rule-strong: 2px solid var(--color-brown);  /* section starts, masthead top */
+  --rule: 1px solid var(--color-brown);         /* short answer, masthead bottom, bars */
+  --rule-soft: 1px solid var(--color-rule-soft);/* between list rows, FAQ items */
+
+  /* ── Shape ─────────────────────────────────────────────────── */
+  --radius-bubble: 22px 22px 6px 22px; /* reader bubble: tail bottom-right */
+  --radius-pill: 999px;                /* buttons */
+  --radius-field: 10px;
+  --radius-sheet: 20px 20px 0 0;
+  --radius-none: 0;                    /* photos, boxes: square, editorial */
+
+  /* Avatar ring: photo, 2px cream gap, sage ring (thickness scales with size) */
+  --avatar-gap: var(--color-cream);
+  --avatar-ring: var(--color-sage);
+
+  /* ── Layout ────────────────────────────────────────────────── */
+  --measure-text: 640px;     /* article text column */
+  --margin-column: 240px;    /* the kantlijn on desktop */
+  --number-gutter: 48px;     /* section numbers on desktop */
+  --page-max: 1120px;
+  --bp-article-grid: 1060px; /* below this the margin column folds in */
+  --kantlijn: calc(var(--margin-column) + var(--space-6));   /* margin column + its gap */
+  --article-max: calc(var(--measure-text) + var(--kantlijn) + var(--number-gutter) + var(--space-6) + 2 * var(--gutter));
+
+  /* ── Motion ────────────────────────────────────────────────── */
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --dur-bubble: 450ms;
+  --dur-fade: 500ms;
+}
+
+/* Track theming: set data-track on <article> (or any wrapper). */
+[data-track="psych-k"] {
+  --track: var(--color-grachtwater);
+  --track-ink: var(--color-grachtwater-ink);
+  --track-tint: var(--color-grachtwater-tint);
+}
+[data-track="mijn-verhaal"] {
+  --track: var(--color-kastanje);
+  --track-ink: var(--color-kastanje-ink);
+  --track-tint: var(--color-kastanje-tint);
+}
+
+@media (min-width: 1060px) {
+  :root {
+    --text-masthead: 128px;
+    --text-h1: 68px;
+    --text-lead-title: 44px;
+    --text-h2: 32px;
+    --text-quote: 44px;
+    --text-index-title: 28px;
+    --text-short-answer: 24px;
+    --text-faq-q: 23px;
+    --text-bubble: 20px;
+    --text-body: 20px;
+    --text-faq-a: 18px;
+    --leading-body: 1.65;
+    --gutter: 32px;
+  }
+}

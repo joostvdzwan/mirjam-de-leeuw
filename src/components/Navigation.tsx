@@ -2,12 +2,18 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import content from "@/content/nl.json";
-import { ease, duration, stagger, fadeUp } from "@/lib/motion";     
+import { ease, duration, stagger, fadeUp } from "@/lib/motion";
 const { nav } = content;
 
-const sectionIds = nav.links.map((link) => link.href.replace("#", ""));
+const sectionIds = nav.links
+  .filter((link) => link.href.startsWith("#"))
+  .map((link) => link.href.slice(1));
+
+const kantlijnLabel = "font-[family-name:var(--font-heading)] italic";
+const MotionLink = motion.create(Link);
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState("");
@@ -16,14 +22,18 @@ export default function Navigation() {
   const shouldReduceMotion = useReducedMotion();
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const toLink = (hash: string) => (isHome ? hash : `/${hash}`);
+  const isBlog = pathname === "/blog" || pathname.startsWith("/blog/");
+  const solid = scrolled || isBlog;
   const homeHref = isHome ? "#" : "/";
 
+  const toLink = (href: string) => (href.startsWith("#") && !isHome ? `/${href}` : href);
+  const isActive = (href: string) =>
+    href.startsWith("#") ? isHome && activeSection === href.slice(1) : pathname === href;
+  const currentType = (href: string) =>
+    href.startsWith("#") ? "true" : ("page" as const);
+
   useEffect(() => {
-    if (!isHome) {
-      setActiveSection("");
-      return;
-    }
+    if (!isHome) return;
 
     const observers: IntersectionObserver[] = [];
 
@@ -71,24 +81,48 @@ export default function Navigation() {
     setMobileMenuOpen(false);
   }, []);
 
+  // On blog pages the button opens the booking dialog; the link is the fallback without JS.
+  const ctaProps = isBlog
+    ? { href: "/#contact", "data-open-booking": "kennismaking" }
+    : { href: toLink("#contact") };
+
+  const mobileItem = {
+    variants: shouldReduceMotion
+      ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
+      : fadeUp,
+    transition: {
+      duration: shouldReduceMotion ? 0.01 : duration.fast,
+      ease: ease.enter,
+    },
+  };
+
   return (
     <>
       <motion.header
         className="fixed top-0 left-0 right-0 z-50"
+        initial={false}
         animate={{
-          backgroundColor: scrolled
-            ? "rgba(250, 247, 242, 0.9)"
+          backgroundColor: solid
+            ? isBlog
+              ? "rgba(250, 247, 242, 1)"
+              : "rgba(250, 247, 242, 0.9)"
             : "rgba(250, 247, 242, 0)",
-          backdropFilter: scrolled ? "blur(12px)" : "blur(0px)",
-          borderBottomColor: scrolled
-            ? "rgba(59, 50, 41, 0.05)"
+          backdropFilter: solid && !isBlog ? "blur(12px)" : "blur(0px)",
+          borderBottomColor: solid
+            ? isBlog
+              ? "rgba(59, 50, 41, 0.12)"
+              : "rgba(59, 50, 41, 0.05)"
             : "rgba(59, 50, 41, 0)",
         }}
         transition={{
           duration: shouldReduceMotion ? 0.01 : 0.3,
           ease: ease.gentle,
         }}
-        style={{ borderBottomWidth: "1px", borderBottomStyle: "solid" }}
+        style={{
+          borderBottomWidth: "1px",
+          borderBottomStyle: "solid",
+          viewTransitionName: "site-header",
+        }}
       >
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4"
@@ -103,21 +137,22 @@ export default function Navigation() {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden items-center gap-6 lg:flex xl:gap-8">
+          <div className="hidden items-center gap-6 whitespace-nowrap lg:flex">
             {nav.links.map((link) => {
-              const isActive = activeSection === link.href.replace("#", "");
+              const active = isActive(link.href);
+              const Anchor = link.href.startsWith("#") ? "a" : Link;
               return (
-                <a
+                <Anchor
                   key={link.href}
                   href={toLink(link.href)}
-                  className={`label-md label-md-medium relative py-1 transition-colors ${isActive
+                  className={`label-md label-md-medium relative py-1 transition-colors ${active
                       ? "text-sage-dark"
                       : "text-brown-muted hover:text-brown"
                     }`}
-                  aria-current={isActive ? "true" : undefined}
+                  aria-current={active ? currentType(link.href) : undefined}
                 >
                   {link.label}
-                  {isActive && (
+                  {active && (
                     <motion.span
                       layoutId="activeNav"
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-sage-dark"
@@ -128,12 +163,28 @@ export default function Navigation() {
                       }}
                     />
                   )}
-                </a>
+                </Anchor>
               );
             })}
+            <Link
+              href={nav.blog.href}
+              className={`relative py-1 text-[17px] leading-none transition-colors ${kantlijnLabel} ${isBlog
+                  ? "text-sage-dark"
+                  : "text-brown-muted hover:text-brown"
+                }`}
+              aria-current={isBlog ? "page" : undefined}
+            >
+              {nav.blog.label}
+              {isBlog && (
+                <motion.span
+                  layoutId="activeNav"
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-sage-dark"
+                />
+              )}
+            </Link>
             <motion.a
-              href={toLink("#contact")}
-              className="label-md label-md-medium rounded-full bg-sage-dark px-4 py-2.5 text-white transition-colors hover:bg-sage xl:px-5"
+              {...ctaProps}
+              className="label-md label-md-medium rounded-full bg-sage-dark px-5 py-2.5 text-white transition-colors hover:bg-sage"
               whileHover={{ scale: 1.02, boxShadow: "0 4px 16px rgba(94, 107, 82, 0.2)" }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2, ease: ease.gentle }}
@@ -149,26 +200,21 @@ export default function Navigation() {
             aria-expanded={mobileMenuOpen}
             aria-label={mobileMenuOpen ? "Menu sluiten" : "Menu openen"}
           >
-            <div className="flex w-6 flex-col gap-1.5">
+            <div className="flex w-6 flex-col gap-[7px]">
               <motion.span
                 className="block h-0.5 w-full bg-brown origin-center"
                 animate={
                   mobileMenuOpen
-                    ? { rotate: 45, y: 8 }
+                    ? { rotate: 45, y: 4.5 }
                     : { rotate: 0, y: 0 }
                 }
                 transition={{ duration: 0.3, ease: ease.gentle }}
               />
               <motion.span
-                className="block h-0.5 w-full bg-brown"
-                animate={{ opacity: mobileMenuOpen ? 0 : 1 }}
-                transition={{ duration: 0.2 }}
-              />
-              <motion.span
                 className="block h-0.5 w-full bg-brown origin-center"
                 animate={
                   mobileMenuOpen
-                    ? { rotate: -45, y: -8 }
+                    ? { rotate: -45, y: -4.5 }
                     : { rotate: 0, y: 0 }
                 }
                 transition={{ duration: 0.3, ease: ease.gentle }}
@@ -222,46 +268,42 @@ export default function Navigation() {
                 },
               }}
             >
-              {nav.links.map((link) => (
-                <motion.a
-                  key={link.href}
-                  href={toLink(link.href)}
-                  className={`display-sm display-sm-regular transition-colors ${activeSection === link.href.replace("#", "")
-                      ? "text-sage-dark"
-                      : "text-brown-muted hover:text-brown"
-                    }`}
-                  aria-current={
-                    activeSection === link.href.replace("#", "")
-                      ? "true"
-                      : undefined
-                  }
-                  onClick={handleNavClick}
-                  variants={
-                    shouldReduceMotion
-                      ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
-                      : fadeUp
-                  }
-                  transition={{
-                    duration: shouldReduceMotion ? 0.01 : duration.fast,
-                    ease: ease.enter,
-                  }}
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+              {nav.links.map((link) => {
+                const active = isActive(link.href);
+                const Anchor = link.href.startsWith("#") ? motion.a : MotionLink;
+                return (
+                  <Anchor
+                    key={link.href}
+                    href={toLink(link.href)}
+                    className={`display-sm display-sm-regular transition-colors ${active
+                        ? "text-sage-dark"
+                        : "text-brown-muted hover:text-brown"
+                      }`}
+                    aria-current={active ? currentType(link.href) : undefined}
+                    onClick={handleNavClick}
+                    {...mobileItem}
+                  >
+                    {link.label}
+                  </Anchor>
+                );
+              })}
+              <MotionLink
+                href={nav.blog.href}
+                className={`display-sm display-sm-regular transition-colors ${kantlijnLabel} ${isBlog
+                    ? "text-sage-dark"
+                    : "text-brown-muted hover:text-brown"
+                  }`}
+                aria-current={isBlog ? "page" : undefined}
+                onClick={handleNavClick}
+                {...mobileItem}
+              >
+                {nav.blog.label}
+              </MotionLink>
               <motion.a
-                href={toLink("#contact")}
+                {...ctaProps}
                 className="label-md label-md-medium mt-4 rounded-full bg-sage-dark px-8 py-3 text-white transition-colors hover:bg-sage"
                 onClick={handleNavClick}
-                variants={
-                  shouldReduceMotion
-                    ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
-                    : fadeUp
-                }
-                transition={{
-                  duration: shouldReduceMotion ? 0.01 : duration.fast,
-                  ease: ease.enter,
-                }}
+                {...mobileItem}
               >
                 {nav.cta}
               </motion.a>

@@ -244,6 +244,20 @@ body {
   letter-spacing: 0;
 }
 
+/* Kantlijn message bubbles on the site: same tail as the blog (see kantlijn.css) */
+@utility msg-tail-in {
+  &::after {
+    content: ""; position: absolute; z-index: -1; bottom: 0; left: -7px; width: 28px; height: 20px; background: inherit; transform: scaleX(-1);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'%3E%3Cpath d='M0 0H21V4C21 12 22.6 16.4 27 18.6C27.9 19.1 27.7 20 26.7 20H0Z'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
+  }
+}
+@utility msg-tail-out {
+  &::after {
+    content: ""; position: absolute; z-index: -1; bottom: 0; right: -7px; width: 28px; height: 20px; background: inherit;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'%3E%3Cpath d='M0 0H21V4C21 12 22.6 16.4 27 18.6C27.9 19.1 27.7 20 26.7 20H0Z'/%3E%3C/svg%3E") no-repeat 0 0 / 100% 100%;
+  }
+}
+
 /* Nudges black-and-white photography toward the warm brown palette */
 .photo-warm {
   filter: sepia(0.14) saturate(0.85) contrast(0.97);

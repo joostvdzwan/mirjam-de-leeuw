@@ -9,6 +9,7 @@ import MotionFadeIn from "./motion/MotionFadeIn";
 import ContactForm from "./ContactForm";
 import { duration } from "@/lib/motion";
 import content from "@/content/nl.json";
+import { KANTLIJN } from "@/lib/kantlijn/config";
 
 const { contact } = content;
 
@@ -98,7 +99,7 @@ export default function Contact() {
         {/* Contact form */}
         <MotionFadeIn variant="fadeUp" delay={0.1}>
           <div className="rounded-2xl border border-brown/5 bg-cream p-5 md:p-8">
-            <ContactForm />
+            <ContactForm replyTime={KANTLIJN.replyTime} crisisLine={KANTLIJN.crisisLine} />
           </div>
         </MotionFadeIn>
       </div>
